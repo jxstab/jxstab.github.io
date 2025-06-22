@@ -1,20 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const CURRENT_VERSION = '1.3.3';
-    const phones = {
-        'Redmi9A': { image: 'Redmi9A.png', stabilizationPoint: { x: '34.93%', y: '9.04%' } },
-        'SamsungS21U': { image: 'SamsungS21U.png', stabilizationPoint: { x: '19.01%', y: '18.26%' } },
-        'RealmeGT7Pro': { image: 'RealmeGT7Pro.png', stabilizationPoint: { x: '38.82%', y: '26.66%' } },
-        'HuaweiPura70U': { image: 'HuaweiPura70U.png', stabilizationPoint: { x: '45.37%', y: '25.02%' } },
-        'OnePlus12': { image: 'OnePlus12.png', stabilizationPoint: { x: '26.38%', y: '17.03%' } },
-        'SamsungS24U': { image: 'SamsungS24U.png', stabilizationPoint: { x: '18.41%', y: '20.09%' } },
-        'HonorMagic6P': { image: 'HonorMagic6P.png', stabilizationPoint: { x: '45.07%', y: '32.88%' } },
-        'OnePlusAce3': { image: 'OnePlusAce3.png', stabilizationPoint: { x: '37.74%', y: '28.00%' } },
-        'SamsungJ4': { image: 'SamsungJ4.png', stabilizationPoint: { x: '50.34%', y: '16.35%' } },
-        'Xiaomi15U': { image: 'Xiaomi15U.png', stabilizationPoint: { x: '42.09%', y: '34.85%' } },
-        'VivoX200U': { image: 'VivoX200U.png', stabilizationPoint: { x: '44.55%', y: '35.46%' } },
-        'SamsungS25U': { image: 'SamsungS25U.png', stabilizationPoint: { x: '37.38%', y: '25.63%' } },
-        'HuaweiPura80U': { image: 'HuaweiPura80U.png', stabilizationPoint: { x: '40.66%', y: '37.10%' } }
-    };
+    const phones = { 'Redmi9A': { image: 'Redmi9A.png', stabilizationPoint: { x: '34.93%', y: '9.04%' } }, 'SamsungS21U': { image: 'SamsungS21U.png', stabilizationPoint: { x: '19.01%', y: '18.26%' } }, 'RealmeGT7Pro': { image: 'RealmeGT7Pro.png', stabilizationPoint: { x: '38.82%', y: '26.66%' } }, 'HuaweiPura70U': { image: 'HuaweiPura70U.png', stabilizationPoint: { x: '45.37%', y: '25.02%' } }, 'OnePlus12': { image: 'OnePlus12.png', stabilizationPoint: { x: '26.38%', y: '17.03%' } }, 'SamsungS24U': { image: 'SamsungS24U.png', stabilizationPoint: { x: '18.41%', y: '20.09%' } }, 'HonorMagic6P': { image: 'HonorMagic6P.png', stabilizationPoint: { x: '50%', y: '50%' } }, 'OnePlusAce3': { image: 'OnePlusAce3.png', stabilizationPoint: { x: '50%', y: '50%' } }, 'SamsungJ4': { image: 'SamsungJ4.png', stabilizationPoint: { x: '50%', y: '50%' } }, 'Xiaomi15U': { image: 'Xiaomi15U.png', stabilizationPoint: { x: '42.09%', y: '34.85%' } }, 'VivoX200U': { image: 'VivoX200U.png', stabilizationPoint: { x: '44.55%', y: '35.46%' } }, 'SamsungS25U': { image: 'SamsungS25U.png', stabilizationPoint: { x: '37.38%', y: '25.63%' } }, 'HuaweiPura80U': { image: 'HuaweiPura80U.png', stabilizationPoint: { x: '40.66%', y: '37.10%' } } };
     
     let isCoordModeActive = false;
     let currentRotation = 0, targetRotation = 0;
@@ -53,9 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function updatePhoneSelector() { const uniquePhones = Object.keys(phones); const currentSelected = phoneSelect.value; phoneSelect.innerHTML = ''; uniquePhones.forEach(modelName => { const option = document.createElement('option'); option.value = modelName; option.textContent = modelName; phoneSelect.appendChild(option); }); if (uniquePhones.includes(currentSelected)) { phoneSelect.value = currentSelected; } updatePhone(); }
-    function updatePhone() { const selectedModel = phoneSelect.value; if (!selectedModel) { phoneImage.src = ''; return; }; const phoneData = phones[selectedModel]; const originPoint = `${phoneData.stabilizationPoint.x} ${phoneData.stabilizationPoint.y}`; phoneImage.style.transformOrigin = originPoint; document.getElementById('phone-container').style.transformOrigin = originPoint; phoneImage.src = phoneData.image; targetRotation = 0; currentRotation = -1; applyInitialTransform(); }
-    function showUpdateModal() { if (localStorage.getItem('seenVersion') !== CURRENT_VERSION) { updateModal.classList.remove('hidden'); } }
+    
+    function updatePhone() {
+        const selectedModel = phoneSelect.value;
+        if (!selectedModel) { phoneImage.src = ''; return; };
 
+        document.body.className = document.body.className.replace(/\bphone-\S+/g, '');
+        document.body.classList.add(`phone-${selectedModel.toLowerCase()}`);
+
+        const phoneData = phones[selectedModel];
+        const originPoint = `${phoneData.stabilizationPoint.x} ${phoneData.stabilizationPoint.y}`;
+        phoneImage.style.transformOrigin = originPoint;
+        document.getElementById('phone-container').style.transformOrigin = originPoint;
+        phoneImage.src = phoneData.image;
+        targetRotation = 0;
+        currentRotation = -1;
+        applyInitialTransform();
+    }
+
+    function showUpdateModal() { if (localStorage.getItem('seenVersion') !== CURRENT_VERSION) { updateModal.classList.remove('hidden'); } }
     function animationLoop() { if (currentRotation !== targetRotation) { currentRotation = targetRotation; phoneImage.style.transform = `perspective(1000px) rotateZ(${currentRotation}deg)`; knobHandle.style.transform = `translateX(-50%) rotate(${currentRotation}deg)`; } requestAnimationFrame(animationLoop); }
     let startDragAngle = 0, startPhoneRotation = 0;
     function onDragStart(e) { if (isCoordModeActive) return; e.preventDefault(); startDragAngle = getAngleFromEvent(e); startPhoneRotation = currentRotation; document.body.style.cursor = 'grabbing'; wrapperBg.classList.add('is-rotating'); document.addEventListener('mousemove', onDragMove); document.addEventListener('mouseup', onDragEnd); document.addEventListener('touchmove', onDragMove, { passive: false }); document.addEventListener('touchend', onDragEnd); }
