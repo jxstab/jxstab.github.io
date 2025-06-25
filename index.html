@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camera Stabilization Effect vX</title>
+    <title>Camera Stabilization Effect vX1 Fix</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="app-header">
-        <span class="version-text">Версия X (Special)</span>
+        <span class="version-text">Версия vX1 Fix</span>
         <span id="fps-counter">-- FPS</span>
-        <a href="https://t.me/jeliktontech" target="_blank" class="header-link">t.me/jeliktontech</a>
     </header>
 
     <div class="app-layout">
@@ -20,6 +19,7 @@
             <div id="phone-container"><img id="phone-image" src="" alt="Телефон" draggable="false"></div>
         </div>
         <div class="controls">
+            <a href="https://t.me/jeliktontech" target="_blank" class="controls-header-link">t.me/jeliktontech</a>
             <h2>Управление</h2>
             <div class="control-group"><label for="phone-select">Модель телефона:</label><select id="phone-select"></select></div>
             <div class="control-group stabilization-control">
@@ -40,14 +40,11 @@
     
     <div id="update-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <h3>Что нового в версии X?</h3>
+            <h3>Обновление vX1 Fix</h3>
             <ul class="update-list">
-                <li><i class="fas fa-fire"></i> Новый эффект "Ярости" при быстром вращении!</li>
-                <li><i class="fas fa-toggle-on"></i> Полностью отключаемая стабилизация камеры.</li>
-                <li><i class="fas fa-paint-brush"></i> Значительно переработан дизайн интерфейса.</li>
-                <li><i class="fas fa-info-circle"></i> Добавлено информационное окно о проекте.</li>
-                <li><i class="fas fa-mobile-alt"></i> Добавлено множество новых моделей телефонов.</li>
-                <li><i class="fas fa-broom"></i> Убран лишний функционал (вспышка).</li>
+                <li><i class="fas fa-bug-slash"></i> <strong>Критические исправления:</strong> Устранены все баги с размерами телефонов на мобильных устройствах. Теперь всё выглядит идеально!</li>
+                <li><i class="fas fa-magic"></i> <strong>Косметические улучшения:</strong> Интерфейс стал еще компактнее и удобнее, а все окна теперь появляются плавно и красиво.</li>
+                <li><i class="fas fa-bolt"></i> <strong>Оптимизация ядра:</strong> Переработана логика для повышения стабильности и подготовки к будущим грандиозным фичам.</li>
             </ul>
             <button class="modal-close-btn">Понятно</button>
         </div>
