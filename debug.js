@@ -1,1 +1,63 @@
-function _0x55b4(_0x28ec5e,_0x81303b){const _0x11d334=_0x11d3();return _0x55b4=function(_0x55b444,_0xaaf224){_0x55b444=_0x55b444-0x172;let _0x138b55=_0x11d334[_0x55b444];return _0x138b55;},_0x55b4(_0x28ec5e,_0x81303b);}(function(_0x5aaa64,_0x746bdd){const _0x28ac3c=_0x55b4,_0x4db4e8=_0x5aaa64();while(!![]){try{const _0x321d27=-parseInt(_0x28ac3c(0x18b))/0x1+parseInt(_0x28ac3c(0x180))/0x2*(parseInt(_0x28ac3c(0x17a))/0x3)+-parseInt(_0x28ac3c(0x177))/0x4+-parseInt(_0x28ac3c(0x176))/0x5*(-parseInt(_0x28ac3c(0x18f))/0x6)+-parseInt(_0x28ac3c(0x19c))/0x7*(-parseInt(_0x28ac3c(0x192))/0x8)+-parseInt(_0x28ac3c(0x199))/0x9*(parseInt(_0x28ac3c(0x194))/0xa)+parseInt(_0x28ac3c(0x17b))/0xb;if(_0x321d27===_0x746bdd)break;else _0x4db4e8['push'](_0x4db4e8['shift']());}catch(_0x4d67a2){_0x4db4e8['push'](_0x4db4e8['shift']());}}}(_0x11d3,0x22a05),(function(){const _0xb8d33f=_0x55b4;document[_0xb8d33f(0x187)](_0xb8d33f(0x18c),()=>{const _0x18650f=_0xb8d33f;if(!window[_0x18650f(0x181)]){console[_0x18650f(0x17c)](_0x18650f(0x173));return;}let _0x288c38=![];const {wrapperBg:_0xb4d09d,phoneImage:_0x859057}=window[_0x18650f(0x181)];function _0x417ae3(_0xcde7d1){const _0x25c90e=_0x18650f;if(!_0x288c38)return;_0xcde7d1['stopPropagation']();const _0x2b3b5f=_0x859057[_0x25c90e(0x18a)]();if(_0xcde7d1['clientX']<_0x2b3b5f[_0x25c90e(0x198)]||_0xcde7d1[_0x25c90e(0x19b)]>_0x2b3b5f['right']||_0xcde7d1[_0x25c90e(0x185)]<_0x2b3b5f['top']||_0xcde7d1[_0x25c90e(0x185)]>_0x2b3b5f[_0x25c90e(0x184)])return;const _0x166115=_0xcde7d1[_0x25c90e(0x19b)]-_0x2b3b5f[_0x25c90e(0x198)],_0x995376=_0xcde7d1[_0x25c90e(0x185)]-_0x2b3b5f[_0x25c90e(0x191)],_0x5eceb7=(_0x166115/_0x2b3b5f[_0x25c90e(0x197)]*0x64)[_0x25c90e(0x188)](0x2),_0xdd2f88=(_0x995376/_0x2b3b5f['height']*0x64)[_0x25c90e(0x188)](0x2),{phones:_0x10da84,phoneSelect:_0x7a6ba1,updatePhone:_0x21246c}=window['APP_STATE'],_0x2988e2=_0x7a6ba1['value'];_0x10da84[_0x2988e2][_0x25c90e(0x178)]={'x':_0x5eceb7+'%','y':_0xdd2f88+'%'},_0x21246c();const _0x106e12='\x27'+_0x2988e2+'\x27:\x20{\x0a\x20\x20\x20\x20image:\x20\x27'+_0x10da84[_0x2988e2][_0x25c90e(0x17d)]+_0x25c90e(0x190)+_0x10da84[_0x2988e2]['stabilizationPoint']['x']+_0x25c90e(0x179)+_0x10da84[_0x2988e2][_0x25c90e(0x178)]['y']+_0x25c90e(0x193);console[_0x25c90e(0x19a)](_0x25c90e(0x186),_0x106e12),alert('Точка\x20для\x20\x22'+_0x2988e2+_0x25c90e(0x174)),off();}window[_0x18650f(0x189)]=function(){const _0x37cd3a=_0x18650f;_0x288c38=!![],_0xb4d09d['style']['cursor']='crosshair',console[_0x37cd3a(0x19a)](_0x37cd3a(0x195),_0x37cd3a(0x172));},window[_0x18650f(0x18d)]=function(){const _0x269437=_0x18650f;_0x288c38&&(_0x288c38=![],_0xb4d09d[_0x269437(0x182)][_0x269437(0x17e)]=_0x269437(0x183),console[_0x269437(0x19a)](_0x269437(0x17f),'color:\x20red;\x20font-weight:\x20bold;'));},_0xb4d09d[_0x18650f(0x187)](_0x18650f(0x18e),_0x417ae3,!![]),console[_0x18650f(0x19a)](_0x18650f(0x196),_0x18650f(0x175));});}()));function _0x11d3(){const _0x3e6ca9=['%c[DEBUG]\x20Режим\x20получения\x20координат\x20активирован.\x20Кликните\x20на\x20нужную\x20точку\x20на\x20телефоне.','%c[DEBUG]\x20Утилиты\x20отладки\x20загружены.\x20Введите\x20camera()\x20для\x20начала,\x20off()\x20для\x20выключения.','width','left','1503KXhCTr','log','clientX','343hVSYHS','color:\x20lime;\x20font-weight:\x20bold;','DEBUG:\x20Main\x20app\x20state\x20(window.APP_STATE)\x20не\x20найдено.\x20Ошибка\x20в\x20app.js.','\x22\x20установлена!\x0aКод\x20для\x20вставки\x20выведен\x20в\x20консоль\x20разработчика\x20(F12).','color:\x20cyan;','5GFZDAj','206256pXnEpC','stabilizationPoint','\x27,\x20y:\x20\x27','495NglcaI','1349612zHMTFP','error','image','cursor','%c[DEBUG]\x20Режим\x20отладки\x20выключен.','972hDYbuD','APP_STATE','style','default','bottom','clientY','Скопируйте\x20этот\x20код\x20и\x20обновите\x20объект\x20\x27phones\x27\x20в\x20app.js:\x0a\x0a','addEventListener','toFixed','camera','getBoundingClientRect','268811qEwyTG','appReady','off','click','1190226MnMCWh','\x27,\x0a\x20\x20\x20\x20stabilizationPoint:\x20{\x20x:\x20\x27','top','12296WYrLQE','\x27\x20}\x0a},','860xMzBWn'];_0x11d3=function(){return _0x3e6ca9;};return _0x11d3();}
+(function() {
+    document.addEventListener('appReady', () => {
+        if (!window.APP_STATE || !window.APP_STATE.wrapperBg) {
+            console.error("DEBUG: Main app state not ready or wrapperBg not found.");
+            return;
+        }
+
+        let isDebugActive = false;
+        const { wrapperBg, phoneImage } = window.APP_STATE;
+
+        function handleClick(event) {
+            if (!isDebugActive) return;
+            
+            event.stopPropagation();
+            
+            const rect = phoneImage.getBoundingClientRect();
+
+            if (
+                event.clientX < rect.left || event.clientX > rect.right ||
+                event.clientY < rect.top  || event.clientY > rect.bottom
+            ) {
+                return;
+            }
+            
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            const xPercent = (x / rect.width * 100).toFixed(2);
+            const yPercent = (y / rect.height * 100).toFixed(2);
+            
+            const { phones, phoneSelect, updatePhone } = window.APP_STATE;
+            const selectedModel = phoneSelect.value;
+
+            phones[selectedModel].stabilizationPoint = { x: `${xPercent}%`, y: `${yPercent}%` };
+            
+            updatePhone();
+            
+            const codeToCopy = `'${selectedModel}': {\n    image: 'phones/${phones[selectedModel].image.split('/').pop()}',\n    stabilizationPoint: { x: '${phones[selectedModel].stabilizationPoint.x}', y: '${phones[selectedModel].stabilizationPoint.y}' }\n},`;
+            
+            console.log("Скопируйте этот код и обновите объект 'phones' в app.js:\n\n", codeToCopy);
+            alert(`Точка для "${selectedModel}" установлена!\nКод для вставки выведен в консоль разработчика (F12).`);
+            
+            off();
+        }
+
+        window.camera = function() {
+            isDebugActive = true;
+            wrapperBg.style.cursor = 'crosshair';
+            console.log(`%c[DEBUG] Режим получения координат активирован. Кликните на нужную точку на телефоне.`, 'color: lime; font-weight: bold;');
+        };
+
+        window.off = function() {
+            if (isDebugActive) {
+                isDebugActive = false;
+                wrapperBg.style.cursor = 'grab';
+                console.log('%c[DEBUG] Режим отладки выключен.', 'color: red; font-weight: bold;');
+            }
+        };
+
+        wrapperBg.addEventListener('click', handleClick, true);
+        
+        console.log('%c[DEBUG] Утилиты отладки загружены. Введите camera() для начала, off() для выключения.', 'color: cyan;');
+    });
+})();

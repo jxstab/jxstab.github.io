@@ -11,6 +11,7 @@
     <header class="app-header">
         <span class="version-text" data-translate-key="version_text">Версия XS</span>
         <span id="fps-counter">-- FPS</span>
+        <button id="menu-btn" title="Открыть меню"><i class="fas fa-bars"></i></button>
     </header>
 
     <div class="app-layout">
@@ -18,33 +19,32 @@
             <div id="tsparticles"></div>
             <div id="white-fire-effect"></div>
             <div id="phone-container"><img id="phone-image" src="" alt="Телефон" draggable="false"></div>
-
             <div id="floating-joystick" class="hidden">
                 <div id="joystick-base"></div>
                 <div id="joystick-handle"></div>
             </div>
         </div>
-        
-        <div id="controls-wrapper">
-            <button id="toggle-controls-btn" title="Открыть/Закрыть панель">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="controls">
-                <h2 data-translate-key="controls_title">Управление</h2>
-                <div class="control-group"><label for="phone-select" data-translate-key="phone_model_label">Модель телефона:</label><select id="phone-select"></select></div>
-                <div class="control-group stabilization-control">
-                    <label data-translate-key="phone_rotation_label">Вращение телефона</label>
-                    <p class="joystick-instruction" data-translate-key="joystick_instruction">Нажмите и потяните в любом месте экрана слева для вращения.</p>
-                </div>
-                <div class="action-buttons">
-                    <button id="info-btn" title="Информация" data-translate-key="info_button_title"><i class="fas fa-info-circle"></i></button>
-                    <button id="settings-btn" title="Настройки" data-translate-key="settings_button_title"><i class="fas fa-cog"></i></button>
-                </div>
-                <a href="https://t.me/jelikton?text=Привет!%20Хочу%20поддержать%20твой%20проект%20денежкой." target="_blank" class="support-button" id="support-button"><span data-translate-key="support_button_text"><i class="fas fa-rocket"></i> Поддержать проект</span></a>
+    </div>
+
+    <!-- Главное меню -->
+    <div id="main-menu-modal" class="modal-overlay hidden">
+        <div class="modal-content main-menu-content">
+            <h2 data-translate-key="controls_title">Управление</h2>
+            <div class="control-group"><label for="phone-select" data-translate-key="phone_model_label">Модель телефона:</label><select id="phone-select"></select></div>
+            <div class="control-group stabilization-control">
+                <label data-translate-key="phone_rotation_label">Вращение телефона</label>
+                <p class="joystick-instruction" data-translate-key="joystick_instruction">Нажмите и потяните в любом месте экрана для вращения.</p>
             </div>
+            <div class="action-buttons">
+                <button id="info-btn" title="Информация" data-translate-key="info_button_title"><i class="fas fa-info-circle"></i> <span class="btn-text" data-translate-key="info_button_text">Инфо</span></button>
+                <button id="settings-btn" title="Настройки" data-translate-key="settings_button_title"><i class="fas fa-cog"></i> <span class="btn-text" data-translate-key="settings_button_text">Настройки</span></button>
+            </div>
+            <a href="https://t.me/jelikton?text=Привет!%20Хочу%20поддержать%20твой%20проект%20денежкой." target="_blank" class="support-button" id="support-button"><span data-translate-key="support_button_text"><i class="fas fa-rocket"></i> Поддержать проект</span></a>
+            <button class="modal-close-btn" id="main-menu-close-btn" data-translate-key="close_button">Закрыть</button>
         </div>
     </div>
 
+    <!-- Модальное окно выбора языка -->
     <div id="language-modal" class="modal-overlay hidden">
         <div class="modal-content">
             <h3 data-translate-key="language_modal_title">Выберите язык / Select language</h3>
@@ -55,6 +55,7 @@
         </div>
     </div>
 
+    <!-- Модальное окно настроек -->
     <div id="settings-modal" class="modal-overlay hidden">
         <div class="modal-content">
             <h3 data-translate-key="settings_title">Настройки</h3>
@@ -76,6 +77,7 @@
         </div>
     </div>
 
+    <!-- Модальное окно информации -->
     <div id="info-modal" class="modal-overlay hidden">
         <div class="modal-content">
             <h3 data-translate-key="info_title">Информация о проекте</h3>
