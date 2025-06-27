@@ -1,1 +1,281 @@
-function _0x16b1(_0x12380b,_0x5fed37){const _0x241d34=_0x241d();return _0x16b1=function(_0x16b169,_0x5b6994){_0x16b169=_0x16b169-0x162;let _0x33815b=_0x241d34[_0x16b169];return _0x33815b;},_0x16b1(_0x12380b,_0x5fed37);}const _0x57fb4b=_0x16b1;(function(_0x392c62,_0x39ecca){const _0x301431=_0x16b1,_0x32e2e2=_0x392c62();while(!![]){try{const _0xeb20d4=parseInt(_0x301431(0x1f7))/0x1+parseInt(_0x301431(0x1c8))/0x2*(parseInt(_0x301431(0x194))/0x3)+parseInt(_0x301431(0x183))/0x4+-parseInt(_0x301431(0x17c))/0x5*(-parseInt(_0x301431(0x212))/0x6)+-parseInt(_0x301431(0x1fd))/0x7*(-parseInt(_0x301431(0x191))/0x8)+parseInt(_0x301431(0x1b4))/0x9+-parseInt(_0x301431(0x1f5))/0xa;if(_0xeb20d4===_0x39ecca)break;else _0x32e2e2['push'](_0x32e2e2['shift']());}catch(_0x29fe7c){_0x32e2e2['push'](_0x32e2e2['shift']());}}}(_0x241d,0x99390),document[_0x57fb4b(0x1bb)]('DOMContentLoaded',()=>{const _0x469e44=_0x57fb4b,_0x34b51b=_0x469e44(0x1f9),_0x2a0742={'Redmi9A':{'image':_0x469e44(0x1de),'stabilizationPoint':{'x':_0x469e44(0x1a1),'y':_0x469e44(0x1c7)}},'SamsungS21U':{'image':_0x469e44(0x210),'stabilizationPoint':{'x':_0x469e44(0x1f8),'y':'17.25%'}},'RealmeGT7Pro':{'image':_0x469e44(0x19e),'stabilizationPoint':{'x':_0x469e44(0x18c),'y':_0x469e44(0x1a3)}},'HuaweiPura70U':{'image':_0x469e44(0x217),'stabilizationPoint':{'x':_0x469e44(0x20d),'y':_0x469e44(0x1ce)}},'OnePlus12':{'image':_0x469e44(0x174),'stabilizationPoint':{'x':_0x469e44(0x1c2),'y':_0x469e44(0x1cb)}},'SamsungS24U':{'image':_0x469e44(0x213),'stabilizationPoint':{'x':_0x469e44(0x1b6),'y':'22.29%'}},'HonorMagic6P':{'image':_0x469e44(0x1fc),'stabilizationPoint':{'x':_0x469e44(0x18b),'y':_0x469e44(0x1c9)}},'OnePlusAce3':{'image':_0x469e44(0x16a),'stabilizationPoint':{'x':_0x469e44(0x18d),'y':_0x469e44(0x190)}},'SamsungJ4':{'image':_0x469e44(0x214),'stabilizationPoint':{'x':_0x469e44(0x1d7),'y':_0x469e44(0x1b7)}},'TecnoPova4':{'image':'TecnoPova4.png','stabilizationPoint':{'x':_0x469e44(0x20f),'y':'13.54%'}},'Iphone13PM':{'image':'Iphone13PM.png','stabilizationPoint':{'x':'37.15%','y':_0x469e44(0x203)}},'Honor200':{'image':_0x469e44(0x215),'stabilizationPoint':{'x':_0x469e44(0x216),'y':_0x469e44(0x1e2)}},'IqooNeo10PP':{'image':_0x469e44(0x19a),'stabilizationPoint':{'x':'41.58%','y':'20.20%'}},'Pixel8P':{'image':_0x469e44(0x1e6),'stabilizationPoint':{'x':_0x469e44(0x207),'y':'16.57%'}},'IqooNeo9SPP':{'image':_0x469e44(0x1b5),'stabilizationPoint':{'x':_0x469e44(0x1c6),'y':_0x469e44(0x21c)}},'SonyXperia1M7':{'image':'SonyXperia1M7.png','stabilizationPoint':{'x':'26.07%','y':'22.78%'}},'Xiaomi15U':{'image':_0x469e44(0x1ea),'stabilizationPoint':{'x':_0x469e44(0x21b),'y':_0x469e44(0x1a5)}},'VivoX200U':{'image':_0x469e44(0x1e5),'stabilizationPoint':{'x':_0x469e44(0x167),'y':_0x469e44(0x1d2)}},'SamsungS25U':{'image':'SamsungS25U.png','stabilizationPoint':{'x':_0x469e44(0x1fb),'y':'25.63%'}},'HuaweiPura80U':{'image':_0x469e44(0x1cd),'stabilizationPoint':{'x':'40.66%','y':_0x469e44(0x1ba)}},'LgK10':{'image':'LgK10.png','stabilizationPoint':{'x':_0x469e44(0x1ad),'y':_0x469e44(0x1b3)}},'Nothing1':{'image':_0x469e44(0x1c5),'stabilizationPoint':{'x':_0x469e44(0x1f4),'y':_0x469e44(0x196)}},'RealmeGT6':{'image':_0x469e44(0x180),'stabilizationPoint':{'x':_0x469e44(0x1c3),'y':'19.52%'}},'SamsungA9':{'image':_0x469e44(0x1e7),'stabilizationPoint':{'x':'33.56%','y':'17.20%'}},'SamsungA72':{'image':_0x469e44(0x200),'stabilizationPoint':{'x':_0x469e44(0x18e),'y':_0x469e44(0x1ec)}},'SamsungS9+':{'image':_0x469e44(0x1cf),'stabilizationPoint':{'x':_0x469e44(0x1aa),'y':_0x469e44(0x219)}},'Xiaomi10U':{'image':_0x469e44(0x19c),'stabilizationPoint':{'x':_0x469e44(0x216),'y':'31.02%'}},'GoogleFold2':{'image':_0x469e44(0x1fa),'stabilizationPoint':{'x':'56.18%','y':_0x469e44(0x1f0)}},'HuaweiMateXTU':{'image':_0x469e44(0x1a2),'stabilizationPoint':{'x':'43.08%','y':'27.12%'}},'HuaweiY9C':{'image':_0x469e44(0x1fe),'stabilizationPoint':{'x':_0x469e44(0x1a7),'y':_0x469e44(0x182)}},'InfinixHot40I':{'image':_0x469e44(0x17d),'stabilizationPoint':{'x':_0x469e44(0x1ff),'y':_0x469e44(0x206)}},'IphoneXSM':{'image':'IphoneXSM.png','stabilizationPoint':{'x':'30.57%','y':_0x469e44(0x1dd)}},'PocoX7Pro':{'image':_0x469e44(0x1b9),'stabilizationPoint':{'x':'40.49%','y':_0x469e44(0x202)}},'SamsungA15':{'image':_0x469e44(0x1db),'stabilizationPoint':{'x':'40.55%','y':_0x469e44(0x19d)}},'SamsungJ1':{'image':_0x469e44(0x1d0),'stabilizationPoint':{'x':_0x469e44(0x197),'y':_0x469e44(0x169)}},'SamsungS10+':{'image':_0x469e44(0x1f2),'stabilizationPoint':{'x':_0x469e44(0x166),'y':_0x469e44(0x1a8)}},'SamsungS4Zoom':{'image':_0x469e44(0x16d),'stabilizationPoint':{'x':_0x469e44(0x185),'y':'30.74%'}},'SamsungXCover7':{'image':'SamsungXCover7.png','stabilizationPoint':{'x':_0x469e44(0x1f6),'y':_0x469e44(0x19f)}},'SamsungZFlip6':{'image':_0x469e44(0x16c),'stabilizationPoint':{'x':_0x469e44(0x178),'y':'9.70%'}},'XiaomiMixAlpha':{'image':_0x469e44(0x1a6),'stabilizationPoint':{'x':'38.38%','y':'12.03%'}},'XiaomiMixFlip':{'image':_0x469e44(0x1b8),'stabilizationPoint':{'x':'41.80%','y':_0x469e44(0x193)}},'ZteNubiaZ70U':{'image':_0x469e44(0x170),'stabilizationPoint':{'x':'39.47%','y':'15.76%'}}};let _0xa4df8f=0x0,_0x9c8c50=0x0,_0x524262=0x0,_0x5071a8;const _0x3ea915=document[_0x469e44(0x171)](_0x469e44(0x218)),_0x19f910=document[_0x469e44(0x171)]('phone-image'),_0x446a38=document[_0x469e44(0x171)](_0x469e44(0x18a)),_0x36ef5e=document[_0x469e44(0x171)](_0x469e44(0x20b)),_0x4d4042=document[_0x469e44(0x171)](_0x469e44(0x1f3)),_0x2c5b21=document[_0x469e44(0x171)](_0x469e44(0x17b)),_0x2b8c78=document['getElementById'](_0x469e44(0x198)),_0x243a42=document[_0x469e44(0x171)](_0x469e44(0x1c4)),_0x226314=document[_0x469e44(0x171)](_0x469e44(0x1df)),_0x413203=document[_0x469e44(0x171)]('info-modal'),_0x314e2b=document[_0x469e44(0x1e0)](_0x469e44(0x211)),_0xe829d8=document['getElementById'](_0x469e44(0x20e)),_0x1bc474=document['getElementById'](_0x469e44(0x1eb)),_0x43d1d6=document['getElementById'](_0x469e44(0x1e9)),_0x5ebfe8=document[_0x469e44(0x171)](_0x469e44(0x1d9)),_0x5d988a=document[_0x469e44(0x171)](_0x469e44(0x195));let _0x43c0b5='';function _0x5f0f50(){const _0x1bbe69=_0x469e44;_0x4655c9(),_0x16b6fd(),_0x2b6b4f(),_0x36ef5e[_0x1bbe69(0x1bb)](_0x1bbe69(0x20c),_0x1c33af),_0x36ef5e[_0x1bbe69(0x1bb)](_0x1bbe69(0x1a0),_0x1c33af,{'passive':![]}),_0x3ea915[_0x1bbe69(0x1bb)](_0x1bbe69(0x1bc),_0x19061d,{'passive':![]}),_0x446a38[_0x1bbe69(0x1bb)](_0x1bbe69(0x1d8),_0x2b6b4f),_0xe829d8[_0x1bbe69(0x1bb)](_0x1bbe69(0x164),()=>_0x226314[_0x1bbe69(0x172)][_0x1bbe69(0x1a9)](_0x1bbe69(0x199))),_0x1bc474['addEventListener'](_0x1bbe69(0x164),()=>_0x413203[_0x1bbe69(0x172)][_0x1bbe69(0x1a9)]('hidden')),_0x43d1d6[_0x1bbe69(0x1bb)](_0x1bbe69(0x1d8),_0x11be21),_0x5ebfe8[_0x1bbe69(0x1bb)]('change',_0x11be21),_0x5d988a[_0x1bbe69(0x1bb)](_0x1bbe69(0x1d8),_0x11be21),_0x314e2b[_0x1bbe69(0x1e8)](_0x450f83=>{const _0x447ce3=_0x1bbe69;_0x450f83[_0x447ce3(0x1bb)](_0x447ce3(0x164),()=>{const _0x334e60=_0x447ce3,_0x551a6d=_0x450f83[_0x334e60(0x1dc)](_0x334e60(0x1d3));_0x551a6d[_0x334e60(0x172)][_0x334e60(0x1ab)]('hidden');});}),_0x5addf7(),requestAnimationFrame(_0x2ec185),requestAnimationFrame(_0x3ded0f),window[_0x1bbe69(0x16f)]={'phones':_0x2a0742,'phoneSelect':_0x446a38,'phoneImage':_0x19f910,'wrapperBg':_0x3ea915,'updatePhone':_0x2b6b4f},document[_0x1bbe69(0x204)](new Event(_0x1bbe69(0x1ca)));}function _0x16b6fd(){const _0x548751=_0x469e44,_0x3e256e=Object[_0x548751(0x208)](_0x2a0742)[_0x548751(0x187)](),_0xd9b6af=_0x446a38['value'];_0x446a38['innerHTML']='',_0x3e256e[_0x548751(0x1e8)](_0x558915=>{const _0x337eb4=_0x548751,_0x1e9322=document['createElement'](_0x337eb4(0x1e3));_0x1e9322[_0x337eb4(0x201)]=_0x558915,_0x1e9322[_0x337eb4(0x186)]=_0x558915,_0x446a38[_0x337eb4(0x20a)](_0x1e9322);}),_0x3e256e['includes'](_0xd9b6af)&&(_0x446a38[_0x548751(0x201)]=_0xd9b6af);}function _0x2b6b4f(){const _0x557aa0=_0x469e44,_0x327c45=_0x446a38[_0x557aa0(0x201)];if(!_0x327c45){_0x19f910[_0x557aa0(0x16b)]='';return;}_0x43c0b5&&document[_0x557aa0(0x1ae)][_0x557aa0(0x172)][_0x557aa0(0x1a9)](_0x43c0b5);_0x43c0b5=_0x557aa0(0x16e)+_0x327c45[_0x557aa0(0x188)](),document[_0x557aa0(0x1ae)][_0x557aa0(0x172)][_0x557aa0(0x1ab)](_0x43c0b5);const _0x59581c=_0x2a0742[_0x327c45];let _0x59af8a='50%\x2050%';_0x5d988a[_0x557aa0(0x1da)]&&(_0x59af8a=_0x59581c[_0x557aa0(0x192)]['x']+'\x20'+_0x59581c[_0x557aa0(0x192)]['y']),_0x19f910[_0x557aa0(0x162)][_0x557aa0(0x1a4)]=_0x59af8a,document[_0x557aa0(0x171)](_0x557aa0(0x1f1))[_0x557aa0(0x162)][_0x557aa0(0x1a4)]=_0x59af8a,_0x19f910[_0x557aa0(0x16b)]=_0x59581c[_0x557aa0(0x181)],_0x9c8c50=0x0,_0xa4df8f=-0x1,_0x2731ea();}function _0x5addf7(){const _0x29474e=_0x469e44;_0x243a42[_0x29474e(0x172)][_0x29474e(0x1a9)](_0x29474e(0x199));}function _0x3ded0f(){const _0x57328b=_0x469e44;_0xa4df8f!==_0x9c8c50&&(_0xa4df8f=_0x9c8c50,_0x19f910['style'][_0x57328b(0x21d)]=_0x57328b(0x1c1)+_0xa4df8f+_0x57328b(0x209),_0x4d4042[_0x57328b(0x162)][_0x57328b(0x21d)]=_0x57328b(0x1c0)+_0xa4df8f+_0x57328b(0x209)),requestAnimationFrame(_0x3ded0f);}let _0x29f841=0x0,_0xb9a687=0x0;function _0x1c33af(_0x1377ed){const _0x232d5c=_0x469e44;_0x1377ed[_0x232d5c(0x184)](),_0x29f841=_0x37f5fc(_0x1377ed),_0xb9a687=_0xa4df8f,document[_0x232d5c(0x1ae)]['style'][_0x232d5c(0x18f)]=_0x232d5c(0x1af),_0x3ea915[_0x232d5c(0x172)][_0x232d5c(0x1ab)](_0x232d5c(0x205)),document[_0x232d5c(0x1bb)](_0x232d5c(0x1cc),_0x2142a3),document[_0x232d5c(0x1bb)](_0x232d5c(0x1d6),_0x778ad0),document[_0x232d5c(0x1bb)](_0x232d5c(0x173),_0x2142a3,{'passive':![]}),document[_0x232d5c(0x1bb)](_0x232d5c(0x19b),_0x778ad0);}function _0x2142a3(_0x6a9f03){const _0x48cdd1=_0x469e44,_0x586b81=_0x37f5fc(_0x6a9f03)-_0x29f841;_0xd3a999(_0xb9a687+_0x586b81,Math[_0x48cdd1(0x1be)](_0x586b81));}function _0x778ad0(){const _0x211f36=_0x469e44;document['body'][_0x211f36(0x162)]['cursor']=_0x211f36(0x1b0),_0x3ea915[_0x211f36(0x172)][_0x211f36(0x1a9)](_0x211f36(0x205)),document[_0x211f36(0x17f)](_0x211f36(0x1cc),_0x2142a3),document[_0x211f36(0x17f)](_0x211f36(0x1d6),_0x778ad0),document[_0x211f36(0x17f)](_0x211f36(0x173),_0x2142a3),document['removeEventListener']('touchend',_0x778ad0);}let _0x90eaf3;function _0x19061d(_0x27ea9a){const _0x217df5=_0x469e44;_0x27ea9a[_0x217df5(0x184)](),_0xd3a999(_0x9c8c50+(_0x27ea9a[_0x217df5(0x176)]>0x0?0x5:-0x5),0x5),_0x3ea915['classList']['add'](_0x217df5(0x205)),clearTimeout(_0x90eaf3),_0x90eaf3=setTimeout(()=>{const _0x1e6f5d=_0x217df5;_0x3ea915['classList'][_0x1e6f5d(0x1a9)](_0x1e6f5d(0x205));},0x12c);}function _0xd3a999(_0x5264f7,_0x507399){const _0x19d32f=_0x469e44;_0x9c8c50=_0x5264f7;if(!_0x5ebfe8[_0x19d32f(0x1da)])return;_0x524262+=_0x507399,_0x524262>0x96&&_0x2b8c78[_0x19d32f(0x172)]['add'](_0x19d32f(0x163)),clearTimeout(_0x5071a8),_0x5071a8=setTimeout(()=>{const _0x1e7359=_0x19d32f;_0x524262=0x0,_0x2b8c78[_0x1e7359(0x172)]['remove'](_0x1e7359(0x163));},0x12c);}function _0x37f5fc(_0x30b920){const _0x17ecdb=_0x469e44,_0x135755=_0x36ef5e[_0x17ecdb(0x17e)](),_0x19f6a9=_0x135755[_0x17ecdb(0x177)]+_0x135755[_0x17ecdb(0x1b2)]/0x2,_0x5629d8=_0x135755['top']+_0x135755['height']/0x2,_0x2b1ba1=_0x30b920[_0x17ecdb(0x1d5)][_0x17ecdb(0x189)](_0x17ecdb(0x1e1))?_0x30b920[_0x17ecdb(0x168)][0x0][_0x17ecdb(0x1bd)]:_0x30b920[_0x17ecdb(0x1bd)],_0xa8fad6=_0x30b920[_0x17ecdb(0x1d5)][_0x17ecdb(0x189)](_0x17ecdb(0x1e1))?_0x30b920[_0x17ecdb(0x168)][0x0][_0x17ecdb(0x21a)]:_0x30b920[_0x17ecdb(0x21a)];return Math[_0x17ecdb(0x1ee)](_0xa8fad6-_0x5629d8,_0x2b1ba1-_0x19f6a9)*(0xb4/Math['PI']);}function _0x2731ea(){const _0xe24c6f=_0x469e44;_0x19f910[_0xe24c6f(0x162)][_0xe24c6f(0x21d)]='perspective(1000px)\x20rotateZ(0deg)',_0x4d4042['style'][_0xe24c6f(0x21d)]=_0xe24c6f(0x1ed),_0x3ea915['classList']['remove'](_0xe24c6f(0x205));}function _0x11be21(){const _0x53c2ee=_0x469e44;document['body'][_0x53c2ee(0x172)][_0x53c2ee(0x1ef)](_0x53c2ee(0x17a),_0x43d1d6[_0x53c2ee(0x1da)]),_0x2b6b4f(),_0x39247c();}function _0x39247c(){const _0xe80444=_0x469e44;localStorage[_0xe80444(0x1d4)](_0xe80444(0x1b1),JSON[_0xe80444(0x175)]({'optimized':_0x43d1d6[_0xe80444(0x1da)],'rage':_0x5ebfe8['checked'],'stabilization':_0x5d988a['checked']}));}function _0x4655c9(){const _0x6ae665=_0x469e44,_0x3b5a9f=JSON['parse'](localStorage[_0x6ae665(0x1ac)](_0x6ae665(0x1b1)));_0x43d1d6[_0x6ae665(0x1da)]=_0x3b5a9f?.[_0x6ae665(0x1bf)]??![],_0x5ebfe8['checked']=_0x3b5a9f?.[_0x6ae665(0x1e4)]??!![],_0x5d988a[_0x6ae665(0x1da)]=_0x3b5a9f?.[_0x6ae665(0x1d1)]??!![],_0x11be21();}let _0x4466df=performance[_0x469e44(0x179)](),_0x52f097=0x0;function _0x2ec185(_0x7adc34){const _0x12f1d4=_0x469e44;_0x52f097++,_0x7adc34-_0x4466df>=0x3e8&&(_0x2c5b21[_0x12f1d4(0x186)]=_0x52f097+_0x12f1d4(0x165),_0x52f097=0x0,_0x4466df=_0x7adc34),requestAnimationFrame(_0x2ec185);}_0x5f0f50();}));function _0x241d(){const _0x13528f=['mouseup','50.34%','change','rage-toggle','checked','SamsungA15.png','closest','12.43%','Redmi9A.png','settings-modal','querySelectorAll','touch','19.30%','option','rage','VivoX200U.png','Pixel8P.png','SamsungA9.png','forEach','optimize-toggle','Xiaomi15U.png','info-btn','21.88%','translateX(-50%)\x20rotate(0deg)','atan2','toggle','18.97%','phone-container','SamsungS10+.png','knob-handle','38.65%','23512420fkpSrM','37.36%','270592WaAybw','19.31%','vX1\x20Fix','GoogleFold2.png','37.38%','HonorMagic6P.png','245217DhbLKn','HuaweiY9C.png','41.80%','SamsungA72.png','value','13.94%','25.98%','dispatchEvent','is-rotating','25.00%','21.34%','keys','deg)','appendChild','stabilization-knob','mousedown','45.37%','settings-btn','36.98%','SamsungS21U.png','.modal-close-btn','2368056gUzTxN','SamsungS24U.png','SamsungJ4.png','Honor200.png','37.75%','HuaweiPura70U.png','wrapper-bg','21.00%','clientY','42.09%','38.93%','transform','style','active','click','\x20FPS','53.21%','44.55%','touches','23.50%','OnePlusAce3.png','src','SamsungZFlip6.png','SamsungS4Zoom.png','phone-','APP_STATE','ZteNubiaZ70U.png','getElementById','classList','touchmove','OnePlus12.png','stringify','deltaY','left','35.54%','now','performance-mode','fps-counter','5rOVEJd','InfinixHot40I.png','getBoundingClientRect','removeEventListener','RealmeGT6.png','image','16.17%','2880368FtbIHj','preventDefault','50.14%','textContent','sort','toLowerCase','includes','phone-select','45.07%','38.82%','43.10%','40.45%','cursor','19.66%','88BrmaHq','stabilizationPoint','22.10%','583179JAQvhN','stabilization-toggle','15.57%','49.66%','rage-effect','hidden','IqooNeo10PP.png','touchend','Xiaomi10U.png','19.38%','RealmeGT7Pro.png','13.14%','touchstart','34.93%','HuaweiMateXTU.png','26.66%','transformOrigin','34.85%','XiaomiMixAlpha.png','37.68%','18.73%','remove','50.58%','add','getItem','49.68%','body','grabbing','default','stabilizerSettings','width','13.74%','5624658TZawBe','IqooNeo9SPP.png','37.92%','16.35%','XiaomiMixFlip.png','PocoX7Pro.png','37.10%','addEventListener','wheel','clientX','abs','optimized','translateX(-50%)\x20rotate(','perspective(1000px)\x20rotateZ(','39.71%','39.55%','update-modal','Nothing1.png','42.72%','9.04%','6RElIzK','32.88%','appReady','20.12%','mousemove','HuaweiPura80U.png','25.02%','SamsungS9+.png','SamsungJ1.png','stabilization','35.46%','.modal-overlay','setItem','type'];_0x241d=function(){return _0x13528f;};return _0x241d();}
+document.addEventListener('DOMContentLoaded', () => {
+    const CURRENT_VERSION = 'XS';
+    const phones = { 'Redmi9A': { image: 'phones/Redmi9A.png', stabilizationPoint: { x: '34.93%', y: '9.04%' } }, 'SamsungS21U': { image: 'phones/SamsungS21U.png', stabilizationPoint: { x: '19.31%', y: '17.25%' } }, 'RealmeGT7Pro': { image: 'phones/RealmeGT7Pro.png', stabilizationPoint: { x: '38.82%', y: '26.66%' } }, 'HuaweiPura70U': { image: 'phones/HuaweiPura70U.png', stabilizationPoint: { x: '45.37%', y: '25.02%' } }, 'OnePlus12': { image: 'phones/OnePlus12.png', stabilizationPoint: { x: '39.71%', y: '20.12%' } }, 'SamsungS24U': { image: 'phones/SamsungS24U.png', stabilizationPoint: { x: '37.92%', y: '22.29%' } }, 'HonorMagic6P': { image: 'phones/HonorMagic6P.png', stabilizationPoint: { x: '45.07%', y: '32.88%' } }, 'OnePlusAce3': { image: 'phones/OnePlusAce3.png', stabilizationPoint: { x: '43.10%', y: '19.66%' } }, 'SamsungJ4': { image: 'phones/SamsungJ4.png', stabilizationPoint: { x: '50.34%', y: '16.35%' } }, 'TecnoPova4': { image: 'phones/TecnoPova4.png', stabilizationPoint: { x: '36.98%', y: '13.54%' } }, 'Iphone13PM': { image: 'phones/Iphone13PM.png', stabilizationPoint: { x: '37.15%', y: '25.98%' } }, 'Honor200': { image: 'phones/Honor200.png', stabilizationPoint: { x: '37.75%', y: '19.30%' } }, 'IqooNeo10PP': { image: 'phones/IqooNeo10PP.png', stabilizationPoint: { x: '41.58%', y: '20.20%' } }, 'Pixel8P': { image: 'phones/Pixel8P.png', stabilizationPoint: { x: '21.34%', y: '16.57%' } }, 'IqooNeo9SPP': { image: 'phones/IqooNeo9SPP.png', stabilizationPoint: { x: '42.72%', y: '38.93%' } }, 'SonyXperia1M7': { image: 'phones/SonyXperia1M7.png', stabilizationPoint: { x: '26.07%', y: '22.78%' } }, 'Xiaomi15U': { image: 'phones/Xiaomi15U.png', stabilizationPoint: { x: '42.09%', y: '34.85%' } }, 'VivoX200U': { image: 'phones/VivoX200U.png', stabilizationPoint: { x: '44.55%', y: '35.46%' } }, 'SamsungS25U': { image: 'phones/SamsungS25U.png', stabilizationPoint: { x: '37.38%', y: '25.63%' } }, 'HuaweiPura80U': { image: 'phones/HuaweiPura80U.png', stabilizationPoint: { x: '40.66%', y: '37.10%' } }, 'LgK10': { image: 'phones/LgK10.png', stabilizationPoint: { x: '49.68%', y: '13.74%' } }, 'Nothing1': { image: 'phones/Nothing1.png', stabilizationPoint: { x: '38.65%', y: '15.57%' } }, 'RealmeGT6': { image: 'phones/RealmeGT6.png', stabilizationPoint: { x: '39.55%', y: '19.52%' } }, 'SamsungA9': { image: 'phones/SamsungA9.png', stabilizationPoint: { x: '33.56%', y: '17.20%' } }, 'SamsungA72': { image: 'phones/SamsungA72.png', stabilizationPoint: { x: '40.45%', y: '21.88%' } }, 'SamsungS9+': { image: 'phones/SamsungS9+.png', stabilizationPoint: { x: '50.58%', y: '21.00%' } }, 'Xiaomi10U': { image: 'phones/Xiaomi10U.png', stabilizationPoint: { x: '37.75%', y: '31.02%' } }, 'GoogleFold2': { image: 'phones/GoogleFold2.png', stabilizationPoint: { x: '56.18%', y: '18.97%' } }, 'HuaweiMateXTU': { image: 'phones/HuaweiMateXTU.png', stabilizationPoint: { x: '43.08%', y: '27.12%' } }, 'HuaweiY9C': { image: 'phones/HuaweiY9C.png', stabilizationPoint: { x: '37.68%', y: '16.17%' } }, 'InfinixHot40I': { image: 'phones/InfinixHot40I.png', stabilizationPoint: { x: '41.80%', y: '25.00%' } }, 'IphoneXSM': { image: 'phones/IphoneXSM.png', stabilizationPoint: { x: '30.57%', y: '12.43%' } }, 'PocoX7Pro': { image: 'phones/PocoX7Pro.png', stabilizationPoint: { x: '40.49%', y: '13.94%' } }, 'SamsungA15': { image: 'phones/SamsungA15.png', stabilizationPoint: { x: '40.55%', y: '19.38%' } }, 'SamsungJ1': { image: 'phones/SamsungJ1.png', stabilizationPoint: { x: '49.66%', y: '23.50%' } }, 'SamsungS10+': { image: 'phones/SamsungS10+.png', stabilizationPoint: { x: '53.21%', y: '18.73%' } }, 'SamsungS4Zoom': { image: 'phones/SamsungS4Zoom.png', stabilizationPoint: { x: '50.14%', y: '30.74%' } }, 'SamsungXCover7': { image: 'phones/SamsungXCover7.png', stabilizationPoint: { x: '37.36%', y: '13.14%' } }, 'SamsungZFlip6': { image: 'phones/SamsungZFlip6.png', stabilizationPoint: { x: '35.54%', y: '9.70%' } }, 'XiaomiMixAlpha': { image: 'phones/XiaomiMixAlpha.png', stabilizationPoint: { x: '38.38%', y: '12.03%' } }, 'XiaomiMixFlip': { image: 'phones/XiaomiMixFlip.png', stabilizationPoint: { x: '41.80%', y: '22.10%' } }, 'ZteNubiaZ70U': { image: 'phones/ZteNubiaZ70U.png', stabilizationPoint: { x: '39.47%', y: '15.76%' } },'MeizuLucky08':{image:'phones/MeizuLucky08.png',stabilizationPoint:{x:'50.00%',y:'50.00%'}},'PocoX6P':{image:'phones/PocoX6P.png',stabilizationPoint:{x:'50.00%',y:'50.00%'}},'InfinixHot12P':{image:'phones/InfinixHot12P.png',stabilizationPoint:{x:'50.00%',y:'50.00%'}},'Xiaomi9':{image:'phones/Xiaomi9.png',stabilizationPoint:{x:'50.00%',y:'50.00%'}},'HonorMagicX9C':{image:'phones/HonorMagicX9C.png',stabilizationPoint:{x:'50.00%',y:'50.00%'}}};
+    const translations = {
+        ru: {
+            version_text: "Версия XS",
+            controls_title: "Управление",
+            phone_model_label: "Модель телефона:",
+            phone_rotation_label: "Вращение телефона",
+            joystick_instruction: "Нажмите и потяните в любом месте экрана слева для вращения.",
+            info_button_title: "Информация",
+            settings_button_title: "Настройки",
+            support_button_text: "Поддержать проект",
+            language_modal_title: "Выберите язык",
+            settings_title: "Настройки",
+            settings_graphics_title: "Графика / ФПС",
+            settings_particles: "Частицы при вращении",
+            settings_white_fire: "Белый огонь (Ярость)",
+            settings_shadows: "Тени от телефона",
+            settings_phone_title: "Телефон",
+            settings_stabilization: "Стабилизация камеры",
+            settings_extra_title: "Экстра",
+            settings_super_fps: "Супер буст ФПС",
+            close_button: "Закрыть",
+            info_title: "Информация о проекте",
+            info_development_title: "Разработка:",
+            info_jelikton_role: "разработчик кода, основатель",
+            info_romafacti1_role: "поиск телефонов, помощь в дизайне",
+            info_links_title: "Ссылки:"
+        },
+        en: {
+            version_text: "Version XS",
+            controls_title: "Controls",
+            phone_model_label: "Phone Model:",
+            phone_rotation_label: "Phone Rotation",
+            joystick_instruction: "Click and drag anywhere on the left screen area to rotate.",
+            info_button_title: "Information",
+            settings_button_title: "Settings",
+            support_button_text: "Support Project",
+            language_modal_title: "Select language",
+            settings_title: "Settings",
+            settings_graphics_title: "Graphics / FPS",
+            settings_particles: "Particles on rotation",
+            settings_white_fire: "White Fire (Rage)",
+            settings_shadows: "Phone shadows",
+            settings_phone_title: "Phone",
+            settings_stabilization: "Camera Stabilization",
+            settings_extra_title: "Extra",
+            settings_super_fps: "Super FPS Boost",
+            close_button: "Close",
+            info_title: "About Project",
+            info_development_title: "Development:",
+            info_jelikton_role: "code developer, founder",
+            info_romafacti1_role: "phone search, design assistant",
+            info_links_title: "Links:"
+        }
+    };
+    
+    let currentRotation = 0, targetRotation = 0, rageLevel = 0, rageTimeout, particlesInstance = null;
+    let lastAngle = 0, isDragging = false;
+
+    const wrapperBg = document.getElementById('wrapper-bg');
+    const phoneImage = document.getElementById('phone-image');
+    const phoneSelect = document.getElementById('phone-select');
+    const whiteFireEffect = document.getElementById('white-fire-effect');
+    const controlsWrapper = document.getElementById('controls-wrapper');
+    const toggleControlsBtn = document.getElementById('toggle-controls-btn');
+    const floatingJoystick = document.getElementById('floating-joystick');
+    const joystickHandle = document.getElementById('joystick-handle');
+    const supportButton = document.getElementById('support-button');
+    const languageModal = document.getElementById('language-modal');
+
+    const settingsModal = document.getElementById('settings-modal');
+    const infoModal = document.getElementById('info-modal');
+    const settingsBtn = document.getElementById('settings-btn');
+    const infoBtn = document.getElementById('info-btn');
+    
+    const particlesToggle = document.getElementById('particles-toggle');
+    const whiteFireToggle = document.getElementById('white-fire-toggle');
+    const shadowsToggle = document.getElementById('shadows-toggle');
+    const stabilizationToggle = document.getElementById('stabilization-toggle');
+    const superFpsBoostToggle = document.getElementById('super-fps-boost-toggle');
+    
+    function init() {
+        initLanguage();
+        initParticles();
+        loadSettings();
+        initSpamProtection();
+        updatePhoneSelector();
+        updatePhone();
+
+        wrapperBg.addEventListener('mousedown', onDragStart);
+        wrapperBg.addEventListener('touchstart', onDragStart, { passive: false });
+        phoneSelect.addEventListener('change', updatePhone);
+        toggleControlsBtn.addEventListener('click', () => controlsWrapper.classList.toggle('open'));
+        
+        settingsBtn.addEventListener('click', () => settingsModal.classList.remove('hidden'));
+        infoBtn.addEventListener('click', () => infoModal.classList.remove('hidden'));
+        
+        document.querySelectorAll('.modal-close-btn').forEach(btn => {
+            btn.addEventListener('click', () => btn.closest('.modal-overlay').classList.add('hidden'));
+        });
+        
+        [particlesToggle, whiteFireToggle, shadowsToggle, stabilizationToggle, superFpsBoostToggle].forEach(toggle => {
+            toggle.addEventListener('change', handleSettingsChange);
+        });
+
+        requestAnimationFrame(animationLoop);
+    }
+    
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        document.querySelectorAll('[data-translate-key]').forEach(el => {
+            const key = el.dataset.translateKey;
+            if (translations[lang][key]) {
+                const targetEl = el.querySelector('span') || el;
+                if (targetEl.childNodes[0].nodeType === Node.TEXT_NODE) {
+                     targetEl.childNodes[0].nodeValue = translations[lang][key] + " ";
+                } else {
+                     targetEl.textContent = translations[lang][key];
+                }
+            }
+        });
+    }
+
+    function initLanguage() {
+        const savedLang = localStorage.getItem('selectedLang');
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else {
+            languageModal.classList.remove('hidden');
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                setLanguage(lang);
+                localStorage.setItem('selectedLang', lang);
+                languageModal.classList.add('hidden');
+            });
+        });
+    }
+
+    async function initParticles() {
+        particlesInstance = await tsParticles.load("tsparticles", { paused: true, fpsLimit: 60, particles: { number: { value: 80 }, color: { value: "#888888" }, shape: { type: "circle" }, opacity: { value: 0.5, random: true }, size: { value: 3, random: true }, move: { enable: true, speed: 2, direction: "none", random: true, out_mode: "out" } }, interactivity: { events: { onclick: { enable: false } } } });
+    }
+    
+    let supportClickCount = 0, spamTimeout = null;
+    function initSpamProtection() {
+        supportButton.addEventListener('click', (e) => {
+            if (supportButton.classList.contains('punished')) {
+                e.preventDefault();
+                return;
+            }
+            clearTimeout(spamTimeout);
+            supportClickCount++;
+            if (supportClickCount >= 5) {
+                e.preventDefault();
+                supportButton.classList.add('punished');
+                setTimeout(() => {
+                    supportButton.classList.remove('punished');
+                }, 1000);
+                supportClickCount = 0;
+            }
+            spamTimeout = setTimeout(() => { supportClickCount = 0; }, 2000);
+        });
+    }
+
+    function updatePhoneSelector() { const uniquePhones = Object.keys(phones).sort(); const currentSelected = phoneSelect.value; phoneSelect.innerHTML = ''; uniquePhones.forEach(modelName => { const option = document.createElement('option'); option.value = modelName; option.textContent = modelName; phoneSelect.appendChild(option); }); if (uniquePhones.includes(currentSelected)) { phoneSelect.value = currentSelected; } }
+    
+    function updatePhone() {
+        const selectedModel = phoneSelect.value;
+        if (!selectedModel) { phoneImage.src = ''; return; }
+        const phoneData = phones[selectedModel];
+        const originPoint = (stabilizationToggle.checked) ? `${phoneData.stabilizationPoint.x} ${phoneData.stabilizationPoint.y}` : '50% 50%';
+        phoneImage.style.transformOrigin = originPoint;
+        phoneImage.src = phoneData.image;
+        targetRotation = 0; currentRotation = -1;
+        phoneImage.style.transform = `perspective(1000px) rotateZ(0deg)`;
+    }
+
+    function animationLoop() { if (isDragging || Math.abs(targetRotation - currentRotation) > 0.01) { currentRotation = targetRotation; phoneImage.style.transform = `perspective(1000px) rotateZ(${currentRotation}deg)`; } requestAnimationFrame(animationLoop); }
+    
+    let joystickCenterX = 0, joystickCenterY = 0;
+    
+    function onDragStart(e) {
+        if (e.target.closest('#controls-wrapper')) return;
+        e.preventDefault();
+        isDragging = true;
+
+        const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+        const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+        
+        joystickCenterX = clientX;
+        joystickCenterY = clientY;
+
+        floatingJoystick.style.left = `${joystickCenterX}px`;
+        floatingJoystick.style.top = `${joystickCenterY}px`;
+        floatingJoystick.style.transform = 'translate(-50%, -50%)';
+        floatingJoystick.classList.remove('hidden');
+
+        lastAngle = Math.atan2(clientY - joystickCenterY, clientX - joystickCenterX) * (180 / Math.PI);
+        
+        document.addEventListener('mousemove', onDragMove);
+        document.addEventListener('mouseup', onDragEnd);
+        document.addEventListener('touchmove', onDragMove, { passive: false });
+        document.addEventListener('touchend', onDragEnd);
+    }
+
+    function onDragMove(e) {
+        if (!isDragging) return;
+        const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+        const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+
+        const currentAngle = Math.atan2(clientY - joystickCenterY, clientX - joystickCenterX) * (180 / Math.PI);
+        let deltaAngle = currentAngle - lastAngle;
+
+        if (deltaAngle > 180) deltaAngle -= 360;
+        if (deltaAngle < -180) deltaAngle += 360;
+        
+        lastAngle = currentAngle;
+        updateRotation(targetRotation + deltaAngle);
+        
+        const deltaX = clientX - joystickCenterX;
+        const deltaY = clientY - joystickCenterY;
+        const distance = Math.min(45, Math.hypot(deltaX, deltaY));
+        const angleRad = Math.atan2(deltaY, deltaX);
+
+        joystickHandle.style.transform = `translate(-50%, -50%) translate(${distance * Math.cos(angleRad)}px, ${distance * Math.sin(angleRad)}px)`;
+    }
+
+    function onDragEnd() {
+        isDragging = false;
+        floatingJoystick.classList.add('hidden');
+        joystickHandle.style.transform = 'translate(-50%, -50%)';
+
+        document.removeEventListener('mousemove', onDragMove);
+        document.removeEventListener('mouseup', onDragEnd);
+        document.removeEventListener('touchmove', onDragMove);
+        document.removeEventListener('touchend', onDragEnd);
+    }
+    
+    function updateRotation(newRotation) {
+        targetRotation = newRotation;
+        if (superFpsBoostToggle.checked) return;
+        if (particlesToggle.checked && particlesInstance) { particlesInstance.play(); setTimeout(() => particlesInstance.pause(), 500); }
+        if (whiteFireToggle.checked) { rageLevel += 5; if (rageLevel > 150) whiteFireEffect.classList.add('active'); clearTimeout(rageTimeout); rageTimeout = setTimeout(() => { rageLevel = 0; whiteFireEffect.classList.remove('active'); }, 300); }
+    }
+    
+    function handleSettingsChange() {
+        if (superFpsBoostToggle.checked) {
+            particlesToggle.checked = false;
+            whiteFireToggle.checked = false;
+            shadowsToggle.checked = false;
+            particlesToggle.disabled = true;
+            whiteFireToggle.disabled = true;
+            shadowsToggle.disabled = true;
+        } else {
+            particlesToggle.disabled = false;
+            whiteFireToggle.disabled = false;
+            shadowsToggle.disabled = false;
+        }
+        document.body.classList.toggle('no-shadows', !shadowsToggle.checked || superFpsBoostToggle.checked);
+        updatePhone();
+        saveSettings();
+    }
+    
+    function saveSettings() { localStorage.setItem('stabilizerSettingsXS', JSON.stringify({ lang: document.documentElement.lang, particles: particlesToggle.checked, fire: whiteFireToggle.checked, shadows: shadowsToggle.checked, stabilization: stabilizationToggle.checked, superFps: superFpsBoostToggle.checked })); }
+    
+    function loadSettings() {
+        const settings = JSON.parse(localStorage.getItem('stabilizerSettingsXS'));
+        particlesToggle.checked = settings?.particles ?? true;
+        whiteFireToggle.checked = settings?.fire ?? true;
+        shadowsToggle.checked = settings?.shadows ?? true;
+        stabilizationToggle.checked = settings?.stabilization ?? true;
+        superFpsBoostToggle.checked = settings?.superFps ?? false;
+        handleSettingsChange();
+    }
+    
+    init();
+});

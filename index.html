@@ -3,91 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camera Stabilization Effect vX1 Fix</title>
+    <title>Camera Stabilization Effect vXS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="app-header">
-        <span class="version-text">Версия vX1 Fix</span>
+        <span class="version-text" data-translate-key="version_text">Версия XS</span>
         <span id="fps-counter">-- FPS</span>
     </header>
 
     <div class="app-layout">
         <div id="wrapper-bg" class="stabilization-wrapper">
-            <div id="rage-effect"></div>
+            <div id="tsparticles"></div>
+            <div id="white-fire-effect"></div>
             <div id="phone-container"><img id="phone-image" src="" alt="Телефон" draggable="false"></div>
+
+            <div id="floating-joystick" class="hidden">
+                <div id="joystick-base"></div>
+                <div id="joystick-handle"></div>
+            </div>
         </div>
-        <div class="controls">
-            <a href="https://t.me/jeliktontech" target="_blank" class="controls-header-link">t.me/jeliktontech</a>
-            <h2>Управление</h2>
-            <div class="control-group"><label for="phone-select">Модель телефона:</label><select id="phone-select"></select></div>
-            <div class="control-group stabilization-control">
-                <label>Вращение телефона</label>
-                <div class="knob-container">
-                    <div id="stabilization-knob">
-                        <div id="knob-handle"></div>
-                    </div>
+        
+        <div id="controls-wrapper">
+            <button id="toggle-controls-btn" title="Открыть/Закрыть панель">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="controls">
+                <h2 data-translate-key="controls_title">Управление</h2>
+                <div class="control-group"><label for="phone-select" data-translate-key="phone_model_label">Модель телефона:</label><select id="phone-select"></select></div>
+                <div class="control-group stabilization-control">
+                    <label data-translate-key="phone_rotation_label">Вращение телефона</label>
+                    <p class="joystick-instruction" data-translate-key="joystick_instruction">Нажмите и потяните в любом месте экрана слева для вращения.</p>
                 </div>
+                <div class="action-buttons">
+                    <button id="info-btn" title="Информация" data-translate-key="info_button_title"><i class="fas fa-info-circle"></i></button>
+                    <button id="settings-btn" title="Настройки" data-translate-key="settings_button_title"><i class="fas fa-cog"></i></button>
+                </div>
+                <a href="https://t.me/jelikton?text=Привет!%20Хочу%20поддержать%20твой%20проект%20денежкой." target="_blank" class="support-button" id="support-button"><span data-translate-key="support_button_text"><i class="fas fa-rocket"></i> Поддержать проект</span></a>
             </div>
-            <div class="action-buttons">
-                <button id="info-btn" title="Информация"><i class="fas fa-info-circle"></i></button>
-                <button id="settings-btn" title="Настройки"><i class="fas fa-cog"></i></button>
-            </div>
-            <a href="https://t.me/jelikton?text=Привет!%20Хочу%20поддержать%20твой%20проект%20денежкой." target="_blank" class="support-button"><span><i class="fas fa-rocket"></i> Поддержать проект</span></a>
         </div>
     </div>
-    
-    <div id="update-modal" class="modal-overlay hidden">
+
+    <div id="language-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <h3>Обновление vX1 Fix</h3>
-            <ul class="update-list">
-                <li><i class="fas fa-bug-slash"></i> <strong>Критические исправления:</strong> Устранены все баги с размерами телефонов на мобильных устройствах. Теперь всё выглядит идеально!</li>
-                <li><i class="fas fa-magic"></i> <strong>Косметические улучшения:</strong> Интерфейс стал еще компактнее и удобнее, а все окна теперь появляются плавно и красиво.</li>
-                <li><i class="fas fa-bolt"></i> <strong>Оптимизация ядра:</strong> Переработана логика для повышения стабильности и подготовки к будущим грандиозным фичам.</li>
-            </ul>
-            <button class="modal-close-btn">Понятно</button>
+            <h3 data-translate-key="language_modal_title">Выберите язык / Select language</h3>
+            <div class="language-buttons">
+                <button class="lang-btn" data-lang="ru">Русский (Russian)</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
         </div>
     </div>
 
     <div id="settings-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <h3>Настройки</h3>
-            <div class="settings-list">
-                <div class="setting-item">
-                    <span>Эффект "Ярости"</span>
-                    <label class="toggle-switch"><input type="checkbox" id="rage-toggle"><span class="slider"></span></label>
-                </div>
-                <div class="setting-item">
-                    <span>Стабилизация камеры</span>
-                    <label class="toggle-switch"><input type="checkbox" id="stabilization-toggle"><span class="slider"></span></label>
-                </div>
-                <div class="setting-item">
-                    <span>Увеличить FPS (отключить размытие)</span>
-                    <label class="toggle-switch"><input type="checkbox" id="optimize-toggle"><span class="slider"></span></label>
-                </div>
+            <h3 data-translate-key="settings_title">Настройки</h3>
+            <div class="settings-section">
+                <h4><i class="fas fa-palette"></i><span data-translate-key="settings_graphics_title">Графика / ФПС</span></h4>
+                <div class="setting-item"><span data-translate-key="settings_particles">Частицы при вращении</span><label class="toggle-switch"><input type="checkbox" id="particles-toggle"><span class="slider"></span></label></div>
+                <div class="setting-item"><span data-translate-key="settings_white_fire">Белый огонь (Ярость)</span><label class="toggle-switch"><input type="checkbox" id="white-fire-toggle"><span class="slider"></span></label></div>
+                <div class="setting-item"><span data-translate-key="settings_shadows">Тени от телефона</span><label class="toggle-switch"><input type="checkbox" id="shadows-toggle"><span class="slider"></span></label></div>
             </div>
-            <button class="modal-close-btn">Закрыть</button>
+             <div class="settings-section">
+                <h4><i class="fas fa-mobile-alt"></i><span data-translate-key="settings_phone_title">Телефон</span></h4>
+                <div class="setting-item"><span data-translate-key="settings_stabilization">Стабилизация камеры</span><label class="toggle-switch"><input type="checkbox" id="stabilization-toggle"><span class="slider"></span></label></div>
+            </div>
+            <div class="settings-section">
+                <h4><i class="fas fa-bolt"></i><span data-translate-key="settings_extra_title">Экстра</span></h4>
+                <div class="setting-item"><span data-translate-key="settings_super_fps">Супер буст ФПС</span><label class="toggle-switch"><input type="checkbox" id="super-fps-boost-toggle"><span class="slider"></span></label></div>
+            </div>
+            <button class="modal-close-btn" data-translate-key="close_button">Закрыть</button>
         </div>
     </div>
 
     <div id="info-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <h3>Информация о проекте</h3>
+            <h3 data-translate-key="info_title">Информация о проекте</h3>
             <div class="info-section">
-                <h4>Разработка:</h4>
-                <p><i class="fab fa-telegram"></i> <a href="https://t.me/jelikton" target="_blank">@jelikton</a> — разработчик кода, основатель</p>
-                <p><i class="fab fa-telegram"></i> <a href="https://t.me/romafacti1" target="_blank">@romafacti1</a> — поиск телефонов, помощь в дизайне</p>
+                <h4 data-translate-key="info_development_title">Разработка:</h4>
+                <p><i class="fab fa-telegram"></i> <a href="https://t.me/jelikton" target="_blank">@jelikton</a> — <span data-translate-key="info_jelikton_role">разработчик кода, основатель</span></p>
+                <p><i class="fab fa-telegram"></i> <a href="https://t.me/romafacti1" target="_blank">@romafacti1</a> — <span data-translate-key="info_romafacti1_role">поиск телефонов, помощь в дизайне</span></p>
             </div>
-            <div class="info-section">
-                <h4>Ссылки:</h4>
+             <div class="info-section">
+                <h4 data-translate-key="info_links_title">Ссылки:</h4>
                 <p><i class="fab fa-github"></i> <a href="https://jxstab.github.io" target="_blank">jxstab.github.io</a></p>
                 <p><i class="fab fa-telegram-plane"></i> <a href="https://t.me/jeliktontech" target="_blank">t.me/jeliktontech</a></p>
             </div>
-            <button class="modal-close-btn">Закрыть</button>
+            <button class="modal-close-btn" data-translate-key="close_button">Закрыть</button>
         </div>
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.9.3/tsparticles.slim.bundle.min.js"></script>
     <script src="app.js"></script>
     <script src="debug.js" defer></script>
 </body>
