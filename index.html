@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camera Stabilization Effect vXS</title>
+    <title>Camera Stabilization Effect vXS MAX</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Экран загрузки -->
+    <div id="loader-overlay">
+        <div class="loader-content">
+            <h1 data-translate-key="loader_welcome">Добро пожаловать на сайт jx stab!</h1>
+            <p data-translate-key="loader_support">Поддержите проект денежкой в телеграмме</p>
+            <p data-translate-key="loader_reactions">100 Реакций - новая обнова</p>
+            <a href="https://t.me/jeliktontech" target="_blank">t.me/jeliktontech</a>
+            <button id="enter-site-btn" data-translate-key="loader_enter">Войти</button>
+        </div>
+    </div>
+
+    <!-- Панель донатов -->
+    <div id="donation-bar">
+        <span data-translate-key="donation_text">Собрано денег: 0/3500Р</span>
+        <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 0%;"></div>
+        </div>
+    </div>
+
     <header class="app-header">
-        <span class="version-text" data-translate-key="version_text">Версия XS</span>
+        <span class="version-text" data-translate-key="version_text">Версия XS MAX</span>
         <span id="fps-counter">-- FPS</span>
         <button id="menu-btn" title="Открыть меню"><i class="fas fa-bars"></i></button>
     </header>
@@ -36,6 +56,9 @@
                 <p class="joystick-instruction" data-translate-key="joystick_instruction">Нажмите и потяните в любом месте экрана для вращения.</p>
             </div>
             <div class="action-buttons">
+                <button id="music-toggle-btn" title="Включить/выключить музыку"><i class="fas fa-music"></i> <span class="btn-text" data-translate-key="music_toggle_text">Музыка</span></button>
+            </div>
+            <div class="action-buttons">
                 <button id="info-btn" title="Информация" data-translate-key="info_button_title"><i class="fas fa-info-circle"></i> <span class="btn-text" data-translate-key="info_button_text">Инфо</span></button>
                 <button id="settings-btn" title="Настройки" data-translate-key="settings_button_title"><i class="fas fa-cog"></i> <span class="btn-text" data-translate-key="settings_button_text">Настройки</span></button>
             </div>
@@ -44,7 +67,7 @@
         </div>
     </div>
 
-    <!-- Модальное окно выбора языка -->
+    <!-- Модальное окно выбора языка (без изменений) -->
     <div id="language-modal" class="modal-overlay hidden">
         <div class="modal-content">
             <h3 data-translate-key="language_modal_title">Выберите язык / Select language</h3>
@@ -59,6 +82,10 @@
     <div id="settings-modal" class="modal-overlay hidden">
         <div class="modal-content">
             <h3 data-translate-key="settings_title">Настройки</h3>
+            <div class="settings-section">
+                <h4><i class="fas fa-adjust"></i><span data-translate-key="settings_theme_title">Тема</span></h4>
+                <div class="setting-item"><span data-translate-key="settings_dark_theme">Тёмная тема</span><label class="toggle-switch"><input type="checkbox" id="dark-theme-toggle"><span class="slider"></span></label></div>
+            </div>
             <div class="settings-section">
                 <h4><i class="fas fa-palette"></i><span data-translate-key="settings_graphics_title">Графика / ФПС</span></h4>
                 <div class="setting-item"><span data-translate-key="settings_particles">Частицы при вращении</span><label class="toggle-switch"><input type="checkbox" id="particles-toggle"><span class="slider"></span></label></div>
@@ -77,7 +104,7 @@
         </div>
     </div>
 
-    <!-- Модальное окно информации -->
+    <!-- Модальное окно информации (без изменений) -->
     <div id="info-modal" class="modal-overlay hidden">
         <div class="modal-content">
             <h3 data-translate-key="info_title">Информация о проекте</h3>
@@ -95,6 +122,11 @@
         </div>
     </div>
     
+    <!-- Музыка -->
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.9.3/tsparticles.slim.bundle.min.js"></script>
     <script src="app.js"></script>
     <script src="debug.js" defer></script>

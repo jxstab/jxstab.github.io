@@ -1,11 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const CURRENT_VERSION = 'XS';
+    const CURRENT_VERSION = 'XS MAX';
     const phones = { 'Redmi9A': { image: 'phones/Redmi9A.png', stabilizationPoint: { x: '34.93%', y: '9.04%' } }, 'SamsungS21U': { image: 'phones/SamsungS21U.png', stabilizationPoint: { x: '19.31%', y: '17.25%' } }, 'RealmeGT7Pro': { image: 'phones/RealmeGT7Pro.png', stabilizationPoint: { x: '38.82%', y: '26.66%' } }, 'HuaweiPura70U': { image: 'phones/HuaweiPura70U.png', stabilizationPoint: { x: '45.37%', y: '25.02%' } }, 'OnePlus12': { image: 'phones/OnePlus12.png', stabilizationPoint: { x: '39.71%', y: '20.12%' } }, 'SamsungS24U': { image: 'phones/SamsungS24U.png', stabilizationPoint: { x: '37.92%', y: '22.29%' } }, 'HonorMagic6P': { image: 'phones/HonorMagic6P.png', stabilizationPoint: { x: '45.07%', y: '32.88%' } }, 'OnePlusAce3': { image: 'phones/OnePlusAce3.png', stabilizationPoint: { x: '43.10%', y: '19.66%' } }, 'SamsungJ4': { image: 'phones/SamsungJ4.png', stabilizationPoint: { x: '50.34%', y: '16.35%' } }, 'TecnoPova4': { image: 'phones/TecnoPova4.png', stabilizationPoint: { x: '36.98%', y: '13.54%' } }, 'Iphone13PM': { image: 'phones/Iphone13PM.png', stabilizationPoint: { x: '37.15%', y: '25.98%' } }, 'Honor200': { image: 'phones/Honor200.png', stabilizationPoint: { x: '37.75%', y: '19.30%' } }, 'IqooNeo10PP': { image: 'phones/IqooNeo10PP.png', stabilizationPoint: { x: '41.58%', y: '20.20%' } }, 'Pixel8P': { image: 'phones/Pixel8P.png', stabilizationPoint: { x: '21.34%', y: '16.57%' } }, 'IqooNeo9SPP': { image: 'phones/IqooNeo9SPP.png', stabilizationPoint: { x: '37.70%', y: '11.79%' } }, 'SonyXperia1M7': { image: 'phones/SonyXperia1M7.png', stabilizationPoint: { x: '26.07%', y: '22.78%' } }, 'Xiaomi15U': { image: 'phones/Xiaomi15U.png', stabilizationPoint: { x: '42.09%', y: '34.85%' } }, 'VivoX200U': { image: 'phones/VivoX200U.png', stabilizationPoint: { x: '44.55%', y: '35.46%' } }, 'SamsungS25U': { image: 'phones/SamsungS25U.png', stabilizationPoint: { x: '37.38%', y: '25.63%' } }, 'HuaweiPura80U': { image: 'phones/HuaweiPura80U.png', stabilizationPoint: { x: '40.66%', y: '37.10%' } }, 'LgK10': { image: 'phones/LgK10.png', stabilizationPoint: { x: '49.68%', y: '13.74%' } }, 'Nothing1': { image: 'phones/Nothing1.png', stabilizationPoint: { x: '38.65%', y: '15.57%' } }, 'RealmeGT6': { image: 'phones/RealmeGT6.png', stabilizationPoint: { x: '39.55%', y: '19.52%' } }, 'SamsungA9': { image: 'phones/SamsungA9.png', stabilizationPoint: { x: '33.56%', y: '17.20%' } }, 'SamsungA72': { image: 'phones/SamsungA72.png', stabilizationPoint: { x: '40.45%', y: '21.88%' } }, 'SamsungS9+': { image: 'phones/SamsungS9+.png', stabilizationPoint: { x: '50.58%', y: '21.00%' } }, 'Xiaomi10U': { image: 'phones/Xiaomi10U.png', stabilizationPoint: { x: '37.75%', y: '31.02%' } }, 'GoogleFold2': { image: 'phones/GoogleFold2.png', stabilizationPoint: { x: '56.18%', y: '18.97%' } }, 'HuaweiMateXTU': { image: 'phones/HuaweiMateXTU.png', stabilizationPoint: { x: '43.08%', y: '27.12%' } }, 'HuaweiY9C': { image: 'phones/HuaweiY9C.png', stabilizationPoint: { x: '37.74%', y: '16.04%' } }, 'InfinixHot40I': { image: 'phones/InfinixHot40I.png', stabilizationPoint: { x: '41.80%', y: '25.00%' } }, 'IphoneXSM': { image: 'phones/IphoneXSM.png', stabilizationPoint: { x: '30.57%', y: '12.43%' } }, 'PocoX7Pro': { image: 'phones/PocoX7Pro.png', stabilizationPoint: { x: '40.49%', y: '13.94%' } }, 'SamsungA15': { image: 'phones/SamsungA15.png', stabilizationPoint: { x: '40.55%', y: '19.38%' } }, 'SamsungJ1': { image: 'phones/SamsungJ1.png', stabilizationPoint: { x: '49.66%', y: '23.50%' } }, 'SamsungS10+': { image: 'phones/SamsungS10+.png', stabilizationPoint: { x: '53.21%', y: '18.73%' } }, 'SamsungS4Zoom': { image: 'phones/SamsungS4Zoom.png', stabilizationPoint: { x: '50.14%', y: '30.74%' } }, 'SamsungXCover7': { image: 'phones/SamsungXCover7.png', stabilizationPoint: { x: '37.36%', y: '13.14%' } }, 'SamsungZFlip6': { image: 'phones/SamsungZFlip6.png', stabilizationPoint: { x: '35.54%', y: '9.70%' } }, 'XiaomiMixAlpha': { image: 'phones/XiaomiMixAlpha.png', stabilizationPoint: { x: '38.38%', y: '12.03%' } }, 'XiaomiMixFlip': { image: 'phones/XiaomiMixFlip.png', stabilizationPoint: { x: '41.80%', y: '22.10%' } }, 'ZteNubiaZ70U': { image: 'phones/ZteNubiaZ70U.png', stabilizationPoint: { x: '39.47%', y: '15.76%' } },'MeizuLucky08':{image:'phones/MeizuLucky08.png',stabilizationPoint:{x:'50.00%',y:'16.46%'}},'PocoX6P':{image:'phones/PocoX6P.png',stabilizationPoint:{x:'38.69%',y:'13.81%'}},'InfinixHot12P':{image:'phones/InfinixHot12P.png',stabilizationPoint:{x:'36.08%',y:'20.08%'}},'Xiaomi9':{image:'phones/Xiaomi9.png',stabilizationPoint:{x:'35.43%',y:'10.67%'}},'HonorMagicX9C':{image:'phones/HonorMagicX9C.png',stabilizationPoint:{x:'44.36%',y:'18.07%'}}};
-    const translations = { ru: { version_text: "Версия XS", controls_title: "Управление", phone_model_label: "Модель телефона:", phone_rotation_label: "Вращение телефона", joystick_instruction: "Нажмите и потяните в любом месте экрана для вращения.", info_button_title: "Информация", settings_button_title: "Настройки", info_button_text: "Инфо", settings_button_text: "Настройки", support_button_text: "Поддержать проект", language_modal_title: "Выберите язык", settings_title: "Настройки", settings_graphics_title: "Графика / ФПС", settings_particles: "Частицы при вращении", settings_white_fire: "Белый огонь (Ярость)", settings_shadows: "Тени от телефона", settings_phone_title: "Телефон", settings_stabilization: "Стабилизация камеры", settings_extra_title: "Экстра", settings_super_fps: "Супер буст ФПС", close_button: "Закрыть", info_title: "Информация о проекте", info_development_title: "Разработка:", info_jelikton_role: "разработчик кода, основатель", info_romafacti1_role: "поиск телефонов, помощь в дизайне", info_links_title: "Ссылки:" }, en: { version_text: "Version XS", controls_title: "Controls", phone_model_label: "Phone Model:", phone_rotation_label: "Phone Rotation", joystick_instruction: "Click and drag anywhere on the screen to rotate.", info_button_title: "Information", settings_button_title: "Settings", info_button_text: "Info", settings_button_text: "Settings", support_button_text: "Support Project", language_modal_title: "Select language", settings_title: "Settings", settings_graphics_title: "Graphics / FPS", settings_particles: "Particles on rotation", settings_white_fire: "White Fire (Rage)", settings_shadows: "Phone shadows", settings_phone_title: "Phone", settings_stabilization: "Camera Stabilization", settings_extra_title: "Extra", settings_super_fps: "Super FPS Boost", close_button: "Close", info_title: "About Project", info_development_title: "Development:", info_jelikton_role: "code developer, founder", info_romafacti1_role: "phone search, design assistant", info_links_title: "Links:" } };
+    const translations = {
+        ru: { version_text: "Версия XS MAX", controls_title: "Управление", phone_model_label: "Модель телефона:", phone_rotation_label: "Вращение телефона", joystick_instruction: "Нажмите и потяните в любом месте экрана для вращения.", info_button_title: "Информация", settings_button_title: "Настройки", info_button_text: "Инфо", settings_button_text: "Настройки", support_button_text: "Поддержать проект", language_modal_title: "Выберите язык", settings_title: "Настройки", settings_graphics_title: "Графика / ФПС", settings_particles: "Частицы при вращении", settings_white_fire: "Белый огонь (Ярость)", settings_shadows: "Тени от телефона", settings_phone_title: "Телефон", settings_stabilization: "Стабилизация камеры", settings_extra_title: "Экстра", settings_super_fps: "Супер буст ФПС", close_button: "Закрыть", info_title: "Информация о проекте", info_development_title: "Разработка:", info_jelikton_role: "разработчик кода, основатель", info_romafacti1_role: "поиск телефонов, помощь в дизайне", info_links_title: "Ссылки:", loader_welcome: "Добро пожаловать на сайт jx stab!", loader_support: "Поддержите проект денежкой в телеграмме", loader_reactions: "100 Реакций - новая обнова", loader_enter: "Войти", donation_text: "Собрано денег: 0/3500Р", settings_theme_title: "Тема", settings_dark_theme: "Тёмная тема", music_toggle_text: "Музыка" },
+        en: { version_text: "Version XS MAX", controls_title: "Controls", phone_model_label: "Phone Model:", phone_rotation_label: "Phone Rotation", joystick_instruction: "Click and drag anywhere on the screen to rotate.", info_button_title: "Information", settings_button_title: "Settings", info_button_text: "Info", settings_button_text: "Settings", support_button_text: "Support Project", language_modal_title: "Select language", settings_title: "Settings", settings_graphics_title: "Graphics / FPS", settings_particles: "Particles on rotation", settings_white_fire: "White Fire (Rage)", settings_shadows: "Phone shadows", settings_phone_title: "Phone", settings_stabilization: "Camera Stabilization", settings_extra_title: "Extra", settings_super_fps: "Super FPS Boost", close_button: "Close", info_title: "About Project", info_development_title: "Development:", info_jelikton_role: "code developer, founder", info_romafacti1_role: "phone search, design assistant", info_links_title: "Links:", loader_welcome: "Welcome to jx stab!", loader_support: "Support the project with a donation on Telegram", loader_reactions: "100 Reactions - new update", loader_enter: "Enter", donation_text: "Collected: 0/3500₽", settings_theme_title: "Theme", settings_dark_theme: "Dark Theme", music_toggle_text: "Music" }
+    };
     
     let currentRotation = 0, targetRotation = 0, rageLevel = 0, rageTimeout, particlesInstance = null;
     let lastAngle = 0, isDragging = false;
 
+    const loaderOverlay = document.getElementById('loader-overlay');
+    const enterSiteBtn = document.getElementById('enter-site-btn');
+    const backgroundMusic = document.getElementById('background-music');
+    const musicToggleButton = document.getElementById('music-toggle-btn');
+    const darkThemeToggle = document.getElementById('dark-theme-toggle');
     const wrapperBg = document.getElementById('wrapper-bg');
     const phoneImage = document.getElementById('phone-image');
     const phoneSelect = document.getElementById('phone-select');
@@ -16,12 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageModal = document.getElementById('language-modal');
     const menuBtn = document.getElementById('menu-btn');
     const mainMenuModal = document.getElementById('main-menu-modal');
-
     const settingsModal = document.getElementById('settings-modal');
     const infoModal = document.getElementById('info-modal');
     const settingsBtn = document.getElementById('settings-btn');
     const infoBtn = document.getElementById('info-btn');
-    
     const particlesToggle = document.getElementById('particles-toggle');
     const whiteFireToggle = document.getElementById('white-fire-toggle');
     const shadowsToggle = document.getElementById('shadows-toggle');
@@ -29,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const superFpsBoostToggle = document.getElementById('super-fps-boost-toggle');
     
     function init() {
+        initLoader();
         initLanguage();
         initParticles();
         loadSettings();
@@ -48,9 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', () => btn.closest('.modal-overlay').classList.add('hidden'));
         });
         
-        [particlesToggle, whiteFireToggle, shadowsToggle, stabilizationToggle, superFpsBoostToggle].forEach(toggle => {
+        [particlesToggle, whiteFireToggle, shadowsToggle, stabilizationToggle, superFpsBoostToggle, darkThemeToggle].forEach(toggle => {
             toggle.addEventListener('change', handleSettingsChange);
         });
+        musicToggleButton.addEventListener('click', toggleMusic);
 
         requestAnimationFrame(animationLoop);
 
@@ -58,6 +66,25 @@ document.addEventListener('DOMContentLoaded', () => {
         document.dispatchEvent(new Event('appReady'));
     }
     
+    function initLoader() {
+        enterSiteBtn.addEventListener('click', () => {
+            loaderOverlay.classList.add('hidden');
+        });
+    }
+
+    function toggleMusic() {
+        const icon = musicToggleButton.querySelector('i');
+        if (backgroundMusic.paused) {
+            backgroundMusic.play().catch(e => console.error("Music playback failed:", e));
+            icon.classList.remove('fa-music');
+            icon.classList.add('fa-volume-high');
+        } else {
+            backgroundMusic.pause();
+            icon.classList.remove('fa-volume-high');
+            icon.classList.add('fa-music');
+        }
+    }
+
     function setLanguage(lang) {
         document.documentElement.lang = lang;
         document.querySelectorAll('[data-translate-key]').forEach(el => {
@@ -218,11 +245,12 @@ document.addEventListener('DOMContentLoaded', () => {
             shadowsToggle.disabled = false;
         }
         document.body.classList.toggle('no-shadows', !shadowsToggle.checked || superFpsBoostToggle.checked);
+        document.body.classList.toggle('dark-theme', darkThemeToggle.checked);
         updatePhone();
         saveSettings();
     }
     
-    function saveSettings() { localStorage.setItem('stabilizerSettingsXS', JSON.stringify({ lang: document.documentElement.lang, particles: particlesToggle.checked, fire: whiteFireToggle.checked, shadows: shadowsToggle.checked, stabilization: stabilizationToggle.checked, superFps: superFpsBoostToggle.checked })); }
+    function saveSettings() { localStorage.setItem('stabilizerSettingsXS', JSON.stringify({ lang: document.documentElement.lang, particles: particlesToggle.checked, fire: whiteFireToggle.checked, shadows: shadowsToggle.checked, stabilization: stabilizationToggle.checked, superFps: superFpsBoostToggle.checked, darkTheme: darkThemeToggle.checked })); }
     
     function loadSettings() {
         const settings = JSON.parse(localStorage.getItem('stabilizerSettingsXS'));
@@ -231,6 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
         shadowsToggle.checked = settings?.shadows ?? true;
         stabilizationToggle.checked = settings?.stabilization ?? true;
         superFpsBoostToggle.checked = settings?.superFps ?? false;
+        darkThemeToggle.checked = settings?.darkTheme ?? false;
         handleSettingsChange();
     }
     
