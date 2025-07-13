@@ -23,7 +23,6 @@ body.dark-theme {
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: flex; flex-direction: column; height: 100vh; overflow: hidden; background: var(--background-color); color: var(--text-color); transition: background-color 0.3s ease, color 0.3s ease;}
 
-/* Стили загрузчика */
 #loader-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--background-color); z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; transition: opacity 0.5s ease, visibility 0.5s ease; }
 #loader-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 .loader-content { padding: 20px; }
@@ -33,7 +32,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helve
 #enter-site-btn { padding: 15px 30px; font-size: 1.2em; font-weight: bold; cursor: pointer; background-color: var(--accent-color); color: white; border: none; border-radius: 12px; transition: all 0.2s ease; }
 #enter-site-btn:hover { transform: scale(1.05); }
 
-/* Стили панели донатов */
 #donation-bar { width: 100%; padding: 12px 20px; background-color: var(--secondary-color); text-align: center; color: var(--text-color); font-size: 0.9em; border-bottom: 1px solid var(--border-color); flex-shrink: 0; }
 .progress-bar-container { width: 100%; max-width: 300px; margin: 8px auto 0; height: 6px; background-color: var(--border-color); border-radius: 3px; overflow: hidden; }
 .progress-bar-fill { height: 100%; background-color: var(--accent-color); border-radius: 3px; transition: width 0.5s ease-out; }
@@ -41,17 +39,23 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helve
 .app-header { width: 100%; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; z-index: 10; border-bottom: 1px solid var(--border-color); background-color: var(--background-color); }
 .version-text { color: var(--text-color-secondary); font-size: 0.9em; }
 #fps-counter { position: absolute; left: 50%; transform: translateX(-50%); color: var(--text-color-secondary); font-family: monospace; }
-
-.header-buttons { display: flex; gap: 10px; }
-#achievements-btn, #menu-btn { background: none; border: 1px solid var(--border-color); color: var(--text-color); width: 40px; height: 40px; border-radius: 8px; cursor: pointer; transition: all .2s; font-size: 1rem; }
-#achievements-btn:hover, #menu-btn:hover { background: var(--secondary-color); color: var(--accent-color); }
+#menu-btn { background: none; border: 1px solid var(--border-color); color: var(--text-color); width: 40px; height: 40px; border-radius: 8px; cursor: pointer; transition: all .2s; font-size: 1rem; }
+#menu-btn:hover { background: var(--secondary-color); color: var(--accent-color); }
 
 .app-layout { display: flex; flex-grow: 1; position: relative; }
 .stabilization-wrapper { flex-grow: 1; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden; position: relative; cursor: grab; }
 .stabilization-wrapper:active { cursor: grabbing; }
 #tsparticles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
 #phone-container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; transition: transform 0.2s ease-out; will-change: transform; transform: translateZ(0); z-index: 3; }
-#phone-image { max-height: 80%; max-width: 90%; user-select: none; pointer-events: none; transform-style: preserve-3d; transition: filter 0.3s ease; }
+#phone-image { 
+    /* ИЗМЕНЕНО: уменьшен максимальный размер для повышения четкости */
+    max-height: 75vh; /* vh - % от высоты видимой области экрана */
+    max-width: 380px;  /* Жесткое ограничение по ширине */
+    user-select: none; 
+    pointer-events: none; 
+    transform-style: preserve-3d; 
+    transition: filter 0.3s ease; 
+}
 body:not(.no-shadows) #phone-image { filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15)); }
 body.dark-theme:not(.no-shadows) #phone-image { filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4)); }
 
@@ -117,28 +121,3 @@ input:checked + .slider:before { transform: translateX(20px); }
 .info-section a { color: var(--accent-color); text-decoration: none; font-weight: 500; }
 .info-section i { margin-right: 10px; color: #aaa; }
 body.dark-theme .info-section i { color: #666; }
-
-/* Стили достижений */
-.achievements-subtitle { text-align: center; font-size: 0.8em; color: var(--text-color-secondary); margin-top: -10px; margin-bottom: 10px; }
-#achievements-list { display: flex; flex-direction: column; gap: 12px; max-height: 50vh; overflow-y: auto; padding-right: 5px; }
-.achievement-item { display: flex; align-items: center; gap: 15px; background-color: var(--secondary-color); padding: 15px; border-radius: 12px; border: 1px solid transparent; transition: all 0.3s ease; opacity: 0.7; }
-.achievement-item.completed { border-color: var(--accent-color); opacity: 1; }
-.achievement-icon { font-size: 24px; color: var(--text-color-secondary); }
-.achievement-item.completed .achievement-icon { color: var(--accent-color); }
-.achievement-details { flex-grow: 1; }
-.achievement-details h4 { margin: 0 0 5px; font-weight: 600; color: var(--text-color); }
-.achievement-details p { margin: 0; font-size: 0.85em; color: var(--text-color-secondary); }
-.achievement-progress-bar { height: 6px; background-color: var(--border-color); border-radius: 3px; margin-top: 8px; overflow: hidden; }
-.achievement-progress-fill { height: 100%; background-color: var(--accent-color); border-radius: 3px; transition: width 0.5s ease; }
-.achievement-check { font-size: 24px; color: var(--accent-color); }
-.all-done-text { text-align: center; color: var(--text-color-secondary); padding: 20px; }
-
-/* Стили уведомлений */
-#notification-container { position: fixed; top: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
-.toast-notification { display: flex; align-items: center; gap: 15px; padding: 15px; border-radius: 12px; background-color: var(--modal-bg-color); color: var(--text-color); border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.1); animation: slideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; min-width: 320px; }
-.toast-notification.closing { animation: fadeOut 0.5s ease-out forwards; }
-.toast-icon { font-size: 24px; color: var(--accent-color); }
-.toast-content strong { font-weight: 600; }
-.toast-content p { margin: 2px 0 0; font-size: 0.9em; color: var(--text-color-secondary); }
-@keyframes slideIn { from { transform: translateX(120%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
-@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }

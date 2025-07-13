@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    <!-- Экран загрузки -->
     <div id="loader-overlay">
         <div class="loader-content">
             <h1 data-translate-key="loader_welcome">Добро пожаловать на сайт jx stab!</h1>
@@ -20,7 +19,6 @@
         </div>
     </div>
 
-    <!-- Панель донатов -->
     <div id="donation-bar">
         <span data-translate-key="donation_text">Собрано денег: 0/3500Р</span>
         <div class="progress-bar-container">
@@ -31,10 +29,7 @@
     <header class="app-header">
         <span class="version-text" data-translate-key="version_text">Версия XS MAX</span>
         <span id="fps-counter">-- FPS</span>
-        <div class="header-buttons">
-            <button id="achievements-btn" title="Достижения"><i class="fas fa-trophy"></i></button>
-            <button id="menu-btn" title="Открыть меню"><i class="fas fa-bars"></i></button>
-        </div>
+        <button id="menu-btn" title="Открыть меню"><i class="fas fa-bars"></i></button>
     </header>
 
     <div class="app-layout">
@@ -67,7 +62,6 @@
         </div>
     </div>
 
-    <!-- Главное меню -->
     <div id="main-menu-modal" class="modal-overlay hidden">
         <div class="modal-content main-menu-content">
             <h2 data-translate-key="controls_title">Управление</h2>
@@ -88,7 +82,6 @@
         </div>
     </div>
 
-    <!-- Модальное окно выбора языка -->
     <div id="language-modal" class="modal-overlay hidden">
         <div class="modal-content">
             <h3 data-translate-key="language_modal_title">Выберите язык / Select language</h3>
@@ -99,7 +92,6 @@
         </div>
     </div>
 
-    <!-- Модальное окно настроек -->
     <div id="settings-modal" class="modal-overlay hidden">
         <div class="modal-content">
             <h3 data-translate-key="settings_title">Настройки</h3>
@@ -125,7 +117,6 @@
         </div>
     </div>
 
-    <!-- Модальное окно информации -->
     <div id="info-modal" class="modal-overlay hidden">
         <div class="modal-content">
             <h3 data-translate-key="info_title">Информация о проекте</h3>
@@ -143,26 +134,12 @@
         </div>
     </div>
     
-    <!-- Модальное окно достижений -->
-    <div id="achievements-modal" class="modal-overlay hidden">
-        <div class="modal-content">
-            <h3 data-translate-key="achievements_title">Достижения</h3>
-            <p class="achievements-subtitle" data-translate-key="achievements_subtitle">Новые задания появляются каждые 10 минут!</p>
-            <div id="achievements-list"></div>
-            <button class="modal-close-btn" data-translate-key="close_button">Закрыть</button>
-        </div>
-    </div>
-    
-    <!-- Контейнер для уведомлений -->
-    <div id="notification-container"></div>
-
     <audio id="background-music" loop>
         <source src="music.mp3" type="audio/mpeg">
     </audio>
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
     <script src="app.js"></script>
-    <!-- Файл achievements.js удален -->
     <script src="debug.js" defer></script>
 </body>
 </html>
