@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const CURRENT_VERSION = 'XS MAX';
+    const CURRENT_VERSION = 'XS MAX PROPELLER';
 
     const phones = {
         'Redmi9A': { image: 'phones/Redmi9A.png', stabilizationPoint: { x: '34.93%', y: '9.04%' }, specs: { processor: 'Helio G25 Octa-Core', camera: '13MP AI Main Camera' } },
@@ -52,15 +52,24 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     const translations = {
-        ru: { version_text: "Версия XS MAX", controls_title: "Управление", phone_model_label: "Модель телефона:", phone_rotation_label: "Вращение телефона", joystick_instruction: "Нажмите и потяните в любом месте экрана для вращения.", info_button_title: "Информация", settings_button_title: "Настройки", info_button_text: "Инфо", settings_button_text: "Настройки", support_button_text: "Поддержать проект", language_modal_title: "Выберите язык", settings_title: "Настройки", settings_graphics_title: "Графика / ФПС", settings_particles: "Частицы", settings_white_fire: "Белый огонь (Ярость)", settings_shadows: "Тени от телефона", settings_phone_title: "Телефон", settings_stabilization: "Стабилизация камеры", settings_extra_title: "Экстра", settings_super_fps: "Супер буст ФПС", close_button: "Закрыть", info_title: "Информация о проекте", info_development_title: "Разработка:", info_jelikton_role: "разработчик кода, основатель", info_romafacti1_role: "поиск телефонов, помощь в дизайне", info_links_title: "Ссылки:", loader_welcome: "Добро пожаловать на сайт jx stab!", loader_support: "Поддержите проект денежкой в телеграмме", loader_reactions: "100 Реакций - новая обнова", loader_enter: "Войти", donation_text: "Собрано денег: 0/3500Р", settings_theme_title: "Тема", settings_dark_theme: "Тёмная тема", music_toggle_text: "Музыка", processor_title: "Процессор", camera_title: "Камера" },
-        en: { version_text: "Version XS MAX", controls_title: "Controls", phone_model_label: "Phone Model:", phone_rotation_label: "Phone Rotation", joystick_instruction: "Click and drag anywhere on the screen to rotate.", info_button_title: "Information", settings_button_title: "Settings", info_button_text: "Info", settings_button_text: "Settings", support_button_text: "Support Project", language_modal_title: "Select language", settings_title: "Settings", settings_graphics_title: "Graphics / FPS", settings_particles: "Particles", settings_white_fire: "White Fire (Rage)", settings_shadows: "Phone shadows", settings_phone_title: "Phone", settings_stabilization: "Camera Stabilization", settings_extra_title: "Extra", settings_super_fps: "Super FPS Boost", close_button: "Close", info_title: "About Project", info_development_title: "Development:", info_jelikton_role: "code developer, founder", info_romafacti1_role: "phone search, design assistant", info_links_title: "Links:", loader_welcome: "Welcome to jx stab!", loader_support: "Support the project with a donation on Telegram", loader_reactions: "100 Reactions - new update", loader_enter: "Enter", donation_text: "Collected: 0/3500₽", settings_theme_title: "Theme", settings_dark_theme: "Dark Theme", music_toggle_text: "Music", processor_title: "Processor", camera_title: "Camera" }
+        ru: { version_text: "Версия XS MAX PROPELLER", controls_title: "Управление", phone_model_label: "Модель телефона:", phone_rotation_label: "Вращение телефона", joystick_instruction: "Нажмите и потяните в любом месте экрана для вращения.", info_button_title: "Информация", settings_button_title: "Настройки", info_button_text: "Инфо", settings_button_text: "Настройки", support_button_text: "Написать автору (@jelikton)", language_modal_title: "Выберите язык", settings_title: "Настройки", settings_graphics_title: "Графика / ФПС", settings_particles: "Частицы", settings_white_fire: "Белый огонь (Ярость)", settings_shadows: "Тени от телефона", settings_phone_title: "Телефон", settings_stabilization: "Стабилизация камеры", settings_extra_title: "Экстра", settings_super_fps: "Супер буст ФПС", close_button: "Закрыть", info_title: "Информация о проекте", info_development_title: "Разработка:", info_jelikton_role: "разработчик кода, основатель", info_romafacti1_role: "поиск телефонов, помощь в дизайне", info_links_title: "Ссылки:", loader_welcome: "Добро пожаловать на сайт jx stab!", loader_support: "Поддержите проект денежкой в телеграмме", loader_reactions: "100 Реакций - новая обнова", loader_enter: "Войти", donation_text: "Задонатить деньгу автору", settings_light_theme: "Светлая тема", music_toggle_text: "Музыка", processor_title: "Процессор", camera_title: "Камера" },
+        en: { version_text: "Version XS MAX PROPELLER", controls_title: "Controls", phone_model_label: "Phone Model:", phone_rotation_label: "Phone Rotation", joystick_instruction: "Click and drag anywhere on the screen to rotate.", info_button_title: "Information", settings_button_title: "Settings", info_button_text: "Info", settings_button_text: "Settings", support_button_text: "Write to author (@jelikton)", language_modal_title: "Select language", settings_title: "Settings", settings_graphics_title: "Graphics / FPS", settings_particles: "Particles", settings_white_fire: "White Fire (Rage)", settings_shadows: "Phone shadows", settings_phone_title: "Phone", settings_stabilization: "Camera Stabilization", settings_extra_title: "Extra", settings_super_fps: "Super FPS Boost", close_button: "Close", info_title: "About Project", info_development_title: "Development:", info_jelikton_role: "code developer, founder", info_romafacti1_role: "phone search, design assistant", info_links_title: "Links:", loader_welcome: "Welcome to jx stab!", loader_support: "Support the project with a donation on Telegram", loader_reactions: "100 Reactions - new update", loader_enter: "Enter", donation_text: "Donate to author", settings_light_theme: "Light Theme", music_toggle_text: "Music", processor_title: "Processor", camera_title: "Camera" }
     };
     
-    const lightThemeParticles = { paused: true, fpsLimit: 60, particles: { number: { value: 80 }, color: { value: "#888888" }, shape: { type: "circle" }, opacity: { value: 0.5, random: true }, size: { value: 3, random: true }, move: { enable: true, speed: 2, direction: "none", random: true, out_mode: "out" } }, interactivity: { events: { onclick: { enable: false } } } };
-    const darkThemeParticles = { fpsLimit: 60, particles: { number: { value: 100, density: { enable: true, value_area: 800 } }, color: { value: "#ffffff" }, shape: { type: "image", image: [ { src: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==', width: 20, height: 20 }, { src: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIyNSIgZmlsbD0iI2FkYWYxZSIvPjxwYXRoIGQ9Ik0xNSw1MEExLDEsMCwwLDEsODUsNTAiIHN0cm9rZT0iI2VkZWYyZSIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIiB0cmFuc2Zvcm09InJvdGF0ZSgtMjApIHRyYW5zZm9ybS1vcmlnaW49IjUwIDUwIi8+PC9zdmc+', width: 50, height: 50 }, { src: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIzNSIgZmlsbD0iI2Y5YjIyMyIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iMzAiIHI9IjUiIGZpbGw9IiNkZTg3MDYiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjcwIiByPSI4IiBmaWxsPSIjZGU4NzA2Ii8+PC9zdmc+', width: 40, height: 40 } ] }, opacity: { value: 0.7, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, size: { value: 8, random: true, anim: { enable: true, speed: 2, size_min: 1, sync: false } }, move: { enable: true, speed: 1, direction: "top-left", random: true, straight: true, out_mode: "out" } }, interactivity: { events: { onclick: { enable: false } } } };
+    // Particles
+    const darkThemeParticles = { fpsLimit: 60, particles: { number: { value: 90, density: { enable: true, value_area: 800 } }, color: { value: "#ffffff" }, shape: { type: "circle" }, opacity: { value: 0.6, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } }, size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 1, sync: false } }, move: { enable: true, speed: 0.8, direction: "top", random: true, straight: false, out_mode: "out" } }, interactivity: { events: { onclick: { enable: false } } } };
+    const lightThemeParticles = { paused: true, fpsLimit: 60, particles: { number: { value: 60 }, color: { value: "#000000" }, shape: { type: "circle" }, opacity: { value: 0.4, random: true }, size: { value: 2, random: true }, move: { enable: true, speed: 1.5, direction: "none", random: true, out_mode: "out" } }, interactivity: { events: { onclick: { enable: false } } } };
     
     let currentRotation = 0, targetRotation = 0, rageLevel = 0, rageTimeout, particlesInstance = null, lastAngle = 0, isDragging = false;
+    let mouseX = 0, mouseY = 0;
     
+    // FPS Logic
+    let lastTime = performance.now();
+    let frameCount = 0;
+    let fps = 0;
+    const fpsDisplay = document.getElementById('fps-counter');
+
+    // DOM
     const phoneInfoContainer = document.getElementById('phone-info-container');
     const phoneProcessorInfo = document.getElementById('phone-processor-info');
     const phoneCameraInfo = document.getElementById('phone-camera-info');
@@ -68,7 +77,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const enterSiteBtn = document.getElementById('enter-site-btn');
     const backgroundMusic = document.getElementById('background-music');
     const musicToggleButton = document.getElementById('music-toggle-btn');
-    const darkThemeToggle = document.getElementById('dark-theme-toggle');
+    const propellerBtn = document.getElementById('propeller-btn');
+    
+    // Settings
+    const lightThemeToggle = document.getElementById('light-theme-toggle'); // Logic inverted (Dark default)
+    const particlesToggle = document.getElementById('particles-toggle');
+    const whiteFireToggle = document.getElementById('white-fire-toggle');
+    const shadowsToggle = document.getElementById('shadows-toggle');
+    const stabilizationToggle = document.getElementById('stabilization-toggle');
+    const superFpsBoostToggle = document.getElementById('super-fps-boost-toggle');
+    const bgSelect = document.getElementById('bg-select');
+    const viewfinderToggle = document.getElementById('viewfinder-toggle');
+    const gyroToggle = document.getElementById('gyro-toggle');
+    const cameraViewfinder = document.getElementById('camera-viewfinder');
+    const viewfinderHorizon = document.getElementById('viewfinder-horizon');
+    
     const wrapperBg = document.getElementById('wrapper-bg');
     const phoneImage = document.getElementById('phone-image');
     const phoneSelect = document.getElementById('phone-select');
@@ -83,11 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const infoModal = document.getElementById('info-modal');
     const settingsBtn = document.getElementById('settings-btn');
     const infoBtn = document.getElementById('info-btn');
-    const particlesToggle = document.getElementById('particles-toggle');
-    const whiteFireToggle = document.getElementById('white-fire-toggle');
-    const shadowsToggle = document.getElementById('shadows-toggle');
-    const stabilizationToggle = document.getElementById('stabilization-toggle');
-    const superFpsBoostToggle = document.getElementById('super-fps-boost-toggle');
+
+    let isPropellerMode = false;
 
     function init() {
         initLoader();
@@ -108,12 +128,36 @@ document.addEventListener('DOMContentLoaded', () => {
         
         wrapperBg.addEventListener('mousedown', onDragStart);
         wrapperBg.addEventListener('touchstart', onDragStart, { passive: false });
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth) - 0.5;
+            mouseY = (e.clientY / window.innerHeight) - 0.5;
+        });
+        
         phoneSelect.addEventListener('change', updatePhone);
         
-        [particlesToggle, whiteFireToggle, shadowsToggle, stabilizationToggle, superFpsBoostToggle, darkThemeToggle].forEach(toggle => {
+        [particlesToggle, whiteFireToggle, shadowsToggle, stabilizationToggle, superFpsBoostToggle, lightThemeToggle, viewfinderToggle, gyroToggle].forEach(toggle => {
             toggle.addEventListener('change', handleSettingsChange);
         });
+        
+        bgSelect.addEventListener('change', handleBackgroundChange);
         musicToggleButton.addEventListener('click', toggleMusic);
+        propellerBtn.addEventListener('click', activatePropeller);
+
+        gyroToggle.addEventListener('click', (e) => {
+            if (gyroToggle.checked && typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
+                DeviceOrientationEvent.requestPermission()
+                    .then(permissionState => {
+                        if (permissionState !== 'granted') {
+                            gyroToggle.checked = false;
+                            alert('Gyroscope permission denied.');
+                        }
+                    })
+                    .catch(console.error);
+            }
+        });
+        
+        window.addEventListener('deviceorientation', handleGyroscope);
 
         requestAnimationFrame(animationLoop);
     }
@@ -124,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function initLanguage() { const savedLang = localStorage.getItem('selectedLang'); if (savedLang) { setLanguage(savedLang); } else { languageModal.classList.remove('hidden'); } document.querySelectorAll('.lang-btn').forEach(btn => { btn.addEventListener('click', () => { const lang = btn.dataset.lang; setLanguage(lang); localStorage.setItem('selectedLang', lang); languageModal.classList.add('hidden'); }); }); }
     
     async function loadParticlesConfig(config) { if (particlesInstance) { particlesInstance.destroy(); } particlesInstance = await tsParticles.load("tsparticles", config); }
-    function initParticles() { const config = darkThemeToggle.checked ? darkThemeParticles : lightThemeParticles; loadParticlesConfig(config); }
+    function initParticles() { const config = lightThemeToggle.checked ? lightThemeParticles : darkThemeParticles; loadParticlesConfig(config); }
 
     let supportClickCount = 0, spamTimeout = null; 
     function initSpamProtection() { supportButton.addEventListener('click', (e) => { if (supportButton.classList.contains('punished')) { e.preventDefault(); return; } clearTimeout(spamTimeout); supportClickCount++; if (supportClickCount >= 5) { e.preventDefault(); supportButton.classList.add('punished'); setTimeout(() => { supportButton.classList.remove('punished'); }, 1000); supportClickCount = 0; } spamTimeout = setTimeout(() => { supportClickCount = 0; }, 2000); }); }
@@ -140,11 +184,71 @@ document.addEventListener('DOMContentLoaded', () => {
         targetRotation = currentRotation;
     }
 
-    function animationLoop() { if (isDragging || Math.abs(targetRotation - currentRotation) > 0.01) { currentRotation += (targetRotation - currentRotation) * 0.2; phoneImage.style.transform = `perspective(1000px) rotateZ(${currentRotation}deg)`; } requestAnimationFrame(animationLoop); }
+    function handleGyroscope(e) {
+        if (!gyroToggle.checked || isPropellerMode) return;
+        let gamma = e.gamma || 0; 
+        if(gamma > 45) gamma = 45;
+        if(gamma < -45) gamma = -45;
+        
+        if (!isDragging) {
+             targetRotation = gamma * 1.5; 
+        }
+    }
+
+    function activatePropeller() {
+        if(isPropellerMode) return;
+        isPropellerMode = true;
+        phoneImage.classList.add('propeller-active');
+        mainMenuModal.classList.add('hidden'); // Close menu to see effect
+        
+        setTimeout(() => {
+            isPropellerMode = false;
+            phoneImage.classList.remove('propeller-active');
+            currentRotation = 0;
+            targetRotation = 0;
+        }, 10000);
+    }
+
+    function animationLoop() {
+        // FPS Counter
+        const now = performance.now();
+        frameCount++;
+        if (now - lastTime >= 1000) {
+            fps = frameCount;
+            fpsDisplay.innerText = fps + " FPS";
+            frameCount = 0;
+            lastTime = now;
+        }
+
+        if (!isPropellerMode) {
+            if (isDragging || Math.abs(targetRotation - currentRotation) > 0.01) {
+                currentRotation += (targetRotation - currentRotation) * 0.15;
+            }
+
+            let transformString = `perspective(1000px) rotateZ(${currentRotation}deg)`;
+            if (shadowsToggle.checked && !superFpsBoostToggle.checked) {
+                const tiltX = mouseY * 15;
+                const tiltY = mouseX * -15;
+                transformString += ` rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+            }
+            phoneImage.style.transform = transformString;
+            
+            if (viewfinderToggle.checked) {
+                 if(stabilizationToggle.checked) {
+                     viewfinderHorizon.style.transform = `rotate(${ -currentRotation * 0.1 }deg) scale(1.5)`;
+                 } else {
+                     viewfinderHorizon.style.transform = `rotate(${ -currentRotation }deg) scale(1.5)`;
+                 }
+            }
+        }
+
+        requestAnimationFrame(animationLoop);
+    }
+    
     let joystickCenterX = 0, joystickCenterY = 0; 
     
     function onDragStart(e) {
-        if (e.target.closest('.modal-overlay') || e.target.closest('#menu-btn')) return;
+        if (e.target.closest('.modal-overlay') || e.target.closest('#menu-btn') || isPropellerMode) return;
         e.preventDefault(); isDragging = true;
         const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
         const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
@@ -166,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (deltaAngle > 180) deltaAngle -= 360; if (deltaAngle < -180) deltaAngle += 360;
         lastAngle = currentAngle;
         updateRotation(targetRotation + deltaAngle);
-        const deltaX = clientX - joystickCenterX; const deltaY = clientY - joystickCenterY; const distance = Math.min(35, Math.hypot(deltaX, deltaY)); const angleRad = Math.atan2(deltaY, deltaX);
+        const deltaX = clientX - joystickCenterX; const deltaY = clientY - joystickCenterY; const distance = Math.min(40, Math.hypot(deltaX, deltaY)); const angleRad = Math.atan2(deltaY, deltaX);
         joystickHandle.style.transform = `translate(-50%, -50%) translate(${distance * Math.cos(angleRad)}px, ${distance * Math.sin(angleRad)}px)`;
     }
     
@@ -175,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateRotation(newRotation) {
         targetRotation = newRotation;
         if (superFpsBoostToggle.checked) return;
-        if (particlesToggle.checked && particlesInstance && !darkThemeToggle.checked) { particlesInstance.play(); setTimeout(() => particlesInstance.pause(), 500); }
+        if (particlesToggle.checked && particlesInstance && lightThemeToggle.checked) { particlesInstance.play(); setTimeout(() => particlesInstance.pause(), 500); }
         if (whiteFireToggle.checked) {
             rageLevel += 5;
             if (rageLevel > 150) {
@@ -188,31 +292,59 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    function handleBackgroundChange() {
+        document.body.className = 'dark-theme'; // Reset to base
+        if(lightThemeToggle.checked) document.body.classList.add('light-theme');
+        document.body.classList.add(bgSelect.value);
+        saveSettings();
+    }
+
     function handleSettingsChange() {
         if (superFpsBoostToggle.checked) { particlesToggle.checked = false; whiteFireToggle.checked = false; shadowsToggle.checked = false; particlesToggle.disabled = true; whiteFireToggle.disabled = true; shadowsToggle.disabled = true; } else { particlesToggle.disabled = false; whiteFireToggle.disabled = false; shadowsToggle.disabled = false; }
         document.body.classList.toggle('no-shadows', !shadowsToggle.checked || superFpsBoostToggle.checked);
-        const isDark = darkThemeToggle.checked; document.body.classList.toggle('dark-theme', isDark);
-        const newConfig = isDark ? darkThemeParticles : lightThemeParticles;
+        
+        // Theme Logic
+        if(lightThemeToggle.checked) document.body.classList.add('light-theme');
+        else document.body.classList.remove('light-theme');
+        
+        if(viewfinderToggle.checked) cameraViewfinder.classList.remove('hidden');
+        else cameraViewfinder.classList.add('hidden');
+
+        const newConfig = lightThemeToggle.checked ? lightThemeParticles : darkThemeParticles;
         loadParticlesConfig(newConfig).then(() => { if (!particlesToggle.checked) { particlesInstance.pause(); } });
         updatePhone(); saveSettings();
     }
     
-    function saveSettings() { localStorage.setItem('stabilizerSettingsXS', JSON.stringify({ lang: document.documentElement.lang, particles: particlesToggle.checked, fire: whiteFireToggle.checked, shadows: shadowsToggle.checked, stabilization: stabilizationToggle.checked, superFps: superFpsBoostToggle.checked, darkTheme: darkThemeToggle.checked })); }
+    function saveSettings() { 
+        localStorage.setItem('stabilizerSettingsXS_Propeller', JSON.stringify({ 
+            lang: document.documentElement.lang, 
+            particles: particlesToggle.checked, 
+            fire: whiteFireToggle.checked, 
+            shadows: shadowsToggle.checked, 
+            stabilization: stabilizationToggle.checked, 
+            superFps: superFpsBoostToggle.checked, 
+            lightTheme: lightThemeToggle.checked,
+            bg: bgSelect.value,
+            viewfinder: viewfinderToggle.checked,
+            gyro: gyroToggle.checked
+        })); 
+    }
     
     function loadSettings() {
-        const settings = JSON.parse(localStorage.getItem('stabilizerSettingsXS'));
+        const settings = JSON.parse(localStorage.getItem('stabilizerSettingsXS_Propeller'));
         if (settings) {
             particlesToggle.checked = settings.particles ?? true;
             whiteFireToggle.checked = settings.fire ?? true;
             shadowsToggle.checked = settings.shadows ?? true;
             stabilizationToggle.checked = settings.stabilization ?? true;
             superFpsBoostToggle.checked = settings.superFps ?? false;
-            darkThemeToggle.checked = settings.darkTheme ?? false;
+            lightThemeToggle.checked = settings.lightTheme ?? false;
+            bgSelect.value = settings.bg || 'bg-default';
+            viewfinderToggle.checked = settings.viewfinder ?? false;
+            gyroToggle.checked = settings.gyro ?? false;
         }
+        handleBackgroundChange();
         handleSettingsChange();
-        if (!particlesToggle.checked && particlesInstance) {
-            particlesInstance.pause();
-        }
     }
     
     init();
