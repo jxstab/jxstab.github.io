@@ -6,12 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     
     const phones = {
-        // --- UPDATED COORDINATES (FROM DEBUG) ---
+        // --- UPDATED COORDINATES (FROM DEBUG LOGS) ---
+        'Realme9i': { image: 'phones/Realme9i.png', stabilizationPoint: { x: '37.86%', y: '12.34%' }, specs: { processor: 'Snapdragon 680', camera: '50MP AI Matrix' } },
+        'Xiaomi13TPro': { image: 'phones/Xiaomi13TPro.png', stabilizationPoint: { x: '38.20%', y: '23.34%' }, specs: { processor: 'Dimensity 9200+', camera: '50MP Leica' } },
+        'RealmeC71': { image: 'phones/RealmeC71.png', stabilizationPoint: { x: '37.30%', y: '22.39%' }, specs: { processor: 'Unisoc T612', camera: '50MP AI Cam' } },
+        'OnePlus11R': { image: 'phones/OnePlus11R.png', stabilizationPoint: { x: '37.86%', y: '26.56%' }, specs: { processor: 'Snapdragon 8+ Gen 1', camera: '50MP IMX890' } },
+        // ---------------------------------------------
+
         'Redmi10': { image: 'phones/Redmi10.png', stabilizationPoint: { x: '37.86%', y: '20.12%' }, specs: { processor: 'Helio G88', camera: '50MP AI Quad' } },
-        'HonorX8C': { image: 'phones/HonorX8C.png', stabilizationPoint: { x: '28.51%', y: '14.43%' }, specs: { processor: 'Snapdragon 680', camera: 'High-Res Matrix' } },
+        'HonorX8C': { image: 'phones/XonorX8C.png', stabilizationPoint: { x: '28.51%', y: '14.43%' }, specs: { processor: 'Snapdragon 680', camera: 'High-Res Matrix' } },
         'Redmi13C': { image: 'phones/Redmi13C.png', stabilizationPoint: { x: '38.43%', y: '15.76%' }, specs: { processor: 'Helio G85', camera: '50MP AI Triple' } },
-        
-        // --- PREVIOUSLY ADDED ---
         'PocoM5s': { image: 'phones/PocoM5s.png', stabilizationPoint: { x: '23.45%', y: '8.55%' }, specs: { processor: 'Helio G95', camera: '64MP AI Quad' } },
         'Iphone11': { image: 'phones/Iphone11.png', stabilizationPoint: { x: '33.62%', y: '18.59%' }, specs: { processor: 'A13 Bionic', camera: '12MP Dual Wide' } },
         'SamsungA21s': { image: 'phones/SamsungA21s.png', stabilizationPoint: { x: '17.32%', y: '13.95%' }, specs: { processor: 'Exynos 850', camera: '48MP Quad Camera' } },
@@ -19,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'Iphone17ProMax': { image: 'phones/Iphone17ProMax.png', stabilizationPoint: { x: '31.29%', y: '23.91%' }, specs: { processor: 'A19 Pro Bionic', camera: '48MP Tetraprism 2.0' } },
         
         // --- OTHER PHONES ---
-        'Realme9i': { image: 'phones/Realme9i.png', stabilizationPoint: { x: '50%', y: '50%' }, specs: { processor: 'Snapdragon 680', camera: '50MP AI Matrix' } },
         'Redmi9A': { image: 'phones/Redmi9A.png', stabilizationPoint: { x: '34.93%', y: '9.04%' }, specs: { processor: 'Helio G25 Octa-Core', camera: '13MP AI Main Camera' } },
         'SamsungS21U': { image: 'phones/SamsungS21U.png', stabilizationPoint: { x: '19.31%', y: '17.25%' }, specs: { processor: 'Exynos 2100', camera: '108MP Pro-Grade Sensor' } },
         'RealmeGT7Pro': { image: 'phones/RealmeGT7Pro.png', stabilizationPoint: { x: '38.82%', y: '26.66%' }, specs: { processor: 'Snapdragon 8 Elite', camera: '200MP OIS Matrix System' } },
