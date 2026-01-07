@@ -1,0 +1,5 @@
+{ 
+  "admin_mode": true, 
+  "debug": "enabled", 
+  "secret_token": "YOU_ARE_A_CLOWN_CLOWN_CLOWN" 
+} 
