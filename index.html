@@ -1,42 +1,49 @@
+<!-- START OF FILE index.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>StabFX Ultimate Dark</title>
+    <title>StabFX Ultimate</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme">
+<body class="dark-theme bg-default">
 
+    <!-- LOADER -->
     <div id="loader-overlay">
         <div class="loader-content">
-            <h1 data-translate-key="loader_welcome">Welcome to jx stab</h1>
-            <p data-translate-key="loader_support">Cinema Quality Stabilization Sim</p>
-            <p style="font-size: 0.9rem; opacity: 0.6; margin-bottom: 24px;" data-translate-key="loader_reactions">Next Update at 100 Reactions</p>
-            <a href="https://t.me/jeliktontech" target="_blank">t.me/jeliktontech</a>
-            <button id="enter-site-btn" data-translate-key="loader_enter">Start Experience</button>
+            <h1 data-translate-key="loader_welcome">StabFX Ultimate</h1>
+            <p data-translate-key="loader_support">Симулятор стабилизации кинематографического уровня</p>
+            <p style="font-size: 0.85rem; opacity: 0.5; margin-top: 8px;" data-translate-key="loader_reactions">100 Reactions = New Update</p>
+            <a href="https://t.me/jeliktontech" target="_blank" class="tg-link">
+                <i class="fab fa-telegram-plane"></i> @jeliktontech
+            </a>
+            <br>
+            <button id="enter-site-btn" data-translate-key="loader_enter">Войти в приложение</button>
         </div>
     </div>
 
+    <!-- UI HEADER -->
     <header class="app-header">
-        <button id="menu-btn" title="Menu"><i class="fas fa-bars"></i></button>
-        <span id="fps-counter">0 FPS</span>
+        <button id="menu-btn" title="Меню"><i class="fas fa-bars"></i></button>
+        <span id="fps-counter">60 FPS</span>
     </header>
 
     <div id="donation-bar">
-        <span style="font-family: monospace; font-size: 1rem; color: var(--accent-color);">💳 2200 7021 0579 3918</span>
-        <span data-translate-key="donation_text" style="font-size: 0.8rem; opacity: 0.7;">Задонатить деньгу автору</span>
+        <span class="card-number">💳 2200 7021 0579 3918</span>
+        <span data-translate-key="donation_text" class="donate-text">Поддержать разработку</span>
     </div>
 
-    <!-- HUD -->
+    <!-- HUD (Viewfinder) -->
     <div id="camera-viewfinder" class="hidden">
-        <div class="viewfinder-world" id="viewfinder-horizon"></div>
-        <div class="viewfinder-ui"></div>
-        <span style="position:absolute; bottom:5px; left:10px; font-size:10px; color:white; font-family:monospace;">REC ●</span>
-        <span style="position:absolute; top:5px; right:10px; font-size:10px; color:#007AFF; font-family:monospace;">OIS</span>
+        <div class="viewfinder-world" id="viewfinder-horizon" style="width:200%; height:200%; position:absolute; left:-50%; top:-50%; background:linear-gradient(#0A84FF 50%, #333 50%); opacity:0.8;"></div>
+        <div class="viewfinder-ui" style="position:absolute; inset:5px; border:1px solid rgba(255,255,255,0.3); border-radius:8px;"></div>
+        <span style="position:absolute; bottom:5px; left:8px; font-size:9px; color:var(--danger-color); font-weight:bold;">REC ●</span>
+        <span style="position:absolute; top:5px; right:8px; font-size:9px; color:var(--accent-color); font-weight:bold;">OIS ON</span>
     </div>
 
+    <!-- MAIN SCENE -->
     <div class="app-layout">
         <div id="wrapper-bg" class="stabilization-wrapper">
             <div id="tsparticles"></div>
@@ -48,15 +55,15 @@
             <div id="phone-info-container" class="hidden">
                 <div class="info-item">
                     <i class="fas fa-microchip"></i>
-                    <div>
-                        <strong data-translate-key="processor_title">Processor</strong>
+                    <div class="info-text">
+                        <strong data-translate-key="processor_title">Процессор</strong>
                         <p id="phone-processor-info">N/A</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-camera"></i>
-                    <div>
-                        <strong data-translate-key="camera_title">Camera</strong>
+                    <div class="info-text">
+                        <strong data-translate-key="camera_title">Камера</strong>
                         <p id="phone-camera-info">N/A</p>
                     </div>
                 </div>
@@ -69,126 +76,166 @@
         </div>
     </div>
 
-    <!-- MAIN MENU -->
+    <!-- MAIN MENU MODAL -->
     <div id="main-menu-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <h2 data-translate-key="controls_title">Control Center</h2>
-            <div class="control-group">
-                <label for="phone-select" data-translate-key="phone_model_label">Select Device</label>
-                <select id="phone-select"></select>
-            </div>
+            <h2 data-translate-key="controls_title">Панель Управления</h2>
             
-            <div class="action-buttons">
-                <button id="music-toggle-btn"><i class="fas fa-music"></i> <span class="btn-text" data-translate-key="music_toggle_text">Music</span></button>
-                <button id="propeller-btn"><i class="fas fa-fan"></i> Check</button>
+            <div class="menu-grid">
+                <!-- Device Select -->
+                <div class="control-group">
+                    <label for="phone-select" data-translate-key="phone_model_label">Устройство</label>
+                    <select id="phone-select"></select>
+                </div>
+
+                <!-- Propeller Card (COMPACT GRAY) -->
+                <div class="propeller-card">
+                    <div class="prop-header">
+                        <span class="prop-label" data-translate-key="turbo_title"><i class="fas fa-fan"></i> Turbo Propeller</span>
+                        <button id="propeller-settings-toggle" class="prop-settings-btn"><i class="fas fa-sliders-h" style="font-size:0.8rem;"></i></button>
+                    </div>
+                    <button id="propeller-btn" class="btn-prop-launch" data-translate-key="launch_btn">ЗАПУСТИТЬ</button>
+                    
+                    <!-- Hidden Settings -->
+                    <div id="propeller-settings-panel" class="prop-settings-panel hidden">
+                        <div class="prop-input-wrap">
+                            <span>Time (s)</span>
+                            <input type="number" id="propeller-time" value="5" min="1" max="60">
+                        </div>
+                        <div class="prop-input-wrap">
+                            <span>Power</span>
+                            <input type="range" id="propeller-power" min="1" max="50" value="25" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Grid -->
+                <div class="btn-grid-row">
+                    <button id="fx-panel-btn" class="menu-action-btn"><i class="fas fa-wand-magic-sparkles"></i> FX Studio</button>
+                    <button id="music-toggle-btn" class="menu-action-btn"><i class="fas fa-music"></i> <span data-translate-key="music_toggle_text">Music</span></button>
+                </div>
+
+                <div class="btn-grid-row">
+                    <button id="info-btn" class="menu-action-btn"><i class="fas fa-info-circle"></i> <span data-translate-key="info_button_text">Info</span></button>
+                    <button id="settings-btn" class="menu-action-btn"><i class="fas fa-cog"></i> <span data-translate-key="settings_button_text">Settings</span></button>
+                </div>
+                
+                <a href="https://t.me/jelikton" target="_blank" class="menu-action-btn btn-blue" id="support-button">
+                    <i class="fab fa-telegram"></i> <span data-translate-key="support_button_text">Написать автору</span>
+                </a>
+
+                <button class="menu-action-btn btn-close modal-close-btn" data-translate-key="close_button">Закрыть</button>
             </div>
-            
-            <div class="action-buttons">
-                <button id="info-btn"><i class="fas fa-info-circle"></i> <span class="btn-text" data-translate-key="info_button_text">Info</span></button>
-                <button id="settings-btn"><i class="fas fa-cog"></i> <span class="btn-text" data-translate-key="settings_button_text">Settings</span></button>
-            </div>
-            <a href="https://t.me/jelikton" target="_blank" class="support-button" id="support-button">
-                <span data-translate-key="support_button_text"><i class="fas fa-paper-plane"></i> Написать автору (@jelikton)</span>
-            </a>
-            <button class="modal-close-btn" data-translate-key="close_button">Dismiss</button>
         </div>
     </div>
 
-    <!-- LANGUAGE MODAL -->
-    <div id="language-modal" class="modal-overlay hidden">
+    <!-- FX STUDIO MODAL -->
+    <div id="fx-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <h3 data-translate-key="language_modal_title">Language</h3>
-            <div class="action-buttons" style="grid-template-columns: 1fr;">
-                <button class="lang-btn" data-lang="ru">Русский</button>
-                <button class="lang-btn" data-lang="en">English</button>
+            <h3 data-translate-key="fx_title">FX Studio</h3>
+            
+            <div class="fx-grid">
+                <div class="fx-btn active" data-fx="none">
+                    <i class="fas fa-ban"></i>
+                    <span>Нет</span>
+                </div>
+                <div class="fx-btn" data-fx="snow">
+                    <i class="fas fa-snowflake"></i>
+                    <span>Снег</span>
+                </div>
+                <div class="fx-btn" data-fx="text">
+                    <i class="fas fa-font"></i>
+                    <span>JX Text</span>
+                </div>
+                <div class="fx-btn" data-fx="phones">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Телефоны</span>
+                </div>
+                <div class="fx-btn" data-fx="mix" style="grid-column: span 2;">
+                    <i class="fas fa-layer-group"></i>
+                    <span>Mix</span>
+                </div>
             </div>
+
+            <div class="setting-item" style="margin-top:20px;">
+                <span data-translate-key="settings_white_fire">Rage Glow (Огонь)</span>
+                <label class="toggle-switch"><input type="checkbox" id="white-fire-toggle"><span class="slider"></span></label>
+            </div>
+
+            <button class="menu-action-btn btn-close modal-close-btn" data-translate-key="close_button">Готово</button>
         </div>
     </div>
 
     <!-- SETTINGS MODAL -->
     <div id="settings-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <h3 data-translate-key="settings_title">Configuration</h3>
+            <h3 data-translate-key="settings_title">Настройки</h3>
             
-            <div class="settings-section">
-                <h4><i class="fas fa-image"></i> Background</h4>
-                <div class="control-group">
-                    <select id="bg-select">
-                        <option value="bg-default">Absolute Black</option>
-                        <option value="bg-neon">Cyberpunk Neon</option>
-                        <option value="bg-space">Deep Space</option>
-                        <option value="bg-matrix">Matrix Code</option>
-                        <option value="bg-sunset">Sunset Vibes</option>
-                        <option value="bg-carbon">Carbon Fiber</option>
-                        <option value="bg-blueprint">Blueprint</option>
-                        <option value="bg-wood">Dark Wood</option>
-                        <option value="bg-hex">Hexagon Tech</option>
-                        <option value="bg-gradient">Aura Gradient</option>
-                        <option value="bg-grid">Technical Grid</option>
-                    </select>
-                </div>
+            <div class="control-group">
+                <label>Фон</label>
+                <select id="bg-select">
+                    <option value="bg-default">Absolute Black</option>
+                    <option value="bg-neon">Cyberpunk Neon</option>
+                    <option value="bg-space">Deep Space</option>
+                    <option value="bg-matrix">Matrix Code</option>
+                    <option value="bg-sunset">Sunset Vibes</option>
+                    <option value="bg-carbon">Carbon Fiber</option>
+                    <option value="bg-blueprint">Blueprint</option>
+                    <option value="bg-wood">Dark Wood</option>
+                    <option value="bg-hex">Hexagon Tech</option>
+                    <option value="bg-gradient">Aura Gradient</option>
+                </select>
             </div>
 
-            <div class="settings-section">
+            <div style="margin-top:15px;">
                 <div class="setting-item">
-                    <span data-translate-key="settings_light_theme">Light Mode</span>
+                    <span data-translate-key="settings_light_theme">Светлая тема</span>
                     <label class="toggle-switch"><input type="checkbox" id="light-theme-toggle"><span class="slider"></span></label>
                 </div>
                 <div class="setting-item">
-                    <span>Camera View (HUD)</span>
+                    <span>HUD Камеры (Видоискатель)</span>
                     <label class="toggle-switch"><input type="checkbox" id="viewfinder-toggle"><span class="slider"></span></label>
                 </div>
                 <div class="setting-item">
-                    <span>Gyroscope Control</span>
-                    <label class="toggle-switch"><input type="checkbox" id="gyro-toggle"><span class="slider"></span></label>
-                </div>
-            </div>
-
-            <div class="settings-section">
-                <div class="setting-item">
-                    <span data-translate-key="settings_particles">Ambient Particles</span>
-                    <label class="toggle-switch"><input type="checkbox" id="particles-toggle"><span class="slider"></span></label>
-                </div>
-                <div class="setting-item">
-                    <span data-translate-key="settings_white_fire">Rage Glow</span>
-                    <label class="toggle-switch"><input type="checkbox" id="white-fire-toggle"><span class="slider"></span></label>
-                </div>
-                <div class="setting-item">
-                    <span data-translate-key="settings_shadows">Dynamic Shadows</span>
+                    <span data-translate-key="settings_shadows">3D Тени</span>
                     <label class="toggle-switch"><input type="checkbox" id="shadows-toggle"><span class="slider"></span></label>
                 </div>
-            </div>
-             
-             <div class="settings-section">
                 <div class="setting-item">
-                    <span data-translate-key="settings_stabilization">Lens Stabilization</span>
+                    <span data-translate-key="settings_stabilization">Стабилизация (OIS)</span>
                     <label class="toggle-switch"><input type="checkbox" id="stabilization-toggle"><span class="slider"></span></label>
                 </div>
                 <div class="setting-item">
-                    <span data-translate-key="settings_super_fps">Performance Mode</span>
+                    <span data-translate-key="settings_super_fps">FPS Boost (Выкл FX)</span>
                     <label class="toggle-switch"><input type="checkbox" id="super-fps-boost-toggle"><span class="slider"></span></label>
                 </div>
             </div>
             
-            <button class="modal-close-btn" data-translate-key="close_button">Done</button>
+            <button class="menu-action-btn btn-close modal-close-btn" data-translate-key="close_button">Назад</button>
+        </div>
+    </div>
+
+    <!-- LANGUAGE MODAL -->
+    <div id="language-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3 data-translate-key="language_modal_title">Язык / Language</h3>
+            <div class="btn-grid-row" style="grid-template-columns: 1fr;">
+                <button class="menu-action-btn btn-blue lang-btn" data-lang="ru">Русский</button>
+                <button class="menu-action-btn lang-btn" data-lang="en">English</button>
+            </div>
         </div>
     </div>
 
     <!-- INFO MODAL -->
     <div id="info-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <h3 data-translate-key="info_title">About</h3>
-            <div class="settings-section">
-                <p style="margin-bottom:8px; font-weight:600;" data-translate-key="info_development_title">Credits</p>
-                <p><a href="https://t.me/jelikton" target="_blank" style="color:var(--accent-color); text-decoration:none;">@jelikton</a> — Lead Dev</p>
-                <p><a href="https://t.me/romafacti1" target="_blank" style="color:var(--accent-color); text-decoration:none;">@romafacti1</a> — Asset Manager</p>
+            <h3 data-translate-key="info_title">О Проекте</h3>
+            <div style="background:rgba(255,255,255,0.05); padding:15px; border-radius:14px; margin-bottom:15px;">
+                <p style="margin-bottom:8px; font-weight:700; color:var(--text-secondary);" data-translate-key="info_development_title">Разработка</p>
+                <p><i class="fas fa-code" style="color:var(--accent-color); width:20px;"></i> @jelikton</p>
+                <p><i class="fas fa-search" style="color:var(--accent-color); width:20px;"></i> @romafacti1</p>
             </div>
-             <div class="settings-section">
-                <p style="margin-bottom:8px; font-weight:600;" data-translate-key="info_links_title">Links</p>
-                <p><a href="https://jxstab.github.io" target="_blank" style="color:var(--text-secondary); text-decoration:none;">jxstab.github.io</a></p>
-                <p><a href="https://t.me/jeliktontech" target="_blank" style="color:var(--text-secondary); text-decoration:none;">t.me/jeliktontech</a></p>
-            </div>
-            <button class="modal-close-btn" data-translate-key="close_button">Close</button>
+            <a href="https://t.me/jeliktontech" target="_blank" class="menu-action-btn btn-blue">Telegram Channel</a>
+            <button class="menu-action-btn btn-close modal-close-btn" data-translate-key="close_button">Закрыть</button>
         </div>
     </div>
     
