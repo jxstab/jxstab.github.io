@@ -1,8 +1,8 @@
-/* --- START OF FILE app.js --- */
+/* --- уроды ебаные не работает это говно блять --- */
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. FULL PHONE LIST (UPDATED COORDINATES & PNG) ---
+    // --- 1. СПИСОК ТЕЛЕФОНОВ ---
     const phones = {
         'IIIF150H2022': { image: 'phones/IIIF150H2022.png', stabilizationPoint: { x: '35.51%', y: '19.20%' }, specs: { processor: 'Helio G95', camera: 'Night Vision' } },
         'SamsungS21FE': { image: 'phones/SamsungS21FE.png', stabilizationPoint: { x: '31.54%', y: '19.61%' }, specs: { processor: 'Snapdragon 888', camera: '12MP Pro-Grade' } },
@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'SamsungS2': { image: 'phones/SamsungS2.png', stabilizationPoint: { x: '45.70%', y: '17.37%' }, specs: { processor: 'Exynos 4210', camera: '8MP Retro' } },
         'Xiaomi14T': { image: 'phones/Xiaomi14T.png', stabilizationPoint: { x: '35.17%', y: '25.09%' }, specs: { processor: 'Dimensity 8300', camera: 'Leica 50MP' } },
         'Iphone11Pro': { image: 'phones/Iphone11Pro.png', stabilizationPoint: { x: '31.04%', y: '21.44%' }, specs: { processor: 'A13 Bionic', camera: 'Triple 12MP' } },
+        
+        // Остальные
         'HuaweiPuraX': { image: 'phones/HuaweiPuraX.png', stabilizationPoint: { x: '24.00%', y: '19.36%' }, specs: { processor: 'Kirin 9010 Prototype', camera: 'XMAGE Concept Lens' } },
         'IqooZ10Turbo+': { image: 'phones/IqooZ10Turbo+.png', stabilizationPoint: { x: '42.42%', y: '15.00%' }, specs: { processor: 'Dimensity 9400+', camera: '64MP Flagship OIS' } },
         'OppoReno14F': { image: 'phones/OppoReno14F.png', stabilizationPoint: { x: '50.00%', y: '21.00%' }, specs: { processor: 'Dimensity 7200', camera: '50MP Cosmo Ring' } },
@@ -78,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'ZteNubiaZ70U': { image: 'phones/ZteNubiaZ70U.png', stabilizationPoint: { x: '39.47%', y: '15.76%' }, specs: { processor: 'Snapdragon 8 Elite', camera: 'Neovision 35mm UDC' } }
     };
     
+    // --- ПЕРЕВОДЫ ---
     const translations = {
         ru: { version_text: "Версия XV", controls_title: "Управление", phone_model_label: "Устройство:", info_button_text: "Инфо", settings_button_text: "Настройки", support_button_text: "Написать автору", language_modal_title: "Язык", settings_title: "Настройки", settings_white_fire: "Rage Glow (Огонь)", settings_shadows: "3D Тени", settings_stabilization: "Стабилизация OIS", settings_super_fps: "FPS Boost", close_button: "Закрыть", info_title: "О Проекте", info_development_title: "Команда:", loader_welcome: "StabFX Ultimate", loader_support: "Симулятор стабилизации", loader_reactions: "100 Реакций - Обнова", loader_enter: "Запустить", donation_text: "Поддержать разработку", settings_light_theme: "Светлая тема", music_toggle_text: "Музыка", processor_title: "Процессор", camera_title: "Камера", turbo_title: "Turbo Propeller", launch_btn: "ЗАПУСТИТЬ", fx_title: "FX Studio" },
         en: { version_text: "Version XV", controls_title: "Controls", phone_model_label: "Device:", info_button_text: "Info", settings_button_text: "Settings", support_button_text: "Contact Author", language_modal_title: "Language", settings_title: "Settings", settings_white_fire: "Rage Glow", settings_shadows: "3D Shadows", settings_stabilization: "OIS Stabilization", settings_super_fps: "FPS Boost", close_button: "Close", info_title: "About", info_development_title: "Team:", loader_welcome: "StabFX Ultimate", loader_support: "Cinema Stabilization Sim", loader_reactions: "100 Reactions - Update", loader_enter: "Start App", donation_text: "Donate", settings_light_theme: "Light Mode", music_toggle_text: "Music", processor_title: "Processor", camera_title: "Camera", turbo_title: "Turbo Propeller", launch_btn: "LAUNCH", fx_title: "FX Studio" }
@@ -122,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const joystickHandle = document.getElementById('joystick-handle');
     const wrapperBg = document.getElementById('wrapper-bg');
     
+    // ЭЛЕМЕНТЫ УПРАВЛЕНИЯ (С ПРОВЕРКОЙ НА СУЩЕСТВОВАНИЕ)
     const lightThemeToggle = document.getElementById('light-theme-toggle');
     const whiteFireToggle = document.getElementById('white-fire-toggle');
     const shadowsToggle = document.getElementById('shadows-toggle');
@@ -158,84 +162,96 @@ document.addEventListener('DOMContentLoaded', () => {
         initLanguage();
         setupDebugMode(); 
         
-        stabilizationToggle.checked = true;
+        // БЕЗОПАСНАЯ ИНИЦИАЛИЗАЦИЯ
+        if(stabilizationToggle) stabilizationToggle.checked = true;
         loadSettings(); 
         
         updatePhoneSelector();
         updatePhone();
 
-        menuBtn.addEventListener('click', () => toggleModal(mainMenuModal, true));
-        settingsBtn.addEventListener('click', () => { toggleModal(mainMenuModal, false); toggleModal(settingsModal, true); });
-        infoBtn.addEventListener('click', () => { toggleModal(mainMenuModal, false); toggleModal(infoModal, true); });
-        fxPanelBtn.addEventListener('click', () => { toggleModal(mainMenuModal, false); toggleModal(fxModal, true); });
+        if(menuBtn) menuBtn.addEventListener('click', () => toggleModal(mainMenuModal, true));
+        if(settingsBtn) settingsBtn.addEventListener('click', () => { toggleModal(mainMenuModal, false); toggleModal(settingsModal, true); });
+        if(infoBtn) infoBtn.addEventListener('click', () => { toggleModal(mainMenuModal, false); toggleModal(infoModal, true); });
+        if(fxPanelBtn) fxPanelBtn.addEventListener('click', () => { toggleModal(mainMenuModal, false); toggleModal(fxModal, true); });
         
         document.querySelectorAll('.modal-close-btn').forEach(btn => btn.addEventListener('click', (e) => toggleModal(e.target.closest('.modal-overlay'), false)));
 
-        wrapperBg.addEventListener('mousedown', onDragStart);
-        wrapperBg.addEventListener('touchstart', onDragStart, { passive: false });
-        // Debug click handler
-        wrapperBg.addEventListener('click', (event) => {
-            if (!isDebugActive) return;
-            event.stopPropagation();
-            const rect = phoneImage.getBoundingClientRect();
-            if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top  || event.clientY > rect.bottom) return;
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
-            const xPercent = (x / rect.width * 100).toFixed(2);
-            const yPercent = (y / rect.height * 100).toFixed(2);
-            const selectedModel = phoneSelect.value;
-            phones[selectedModel].stabilizationPoint = { x: `${xPercent}%`, y: `${yPercent}%` };
-            updatePhone();
-            const codeToCopy = `'${selectedModel}': { image: '${phones[selectedModel].image}', stabilizationPoint: { x: '${xPercent}%', y: '${yPercent}%' }, specs: ... },`;
-            console.log("КОД ДЛЯ ВСТАВКИ:\n", codeToCopy);
-            alert(`Точка для ${selectedModel}: X=${xPercent}%, Y=${yPercent}%`);
-        });
+        if(wrapperBg) {
+            wrapperBg.addEventListener('mousedown', onDragStart);
+            wrapperBg.addEventListener('touchstart', onDragStart, { passive: false });
+            wrapperBg.addEventListener('click', (event) => {
+                if (!isDebugActive) return;
+                event.stopPropagation();
+                const rect = phoneImage.getBoundingClientRect();
+                if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top  || event.clientY > rect.bottom) return;
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                const xPercent = (x / rect.width * 100).toFixed(2);
+                const yPercent = (y / rect.height * 100).toFixed(2);
+                const selectedModel = phoneSelect.value;
+                phones[selectedModel].stabilizationPoint = { x: `${xPercent}%`, y: `${yPercent}%` };
+                updatePhone();
+                const codeToCopy = `'${selectedModel}': { image: '${phones[selectedModel].image}', stabilizationPoint: { x: '${xPercent}%', y: '${yPercent}%' }, specs: ... },`;
+                console.log("КОД ДЛЯ ВСТАВКИ:\n", codeToCopy);
+                alert(`Точка для ${selectedModel}: X=${xPercent}%, Y=${yPercent}%`);
+            });
+        }
 
         document.addEventListener('mousemove', (e) => {
             mouseX = (e.clientX / window.innerWidth) - 0.5;
             mouseY = (e.clientY / window.innerHeight) - 0.5;
         });
 
-        phoneSelect.addEventListener('change', updatePhone);
-        bgSelect.addEventListener('change', () => { handleBackgroundChange(); saveSettings(); });
+        if(phoneSelect) phoneSelect.addEventListener('change', updatePhone);
+        if(bgSelect) bgSelect.addEventListener('change', () => { handleBackgroundChange(); saveSettings(); });
         
-        [lightThemeToggle, whiteFireToggle, shadowsToggle, stabilizationToggle, superFpsBoostToggle, viewfinderToggle].forEach(t => {
-            t.addEventListener('change', () => { handleSettingsChange(); saveSettings(); });
+        // Безопасное добавление событий для переключателей
+        const toggles = [lightThemeToggle, whiteFireToggle, shadowsToggle, stabilizationToggle, superFpsBoostToggle, viewfinderToggle];
+        toggles.forEach(t => {
+            if(t) t.addEventListener('change', () => { handleSettingsChange(); saveSettings(); });
         });
 
-        fxButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                fxButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentFxMode = btn.dataset.fx;
-                reloadParticles();
-                saveSettings();
+        if(fxButtons) {
+            fxButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    fxButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentFxMode = btn.dataset.fx;
+                    reloadParticles();
+                    saveSettings();
+                });
             });
-        });
+        }
 
-        propSettingsBtn.addEventListener('click', () => propSettingsPanel.classList.toggle('hidden'));
-        propellerBtn.addEventListener('click', activatePropeller);
-        musicBtn.addEventListener('click', toggleMusic);
+        if(propSettingsBtn) propSettingsBtn.addEventListener('click', () => propSettingsPanel.classList.toggle('hidden'));
+        if(propellerBtn) propellerBtn.addEventListener('click', activatePropeller);
+        if(musicBtn) musicBtn.addEventListener('click', toggleMusic);
 
         requestAnimationFrame(animationLoop);
     }
     
     function toggleModal(modal, show) {
+        if(!modal) return;
         if(show) modal.classList.remove('hidden');
         else modal.classList.add('hidden');
     }
 
     function initLoader() { 
-        enterSiteBtn.addEventListener('click', () => { 
-            loaderOverlay.style.opacity = '0';
-            setTimeout(() => loaderOverlay.classList.add('hidden'), 500);
-        }); 
+        if(enterSiteBtn) {
+            enterSiteBtn.addEventListener('click', () => { 
+                if(loaderOverlay) {
+                    loaderOverlay.style.opacity = '0';
+                    setTimeout(() => loaderOverlay.classList.add('hidden'), 500);
+                }
+            });
+        }
     }
 
     function toggleMusic() { 
+        if(!musicBtn || !backgroundMusic) return;
         const icon = musicBtn.querySelector('i'); 
-        if (backgroundMusic.paused) { backgroundMusic.play().catch(console.error); icon.className = 'fas fa-volume-up'; } 
-        else { backgroundMusic.pause(); icon.className = 'fas fa-music'; } 
+        if (backgroundMusic.paused) { backgroundMusic.play().catch(console.error); if(icon) icon.className = 'fas fa-volume-up'; } 
+        else { backgroundMusic.pause(); if(icon) icon.className = 'fas fa-music'; } 
     }
 
     function setLanguage(lang) {
@@ -256,11 +272,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function initLanguage() { 
         const savedLang = localStorage.getItem('selectedLang'); 
         if (savedLang) setLanguage(savedLang); 
-        else languageModal.classList.remove('hidden'); 
+        else if(languageModal) languageModal.classList.remove('hidden'); 
         
         document.querySelectorAll('.lang-btn').forEach(btn => { 
             btn.addEventListener('click', () => { 
-                const lang = btn.dataset.lang; setLanguage(lang); localStorage.setItem('selectedLang', lang); languageModal.classList.add('hidden'); 
+                const lang = btn.dataset.lang; setLanguage(lang); localStorage.setItem('selectedLang', lang); if(languageModal) languageModal.classList.add('hidden'); 
             }); 
         }); 
     }
@@ -268,10 +284,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 6. PARTICLES ENGINE ---
     async function reloadParticles() {
         if(particlesInstance) { await particlesInstance.destroy(); particlesInstance = null; }
-        if(currentFxMode === 'none' || superFpsBoostToggle.checked) return;
+        if(currentFxMode === 'none' || (superFpsBoostToggle && superFpsBoostToggle.checked)) return;
 
         let config = {};
-        const isLight = lightThemeToggle.checked;
+        const isLight = lightThemeToggle && lightThemeToggle.checked;
         const color = isLight ? "#000000" : "#ffffff";
 
         const commonMove = {
@@ -344,6 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 7. CORE LOGIC ---
     function updatePhoneSelector() {
+        if(!phoneSelect) return;
         const uniquePhones = Object.keys(phones).sort();
         phoneSelect.innerHTML = '';
         uniquePhones.forEach(modelName => {
@@ -355,26 +372,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updatePhone() {
+        if(!phoneSelect || !phoneImage) return;
         const selectedModel = phoneSelect.value;
         if (!phones[selectedModel]) return;
         const data = phones[selectedModel];
         phoneImage.src = data.image;
         
-        if(stabilizationToggle.checked) phoneImage.style.transformOrigin = `${data.stabilizationPoint.x} ${data.stabilizationPoint.y}`;
+        if(stabilizationToggle && stabilizationToggle.checked) phoneImage.style.transformOrigin = `${data.stabilizationPoint.x} ${data.stabilizationPoint.y}`;
         else phoneImage.style.transformOrigin = '50% 50%';
 
-        if(data.specs) {
-            processorInfo.textContent = data.specs.processor;
-            cameraInfo.textContent = data.specs.camera;
+        if(data.specs && phoneInfoContainer) {
+            if(processorInfo) processorInfo.textContent = data.specs.processor;
+            if(cameraInfo) cameraInfo.textContent = data.specs.camera;
             phoneInfoContainer.classList.remove('hidden');
-        } else phoneInfoContainer.classList.add('hidden');
+        } else if(phoneInfoContainer) {
+            phoneInfoContainer.classList.add('hidden');
+        }
     }
 
     function activatePropeller() {
         if(isPropellerMode) return;
         toggleModal(mainMenuModal, false);
-        const time = parseInt(propTimeInput.value) || 5;
-        const power = parseInt(propPowerInput.value) || 25;
+        const time = parseInt(propTimeInput ? propTimeInput.value : 5) || 5;
+        const power = parseInt(propPowerInput ? propPowerInput.value : 25) || 25;
         const speed = Math.max(0.01, 1.0 - (power * 0.019));
 
         isPropellerMode = true;
@@ -393,22 +413,23 @@ document.addEventListener('DOMContentLoaded', () => {
     function animationLoop() {
         const now = performance.now();
         frameCount++;
-        if (now - lastTime >= 1000) { fpsDisplay.innerText = frameCount + " FPS"; frameCount = 0; lastTime = now; }
+        if (now - lastTime >= 1000) { if(fpsDisplay) fpsDisplay.innerText = frameCount + " FPS"; frameCount = 0; lastTime = now; }
 
         if (!isPropellerMode) {
             if (isDragging || Math.abs(targetRotation - currentRotation) > 0.01) {
                 currentRotation += (targetRotation - currentRotation) * 0.15;
             }
             let transform = `perspective(1000px) rotateZ(${currentRotation}deg)`;
-            if (shadowsToggle.checked && !superFpsBoostToggle.checked) {
+            if (shadowsToggle && shadowsToggle.checked && superFpsBoostToggle && !superFpsBoostToggle.checked) {
                 const tiltX = mouseY * 12; const tiltY = mouseX * -12;
                 transform += ` rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
             }
-            phoneImage.style.transform = transform;
+            if(phoneImage) phoneImage.style.transform = transform;
             
-            if(!document.getElementById('camera-viewfinder').classList.contains('hidden')) {
-                const horizon = document.getElementById('viewfinder-horizon');
-                if(stabilizationToggle.checked) horizon.style.transform = `translate(-50%, -50%) rotate(${-currentRotation}deg)`;
+            const viewfinder = document.getElementById('camera-viewfinder');
+            const horizon = document.getElementById('viewfinder-horizon');
+            if(viewfinder && !viewfinder.classList.contains('hidden') && horizon) {
+                if(stabilizationToggle && stabilizationToggle.checked) horizon.style.transform = `translate(-50%, -50%) rotate(${-currentRotation}deg)`;
                 else horizon.style.transform = `translate(-50%, -50%) rotate(0deg)`;
             }
         }
@@ -422,8 +443,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const cx = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
         const cy = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
         joystickCenterX = cx; joystickCenterY = cy;
-        floatingJoystick.style.left = cx + 'px'; floatingJoystick.style.top = cy + 'px';
-        floatingJoystick.classList.remove('hidden');
+        if(floatingJoystick) {
+            floatingJoystick.style.left = cx + 'px'; floatingJoystick.style.top = cy + 'px';
+            floatingJoystick.classList.remove('hidden');
+        }
         lastAngle = Math.atan2(cy - joystickCenterY, cx - joystickCenterX) * (180 / Math.PI);
         
         const moveHandler = (ev) => {
@@ -439,10 +462,10 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const dx = mx - joystickCenterX; const dy = my - joystickCenterY;
             const dist = Math.min(35, Math.hypot(dx, dy)); const angle = Math.atan2(dy, dx);
-            joystickHandle.style.transform = `translate(-50%, -50%) translate(${dist * Math.cos(angle)}px, ${dist * Math.sin(angle)}px)`;
+            if(joystickHandle) joystickHandle.style.transform = `translate(-50%, -50%) translate(${dist * Math.cos(angle)}px, ${dist * Math.sin(angle)}px)`;
         };
         const endHandler = () => {
-            isDragging = false; floatingJoystick.classList.add('hidden');
+            isDragging = false; if(floatingJoystick) floatingJoystick.classList.add('hidden');
             document.removeEventListener('mousemove', moveHandler); document.removeEventListener('mouseup', endHandler);
             document.removeEventListener('touchmove', moveHandler); document.removeEventListener('touchend', endHandler);
         };
@@ -451,53 +474,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function triggerRage() {
-        if(!whiteFireToggle.checked || superFpsBoostToggle.checked) return;
-        rageLevel += 5; if(rageLevel > 100) whiteFireEffect.classList.add('active');
-        clearTimeout(rageTimeout); rageTimeout = setTimeout(() => { rageLevel = 0; whiteFireEffect.classList.remove('active'); }, 200);
+        if(!whiteFireToggle || !whiteFireToggle.checked || (superFpsBoostToggle && superFpsBoostToggle.checked)) return;
+        rageLevel += 5; if(rageLevel > 100 && whiteFireEffect) whiteFireEffect.classList.add('active');
+        clearTimeout(rageTimeout); rageTimeout = setTimeout(() => { rageLevel = 0; if(whiteFireEffect) whiteFireEffect.classList.remove('active'); }, 200);
     }
 
     function handleBackgroundChange() {
+        if(!lightThemeToggle || !bgSelect) return;
         document.body.className = lightThemeToggle.checked ? 'light-theme' : 'dark-theme';
         document.body.classList.add(bgSelect.value);
     }
 
     function handleSettingsChange() {
-        const boost = superFpsBoostToggle.checked;
-        if(boost) { whiteFireToggle.checked = false; shadowsToggle.checked = false; if(particlesInstance) particlesInstance.stop(); } 
+        const boost = superFpsBoostToggle && superFpsBoostToggle.checked;
+        if(boost) { 
+            if(whiteFireToggle) whiteFireToggle.checked = false; 
+            if(shadowsToggle) shadowsToggle.checked = false; 
+            if(particlesInstance) particlesInstance.stop(); 
+        } 
         else { reloadParticles(); }
         updatePhone(); handleBackgroundChange();
-        if(viewfinderToggle.checked) document.getElementById('camera-viewfinder').classList.remove('hidden');
-        else document.getElementById('camera-viewfinder').classList.add('hidden');
+        
+        const viewfinder = document.getElementById('camera-viewfinder');
+        if(viewfinderToggle && viewfinder) {
+            if(viewfinderToggle.checked) viewfinder.classList.remove('hidden');
+            else viewfinder.classList.add('hidden');
+        }
     }
 
     function saveSettings() {
         localStorage.setItem('jxStabSettings_V2', JSON.stringify({
             lang: document.documentElement.lang,
-            lightTheme: lightThemeToggle.checked,
+            lightTheme: lightThemeToggle ? lightThemeToggle.checked : false,
             fxMode: currentFxMode,
-            fire: whiteFireToggle.checked,
-            shadows: shadowsToggle.checked,
-            stabilization: stabilizationToggle.checked,
-            boost: superFpsBoostToggle.checked,
-            viewfinder: viewfinderToggle.checked,
-            bg: bgSelect.value
+            fire: whiteFireToggle ? whiteFireToggle.checked : false,
+            shadows: shadowsToggle ? shadowsToggle.checked : false,
+            stabilization: stabilizationToggle ? stabilizationToggle.checked : true,
+            boost: superFpsBoostToggle ? superFpsBoostToggle.checked : false,
+            viewfinder: viewfinderToggle ? viewfinderToggle.checked : false,
+            bg: bgSelect ? bgSelect.value : 'bg-default'
         }));
     }
 
     function loadSettings() {
         const s = JSON.parse(localStorage.getItem('jxStabSettings_V2'));
         if(s) {
-            lightThemeToggle.checked = s.lightTheme || false;
+            if(lightThemeToggle) lightThemeToggle.checked = s.lightTheme || false;
             currentFxMode = s.fxMode || 'none';
-            whiteFireToggle.checked = s.fire;
-            shadowsToggle.checked = s.shadows;
-            stabilizationToggle.checked = s.stabilization;
-            superFpsBoostToggle.checked = s.boost;
-            viewfinderToggle.checked = s.viewfinder;
-            bgSelect.value = s.bg || 'bg-default';
-            fxButtons.forEach(b => b.classList.toggle('active', b.dataset.fx === currentFxMode));
+            if(whiteFireToggle) whiteFireToggle.checked = s.fire;
+            if(shadowsToggle) shadowsToggle.checked = s.shadows;
+            if(stabilizationToggle) stabilizationToggle.checked = s.stabilization;
+            if(superFpsBoostToggle) superFpsBoostToggle.checked = s.boost;
+            if(viewfinderToggle) viewfinderToggle.checked = s.viewfinder;
+            if(bgSelect) bgSelect.value = s.bg || 'bg-default';
+            if(fxButtons) fxButtons.forEach(b => b.classList.toggle('active', b.dataset.fx === currentFxMode));
         } else {
-            stabilizationToggle.checked = true;
+            if(stabilizationToggle) stabilizationToggle.checked = true;
         }
         handleSettingsChange();
     }
