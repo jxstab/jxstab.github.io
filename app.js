@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'SamsungS2': { image: 'phones/SamsungS2.png', stabilizationPoint: { x: '45.70%', y: '17.37%' }, specs: { processor: 'Exynos 4210', camera: '8MP Retro' } },
         'Xiaomi14T': { image: 'phones/Xiaomi14T.png', stabilizationPoint: { x: '35.17%', y: '25.09%' }, specs: { processor: 'Dimensity 8300', camera: 'Leica 50MP' } },
         'Iphone11Pro': { image: 'phones/Iphone11Pro.png', stabilizationPoint: { x: '31.04%', y: '21.44%' }, specs: { processor: 'A13 Bionic', camera: 'Triple 12MP' } },
-        
-        // Остальные (пока дефолтные координаты, изменишь через camera())
         'HuaweiPuraX': { image: 'phones/HuaweiPuraX.png', stabilizationPoint: { x: '24.00%', y: '19.36%' }, specs: { processor: 'Kirin 9010 Prototype', camera: 'XMAGE Concept Lens' } },
         'IqooZ10Turbo+': { image: 'phones/IqooZ10Turbo+.png', stabilizationPoint: { x: '42.42%', y: '15.00%' }, specs: { processor: 'Dimensity 9400+', camera: '64MP Flagship OIS' } },
         'OppoReno14F': { image: 'phones/OppoReno14F.png', stabilizationPoint: { x: '50.00%', y: '21.00%' }, specs: { processor: 'Dimensity 7200', camera: '50MP Cosmo Ring' } },
