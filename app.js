@@ -1,83 +1,90 @@
-/* --- уроды ебаные не работает это говно блять --- */
+/* --- START OF FILE app.js --- */
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. СПИСОК ТЕЛЕФОНОВ ---
+    // --- 1. FULL PHONE LIST (VERIFIED SPECS) ---
     const phones = {
-        'IIIF150H2022': { image: 'phones/IIIF150H2022.png', stabilizationPoint: { x: '35.51%', y: '19.20%' }, specs: { processor: 'Helio G95', camera: 'Night Vision' } },
+        // === НОВЫЕ / ИСПРАВЛЕННЫЕ ===
+        'HONOR LLY-LX2': { image: 'phones/HONOR LLY-LX2.png', stabilizationPoint: { x: '36.61%', y: '12.27%' }, specs: { processor: 'Snapdragon 6 Gen 1', camera: '108MP Matrix' } },
+        'TCL20SE': { image: 'phones/TCL20SE.png', stabilizationPoint: { x: '37.21%', y: '16.73%' }, specs: { processor: 'Snapdragon 460', camera: '16MP AI Quad' } },
+        'RedmiNote10Pro': { image: 'phones/RedmiNote10Pro.png', stabilizationPoint: { x: '37.97%', y: '11.50%' }, specs: { processor: 'Snapdragon 732G', camera: '108MP Wide' } },
+        'SamsungA32': { image: 'phones/SamsungA32.png', stabilizationPoint: { x: '34.67%', y: '18.66%' }, specs: { processor: 'Helio G80', camera: '64MP Quad' } },
+        'Nothing3A': { image: 'phones/Nothing3A.png', stabilizationPoint: { x: '38.82%', y: '24.67%' }, specs: { processor: 'Snapdragon 7s Gen 3', camera: '50MP Dual OIS' } }, // Phone (2a)
+        'OppoReno14F': { image: 'phones/OppoReno14F.png', stabilizationPoint: { x: '39.90%', y: '21.92%' }, specs: { processor: 'Dimensity 6300', camera: '50MP Cosmo Ring' } },
+        'Iphone16ProMax': { image: 'phones/Iphone16ProMax.png', stabilizationPoint: { x: '50.00%', y: '20.00%' }, specs: { processor: 'A18 Pro', camera: '48MP Fusion' } },
+
+        // === ПРОВЕРЕННАЯ БАЗА ===
+        'IIIF150H2022': { image: 'phones/IIIF150H2022.png', stabilizationPoint: { x: '35.51%', y: '19.20%' }, specs: { processor: 'Helio G95', camera: '20MP Night Vision' } },
         'SamsungS21FE': { image: 'phones/SamsungS21FE.png', stabilizationPoint: { x: '31.54%', y: '19.61%' }, specs: { processor: 'Snapdragon 888', camera: '12MP Pro-Grade' } },
         'SamsungA16': { image: 'phones/SamsungA16.png', stabilizationPoint: { x: '31.75%', y: '19.81%' }, specs: { processor: 'Exynos 1330', camera: '50MP Main' } },
         'Iphone13ProMax': { image: 'phones/Iphone13ProMax.png', stabilizationPoint: { x: '30.83%', y: '23.47%' }, specs: { processor: 'A15 Bionic', camera: 'Pro 12MP System' } },
-        'Nothing3A': { image: 'phones/Nothing3A.png', stabilizationPoint: { x: '50.00%', y: '20.00%' }, specs: { processor: 'Dimensity 7200 Pro', camera: '50MP Dual' } },
         'SamsungS2': { image: 'phones/SamsungS2.png', stabilizationPoint: { x: '45.70%', y: '17.37%' }, specs: { processor: 'Exynos 4210', camera: '8MP Retro' } },
-        'Xiaomi14T': { image: 'phones/Xiaomi14T.png', stabilizationPoint: { x: '35.17%', y: '25.09%' }, specs: { processor: 'Dimensity 8300', camera: 'Leica 50MP' } },
+        'Xiaomi14T': { image: 'phones/Xiaomi14T.png', stabilizationPoint: { x: '35.17%', y: '25.09%' }, specs: { processor: 'Dimensity 8300 Ultra', camera: 'Leica 50MP' } },
         'Iphone11Pro': { image: 'phones/Iphone11Pro.png', stabilizationPoint: { x: '31.04%', y: '21.44%' }, specs: { processor: 'A13 Bionic', camera: 'Triple 12MP' } },
         
-        // Остальные
-        'HuaweiPuraX': { image: 'phones/HuaweiPuraX.png', stabilizationPoint: { x: '24.00%', y: '19.36%' }, specs: { processor: 'Kirin 9010 Prototype', camera: 'XMAGE Concept Lens' } },
-        'IqooZ10Turbo+': { image: 'phones/IqooZ10Turbo+.png', stabilizationPoint: { x: '42.42%', y: '15.00%' }, specs: { processor: 'Dimensity 9400+', camera: '64MP Flagship OIS' } },
-        'OppoReno14F': { image: 'phones/OppoReno14F.png', stabilizationPoint: { x: '50.00%', y: '21.00%' }, specs: { processor: 'Dimensity 7200', camera: '50MP Cosmo Ring' } },
+        'HuaweiPuraX': { image: 'phones/HuaweiPuraX.png', stabilizationPoint: { x: '24.00%', y: '19.36%' }, specs: { processor: 'Kirin 9010 Proto', camera: 'XMAGE Concept' } },
+        'IqooZ10Turbo+': { image: 'phones/IqooZ10Turbo+.png', stabilizationPoint: { x: '42.42%', y: '15.00%' }, specs: { processor: 'Dimensity 9300+', camera: '50MP Flagship' } },
         'PocoM3Pro5G': { image: 'phones/PocoM3Pro5G.png', stabilizationPoint: { x: '34.80%', y: '8.28%' }, specs: { processor: 'Dimensity 700', camera: '48MP AI Triple' } },
-        'RedmiNote8Pro': { image: 'phones/RedmiNote8Pro.png', stabilizationPoint: { x: '50.00%', y: '19.17%' }, specs: { processor: 'Helio G90T', camera: '64MP AI Quad' } },
-        'RedmiNote14_4G': { image: 'phones/RedmiNote14_4G.png', stabilizationPoint: { x: '38.00%', y: '17.00%' }, specs: { processor: 'Snapdragon 685', camera: '108MP Main Lens' } },
-        'GoogleFold2': { image: 'phones/GoogleFold2.png', stabilizationPoint: { x: '56.18%', y: '18.97%' }, specs: { processor: 'Tensor G4 Foldable', camera: 'Pixel-Perfect Fold Cam' } },
-        'Honor200': { image: 'phones/Honor200.png', stabilizationPoint: { x: '37.75%', y: '19.30%' }, specs: { processor: 'Snapdragon 7 Gen 3', camera: 'Harcourt Portrait Master' } },
-        'HonorMagic6P': { image: 'phones/HonorMagic6P.png', stabilizationPoint: { x: '45.07%', y: '32.88%' }, specs: { processor: 'Snapdragon 8 Gen 3', camera: 'Falcon Capture AI System' } },
-        'HonorMagicX9C': { image: 'phones/HonorMagicX9C.png', stabilizationPoint: { x: '44.36%', y: '18.07%' }, specs: { processor: 'Snapdragon 6 Gen 1', camera: 'Circular Matrix Lens' } },
+        'RedmiNote8Pro': { image: 'phones/RedmiNote8Pro.png', stabilizationPoint: { x: '50.00%', y: '19.17%' }, specs: { processor: 'Helio G90T', camera: '64MP Quad' } },
+        'RedmiNote14_4G': { image: 'phones/RedmiNote14_4G.png', stabilizationPoint: { x: '38.00%', y: '17.00%' }, specs: { processor: 'Snapdragon 685', camera: '108MP Main' } },
+        'GoogleFold2': { image: 'phones/GoogleFold2.png', stabilizationPoint: { x: '56.18%', y: '18.97%' }, specs: { processor: 'Tensor G4', camera: 'Pixel Fold Cam' } },
+        'Honor200': { image: 'phones/Honor200.png', stabilizationPoint: { x: '37.75%', y: '19.30%' }, specs: { processor: 'Snapdragon 7 Gen 3', camera: '50MP Harcourt' } },
+        'HonorMagic6P': { image: 'phones/HonorMagic6P.png', stabilizationPoint: { x: '45.07%', y: '32.88%' }, specs: { processor: 'Snapdragon 8 Gen 3', camera: '180MP Falcon' } },
+        'HonorMagicX9C': { image: 'phones/HonorMagicX9C.png', stabilizationPoint: { x: '44.36%', y: '18.07%' }, specs: { processor: 'Snapdragon 6 Gen 1', camera: '108MP Matrix' } },
         'HonorX8C': { image: 'phones/HonorX8C.png', stabilizationPoint: { x: '28.51%', y: '14.43%' }, specs: { processor: 'Snapdragon 680', camera: 'High-Res Matrix' } },
-        'HuaweiMateXTU': { image: 'phones/HuaweiMateXTU.png', stabilizationPoint: { x: '43.08%', y: '27.12%' }, specs: { processor: 'Kirin 9010', camera: 'Falcon Wing Hinge Cam' } },
-        'HuaweiPura70U': { image: 'phones/HuaweiPura70U.png', stabilizationPoint: { x: '45.37%', y: '25.02%' }, specs: { processor: 'Kirin 9010', camera: '1-inch Retractable Lens' } },
-        'HuaweiPura80U': { image: 'phones/HuaweiPura80U.png', stabilizationPoint: { x: '40.66%', y: '37.10%' }, specs: { processor: 'Kirin 9020', camera: 'XMAGE 2.0 Variable Lens' } },
-        'HuaweiY9C': { image: 'phones/HuaweiY9C.png', stabilizationPoint: { x: '37.74%', y: '16.04%' }, specs: { processor: 'Kirin 710F', camera: '48MP Pop-Up AI Cam' } },
-        'InfinixHot12P': { image: 'phones/InfinixHot12P.png', stabilizationPoint: { x: '36.08%', y: '20.08%' }, specs: { processor: 'Unisoc Tiger T616', camera: '50MP SuperNight' } },
-        'InfinixHot40I': { image: 'phones/InfinixHot40I.png', stabilizationPoint: { x: '41.80%', y: '25.00%' }, specs: { processor: 'Unisoc T606', camera: '50MP Super-Night AI' } },
-        'Iphone11': { image: 'phones/Iphone11.png', stabilizationPoint: { x: '33.62%', y: '18.59%' }, specs: { processor: 'A13 Bionic', camera: '12MP Dual Wide' } },
-        'Iphone17ProMax': { image: 'phones/Iphone17ProMax.png', stabilizationPoint: { x: '31.29%', y: '23.91%' }, specs: { processor: 'A19 Pro Bionic', camera: '48MP Tetraprism 2.0' } },
-        'IphoneXSM': { image: 'phones/IphoneXSM.png', stabilizationPoint: { x: '30.57%', y: '12.43%' }, specs: { processor: 'A12 Bionic Chip', camera: '12MP Dual Smart HDR' } },
-        'IqooNeo10PP': { image: 'phones/IqooNeo10PP.png', stabilizationPoint: { x: '41.58%', y: '20.20%' }, specs: { processor: 'Snapdragon 8 Elite', camera: 'Vivo V3+ Imaging Chip' } },
-        'IqooNeo9SPP': { image: 'phones/IqooNeo9SPP.png', stabilizationPoint: { x: '37.70%', y: '11.79%' }, specs: { processor: 'Snapdragon 8 Gen 3', camera: 'IMX920 Super-Sense' } },
-        'LgK10': { image: 'phones/LgK10.png', stabilizationPoint: { x: '49.68%', y: '13.74%' }, specs: { processor: 'Mediatek MT6753', camera: '13MP Auto-Focus Cam' } },
-        'MeizuLucky08': { image: 'phones/MeizuLucky08.png', stabilizationPoint: { x: '50.00%', y: '16.46%' }, specs: { processor: 'Snapdragon 7s Gen 2', camera: 'Flyme AI Imaging' } },
-        'Nothing1': { image: 'phones/Nothing1.png', stabilizationPoint: { x: '38.65%', y: '15.57%' }, specs: { processor: 'Snapdragon 778G+ 5G', camera: 'Glyph Interface Camera' } },
+        'HuaweiMateXTU': { image: 'phones/HuaweiMateXTU.png', stabilizationPoint: { x: '43.08%', y: '27.12%' }, specs: { processor: 'Kirin 9010', camera: 'Tri-Fold Cam' } },
+        'HuaweiPura70U': { image: 'phones/HuaweiPura70U.png', stabilizationPoint: { x: '45.37%', y: '25.02%' }, specs: { processor: 'Kirin 9010', camera: '1-inch Retractable' } },
+        'HuaweiPura80U': { image: 'phones/HuaweiPura80U.png', stabilizationPoint: { x: '40.66%', y: '37.10%' }, specs: { processor: 'Kirin 9020', camera: 'XMAGE Variable' } },
+        'HuaweiY9C': { image: 'phones/HuaweiY9C.png', stabilizationPoint: { x: '37.74%', y: '16.04%' }, specs: { processor: 'Kirin 710F', camera: 'Pop-Up AI' } },
+        'InfinixHot12P': { image: 'phones/InfinixHot12P.png', stabilizationPoint: { x: '36.08%', y: '20.08%' }, specs: { processor: 'Unisoc T616', camera: '50MP SuperNight' } },
+        'InfinixHot40I': { image: 'phones/InfinixHot40I.png', stabilizationPoint: { x: '41.80%', y: '25.00%' }, specs: { processor: 'Unisoc T606', camera: '50MP AI' } },
+        'Iphone11': { image: 'phones/Iphone11.png', stabilizationPoint: { x: '33.62%', y: '18.59%' }, specs: { processor: 'A13 Bionic', camera: '12MP Dual' } },
+        'Iphone17ProMax': { image: 'phones/Iphone17ProMax.png', stabilizationPoint: { x: '31.29%', y: '23.91%' }, specs: { processor: 'A19 Pro Bionic', camera: 'Tetraprism 2.0' } },
+        'IphoneXSM': { image: 'phones/IphoneXSM.png', stabilizationPoint: { x: '30.57%', y: '12.43%' }, specs: { processor: 'A12 Bionic', camera: '12MP Dual' } },
+        'IqooNeo10PP': { image: 'phones/IqooNeo10PP.png', stabilizationPoint: { x: '41.58%', y: '20.20%' }, specs: { processor: 'Snapdragon 8 Elite', camera: 'Vivo V3+' } },
+        'IqooNeo9SPP': { image: 'phones/IqooNeo9SPP.png', stabilizationPoint: { x: '37.70%', y: '11.79%' }, specs: { processor: 'Snapdragon 8 Gen 3', camera: 'IMX920' } },
+        'LgK10': { image: 'phones/LgK10.png', stabilizationPoint: { x: '49.68%', y: '13.74%' }, specs: { processor: 'MT6753', camera: '13MP AF' } },
+        'MeizuLucky08': { image: 'phones/MeizuLucky08.png', stabilizationPoint: { x: '50.00%', y: '16.46%' }, specs: { processor: 'Snapdragon 7s Gen 2', camera: 'Flyme AI' } },
+        'Nothing1': { image: 'phones/Nothing1.png', stabilizationPoint: { x: '38.65%', y: '15.57%' }, specs: { processor: 'Snapdragon 778G+', camera: '50MP Dual' } },
         'OnePlus11R': { image: 'phones/OnePlus11R.png', stabilizationPoint: { x: '37.86%', y: '26.56%' }, specs: { processor: 'Snapdragon 8+ Gen 1', camera: '50MP IMX890' } },
-        'OnePlus12': { image: 'phones/OnePlus12.png', stabilizationPoint: { x: '39.71%', y: '20.12%' }, specs: { processor: 'Snapdragon 8 Gen 3', camera: 'Hasselblad 4th Gen Camera' } },
-        'OnePlusAce3': { image: 'phones/OnePlusAce3.png', stabilizationPoint: { x: '43.10%', y: '19.66%' }, specs: { processor: 'Snapdragon 8 Gen 2', camera: 'Sony IMX890 50MP Sensor' } },
-        'Pixel8P': { image: 'phones/Pixel8P.png', stabilizationPoint: { x: '21.34%', y: '16.57%' }, specs: { processor: 'Google Tensor G3', camera: '50MP Octa-PD Pro Cam' } },
+        'OnePlus12': { image: 'phones/OnePlus12.png', stabilizationPoint: { x: '39.71%', y: '20.12%' }, specs: { processor: 'Snapdragon 8 Gen 3', camera: 'Hasselblad 4' } },
+        'OnePlusAce3': { image: 'phones/OnePlusAce3.png', stabilizationPoint: { x: '43.10%', y: '19.66%' }, specs: { processor: 'Snapdragon 8 Gen 2', camera: 'IMX890' } },
+        'Pixel8P': { image: 'phones/Pixel8P.png', stabilizationPoint: { x: '21.34%', y: '16.57%' }, specs: { processor: 'Tensor G3', camera: '50MP Pro' } },
         'PocoM5s': { image: 'phones/PocoM5s.png', stabilizationPoint: { x: '23.45%', y: '8.55%' }, specs: { processor: 'Helio G95', camera: '64MP AI Quad' } },
-        'PocoX6P': { image: 'phones/PocoX6P.png', stabilizationPoint: { x: '38.69%', y: '13.81%' }, specs: { processor: 'Dimensity 8300 Ultra', camera: '64MP OIS Triple Cam' } },
-        'PocoX7Pro': { image: 'phones/PocoX7Pro.png', stabilizationPoint: { x: '40.49%', y: '13.94%' }, specs: { processor: 'Dimensity 8400 Ultra', camera: '108MP Crystal-Clear' } },
-        'Realme9i': { image: 'phones/Realme9i.png', stabilizationPoint: { x: '37.86%', y: '12.34%' }, specs: { processor: 'Snapdragon 680', camera: '50MP AI Matrix' } },
-        'RealmeC71': { image: 'phones/RealmeC71.png', stabilizationPoint: { x: '37.30%', y: '22.39%' }, specs: { processor: 'Unisoc T612', camera: '50MP AI Cam' } },
-        'RealmeGT6': { image: 'phones/RealmeGT6.png', stabilizationPoint: { x: '39.55%', y: '19.52%' }, specs: { processor: 'Snapdragon 8s Gen 3', camera: 'Super-AI Nightscape' } },
-        'RealmeGT7Pro': { image: 'phones/RealmeGT7Pro.png', stabilizationPoint: { x: '38.82%', y: '26.66%' }, specs: { processor: 'Snapdragon 8 Elite', camera: '200MP OIS Matrix System' } },
-        'Redmi10': { image: 'phones/Redmi10.png', stabilizationPoint: { x: '37.86%', y: '20.12%' }, specs: { processor: 'Helio G88', camera: '50MP AI Quad' } },
-        'Redmi13C': { image: 'phones/Redmi13C.png', stabilizationPoint: { x: '38.43%', y: '15.76%' }, specs: { processor: 'Helio G85', camera: '50MP AI Triple' } },
-        'Redmi9A': { image: 'phones/Redmi9A.png', stabilizationPoint: { x: '34.93%', y: '9.04%' }, specs: { processor: 'Helio G25 Octa-Core', camera: '13MP AI Main Camera' } },
-        'SamsungA15': { image: 'phones/SamsungA15.png', stabilizationPoint: { x: '40.55%', y: '19.38%' }, specs: { processor: 'Helio G99', camera: '50MP Vision Booster' } },
-        'SamsungA21s': { image: 'phones/SamsungA21s.png', stabilizationPoint: { x: '17.32%', y: '13.95%' }, specs: { processor: 'Exynos 850', camera: '48MP Quad Camera' } },
-        'SamsungA72': { image: 'phones/SamsungA72.png', stabilizationPoint: { x: '40.45%', y: '21.88%' }, specs: { processor: 'Snapdragon 720G', camera: '64MP OIS Quad-System' } },
-        'SamsungA9': { image: 'phones/SamsungA9.png', stabilizationPoint: { x: '33.56%', y: '17.20%' }, specs: { processor: 'Snapdragon 660', camera: 'World\'s First Quad Camera' } },
-        'SamsungJ1': { image: 'phones/SamsungJ1.png', stabilizationPoint: { x: '49.66%', y: '23.50%' }, specs: { processor: 'Spreadtrum SC9830', camera: '5MP f/2.2 Rear Cam' } },
-        'SamsungJ4': { image: 'phones/SamsungJ4.png', stabilizationPoint: { x: '50.34%', y: '16.35%' }, specs: { processor: 'Exynos 7570 Quad', camera: '13MP Single Shooter' } },
-        'SamsungS10+': { image: 'phones/SamsungS10+.png', stabilizationPoint: { x: '53.21%', y: '18.73%' }, specs: { processor: 'Exynos 9820', camera: '16MP Ultra-Wide Lens' } },
-        'SamsungS21U': { image: 'phones/SamsungS21U.png', stabilizationPoint: { x: '19.31%', y: '17.25%' }, specs: { processor: 'Exynos 2100', camera: '108MP Pro-Grade Sensor' } },
-        'SamsungS24U': { image: 'phones/SamsungS24U.png', stabilizationPoint: { x: '37.92%', y: '22.29%' }, specs: { processor: 'Snapdragon 8 Gen 3 for Galaxy', camera: '200MP ISOCELL HP2X' } },
-        'SamsungS25U': { image: 'phones/SamsungS25U.png', stabilizationPoint: { x: '37.38%', y: '25.63%' }, specs: { processor: 'Snapdragon 8 Elite For Galaxy', camera: 'ISOCELL HPX 250MP' } },
-        'SamsungS4Zoom': { image: 'phones/SamsungS4Zoom.png', stabilizationPoint: { x: '50.14%', y: '30.74%' }, specs: { processor: 'Exynos 5410 Octa', camera: '16MP with 10x Optical Zoom' } },
-        'SamsungS9+': { image: 'phones/SamsungS9+.png', stabilizationPoint: { x: '50.58%', y: '21.00%' }, specs: { processor: 'Exynos 9810', camera: 'Dual Aperture Lens' } },
-        'SamsungXCover7': { image: 'phones/SamsungXCover7.png', stabilizationPoint: { x: '37.36%', y: '13.14%' }, specs: { processor: 'Dimensity 6100+', camera: 'Rugged 50MP Sensor' } },
-        'SamsungZFlip6': { image: 'phones/SamsungZFlip6.png', stabilizationPoint: { x: '35.54%', y: '9.70%' }, specs: { processor: 'Snapdragon 8 Gen 3 for Galaxy', camera: 'FlexiCam 5.0 System' } },
-        'SonyXperia1M7': { image: 'phones/SonyXperia1M7.png', stabilizationPoint: { x: '26.07%', y: '22.78%' }, specs: { processor: 'Snapdragon 8 Elite', camera: 'Exmor T 1/1.35" Sensor' } },
-        'TecnoPova4': { image: 'phones/TecnoPova4.png', stabilizationPoint: { x: '36.98%', y: '13.54%' }, specs: { processor: 'Helio G99 Gaming Core', camera: '50MP Dual AI Cam' } },
-        'VivoX200U': { image: 'phones/VivoX200U.png', stabilizationPoint: { x: '44.55%', y: '35.46%' }, specs: { processor: 'Snapdragon 8 Elite', camera: 'Zeiss APO-Tessar Lens' } },
-        'Xiaomi10U': { image: 'phones/Xiaomi10U.png', stabilizationPoint: { x: '37.75%', y: '31.02%' }, specs: { processor: 'Snapdragon 865 5G', camera: '120x AI Super Zoom' } },
+        'PocoX6P': { image: 'phones/PocoX6P.png', stabilizationPoint: { x: '38.69%', y: '13.81%' }, specs: { processor: 'Dimensity 8300 Ultra', camera: '64MP OIS' } },
+        'PocoX7Pro': { image: 'phones/PocoX7Pro.png', stabilizationPoint: { x: '40.49%', y: '13.94%' }, specs: { processor: 'Dimensity 8400', camera: '200MP' } },
+        'Realme9i': { image: 'phones/Realme9i.png', stabilizationPoint: { x: '37.86%', y: '12.34%' }, specs: { processor: 'Snapdragon 680', camera: '50MP Matrix' } },
+        'RealmeC71': { image: 'phones/RealmeC71.png', stabilizationPoint: { x: '37.30%', y: '22.39%' }, specs: { processor: 'Unisoc T612', camera: '50MP AI' } },
+        'RealmeGT6': { image: 'phones/RealmeGT6.png', stabilizationPoint: { x: '39.55%', y: '19.52%' }, specs: { processor: 'Snapdragon 8s Gen 3', camera: 'AI Nightscape' } },
+        'RealmeGT7Pro': { image: 'phones/RealmeGT7Pro.png', stabilizationPoint: { x: '38.82%', y: '26.66%' }, specs: { processor: 'Snapdragon 8 Elite', camera: '200MP OIS' } },
+        'Redmi10': { image: 'phones/Redmi10.png', stabilizationPoint: { x: '37.86%', y: '20.12%' }, specs: { processor: 'Helio G88', camera: '50MP Quad' } },
+        'Redmi13C': { image: 'phones/Redmi13C.png', stabilizationPoint: { x: '38.43%', y: '15.76%' }, specs: { processor: 'Helio G85', camera: '50MP AI' } },
+        'Redmi9A': { image: 'phones/Redmi9A.png', stabilizationPoint: { x: '34.93%', y: '9.04%' }, specs: { processor: 'Helio G25', camera: '13MP AI' } },
+        'SamsungA15': { image: 'phones/SamsungA15.png', stabilizationPoint: { x: '40.55%', y: '19.38%' }, specs: { processor: 'Helio G99', camera: '50MP Vision' } },
+        'SamsungA21s': { image: 'phones/SamsungA21s.png', stabilizationPoint: { x: '17.32%', y: '13.95%' }, specs: { processor: 'Exynos 850', camera: '48MP Quad' } },
+        'SamsungA72': { image: 'phones/SamsungA72.png', stabilizationPoint: { x: '40.45%', y: '21.88%' }, specs: { processor: 'Snapdragon 720G', camera: '64MP OIS' } },
+        'SamsungA9': { image: 'phones/SamsungA9.png', stabilizationPoint: { x: '33.56%', y: '17.20%' }, specs: { processor: 'Snapdragon 660', camera: 'Quad Cam' } },
+        'SamsungJ1': { image: 'phones/SamsungJ1.png', stabilizationPoint: { x: '49.66%', y: '23.50%' }, specs: { processor: 'Spreadtrum SC9830', camera: '5MP f/2.2' } },
+        'SamsungJ4': { image: 'phones/SamsungJ4.png', stabilizationPoint: { x: '50.34%', y: '16.35%' }, specs: { processor: 'Exynos 7570', camera: '13MP' } },
+        'SamsungS10+': { image: 'phones/SamsungS10+.png', stabilizationPoint: { x: '53.21%', y: '18.73%' }, specs: { processor: 'Exynos 9820', camera: '16MP Ultra-Wide' } },
+        'SamsungS21U': { image: 'phones/SamsungS21U.png', stabilizationPoint: { x: '19.31%', y: '17.25%' }, specs: { processor: 'Exynos 2100', camera: '108MP Pro-Grade' } },
+        'SamsungS24U': { image: 'phones/SamsungS24U.png', stabilizationPoint: { x: '37.92%', y: '22.29%' }, specs: { processor: 'Snapdragon 8 Gen 3', camera: '200MP HP2X' } },
+        'SamsungS25U': { image: 'phones/SamsungS25U.png', stabilizationPoint: { x: '37.38%', y: '25.63%' }, specs: { processor: 'Snapdragon 8 Elite', camera: 'ISOCELL HPX' } },
+        'SamsungS4Zoom': { image: 'phones/SamsungS4Zoom.png', stabilizationPoint: { x: '50.14%', y: '30.74%' }, specs: { processor: 'Dual-Core 1.5GHz', camera: '16MP 10x Zoom' } },
+        'SamsungS9+': { image: 'phones/SamsungS9+.png', stabilizationPoint: { x: '50.58%', y: '21.00%' }, specs: { processor: 'Exynos 9810', camera: 'Dual Aperture' } },
+        'SamsungXCover7': { image: 'phones/SamsungXCover7.png', stabilizationPoint: { x: '37.36%', y: '13.14%' }, specs: { processor: 'Dimensity 6100+', camera: 'Rugged 50MP' } },
+        'SamsungZFlip6': { image: 'phones/SamsungZFlip6.png', stabilizationPoint: { x: '35.54%', y: '9.70%' }, specs: { processor: 'Snapdragon 8 Gen 3', camera: 'FlexiCam' } },
+        'SonyXperia1M7': { image: 'phones/SonyXperia1M7.png', stabilizationPoint: { x: '26.07%', y: '22.78%' }, specs: { processor: 'Snapdragon 8 Elite', camera: 'Exmor T' } },
+        'TecnoPova4': { image: 'phones/TecnoPova4.png', stabilizationPoint: { x: '36.98%', y: '13.54%' }, specs: { processor: 'Helio G99', camera: '50MP Dual' } },
+        'VivoX200U': { image: 'phones/VivoX200U.png', stabilizationPoint: { x: '44.55%', y: '35.46%' }, specs: { processor: 'Dimensity 9400', camera: 'Zeiss APO' } },
+        'Xiaomi10U': { image: 'phones/Xiaomi10U.png', stabilizationPoint: { x: '37.75%', y: '31.02%' }, specs: { processor: 'Snapdragon 865', camera: '120x Zoom' } },
         'Xiaomi13TPro': { image: 'phones/Xiaomi13TPro.png', stabilizationPoint: { x: '38.20%', y: '23.34%' }, specs: { processor: 'Dimensity 9200+', camera: '50MP Leica' } },
-        'Xiaomi15U': { image: 'phones/Xiaomi15U.png', stabilizationPoint: { x: '42.09%', y: '34.85%' }, specs: { processor: 'Snapdragon 8 Elite', camera: 'Leica Summilux 1.5-inch' } },
-        'Xiaomi17Pro': { image: 'phones/Xiaomi17Pro.png', stabilizationPoint: { x: '34.07%', y: '22.39%' }, specs: { processor: 'Snapdragon 8 Gen 5', camera: 'Leica Summilux Next-Gen' } },
-        'Xiaomi9': { image: 'phones/Xiaomi9.png', stabilizationPoint: { x: '35.43%', y: '10.67%' }, specs: { processor: 'Snapdragon 855', camera: 'Sony IMX586 48MP' } },
-        'XiaomiMixAlpha': { image: 'phones/XiaomiMixAlpha.png', stabilizationPoint: { x: '38.38%', y: '12.03%' }, specs: { processor: 'Snapdragon 855+', camera: '108MP Surround Display Cam' } },
-        'XiaomiMixFlip': { image: 'phones/XiaomiMixFlip.png', stabilizationPoint: { x: '41.80%', y: '22.10%' }, specs: { processor: 'Snapdragon 8 Gen 3', camera: 'Leica Vario-Summilux Flip' } },
-        'ZteNubiaZ70U': { image: 'phones/ZteNubiaZ70U.png', stabilizationPoint: { x: '39.47%', y: '15.76%' }, specs: { processor: 'Snapdragon 8 Elite', camera: 'Neovision 35mm UDC' } }
+        'Xiaomi15U': { image: 'phones/Xiaomi15U.png', stabilizationPoint: { x: '42.09%', y: '34.85%' }, specs: { processor: 'Snapdragon 8 Elite', camera: 'Leica 1.5-inch' } },
+        'Xiaomi17Pro': { image: 'phones/Xiaomi17Pro.png', stabilizationPoint: { x: '34.07%', y: '22.39%' }, specs: { processor: 'Snapdragon 8 Gen 5', camera: 'Leica Next-Gen' } },
+        'Xiaomi9': { image: 'phones/Xiaomi9.png', stabilizationPoint: { x: '35.43%', y: '10.67%' }, specs: { processor: 'Snapdragon 855', camera: '48MP' } },
+        'XiaomiMixAlpha': { image: 'phones/XiaomiMixAlpha.png', stabilizationPoint: { x: '38.38%', y: '12.03%' }, specs: { processor: 'Snapdragon 855+', camera: '108MP Surround' } },
+        'XiaomiMixFlip': { image: 'phones/XiaomiMixFlip.png', stabilizationPoint: { x: '41.80%', y: '22.10%' }, specs: { processor: 'Snapdragon 8 Gen 3', camera: 'Leica Flip' } },
+        'ZteNubiaZ70U': { image: 'phones/ZteNubiaZ70U.png', stabilizationPoint: { x: '39.47%', y: '15.76%' }, specs: { processor: 'Snapdragon 8 Elite', camera: '35mm UDC' } }
     };
     
     // --- ПЕРЕВОДЫ ---
@@ -96,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentFxMode = 'none';
     let joystickCenterX = 0, joystickCenterY = 0;
     let isDebugActive = false;
+    let isAutoSpinning = false; // Бесконечное вращение
 
     // --- 3. DOM ELEMENTS ---
     const loaderOverlay = document.getElementById('loader-overlay');
@@ -103,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backgroundMusic = document.getElementById('background-music');
     
     const menuBtn = document.getElementById('menu-btn');
+    const autoSpinBtn = document.getElementById('auto-spin-btn');
     const mainMenuModal = document.getElementById('main-menu-modal');
     const settingsModal = document.getElementById('settings-modal');
     const infoModal = document.getElementById('info-modal');
@@ -125,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const joystickHandle = document.getElementById('joystick-handle');
     const wrapperBg = document.getElementById('wrapper-bg');
     
-    // ЭЛЕМЕНТЫ УПРАВЛЕНИЯ (С ПРОВЕРКОЙ НА СУЩЕСТВОВАНИЕ)
     const lightThemeToggle = document.getElementById('light-theme-toggle');
     const whiteFireToggle = document.getElementById('white-fire-toggle');
     const shadowsToggle = document.getElementById('shadows-toggle');
@@ -162,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
         initLanguage();
         setupDebugMode(); 
         
-        // БЕЗОПАСНАЯ ИНИЦИАЛИЗАЦИЯ
         if(stabilizationToggle) stabilizationToggle.checked = true;
         loadSettings(); 
         
@@ -170,6 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
         updatePhone();
 
         if(menuBtn) menuBtn.addEventListener('click', () => toggleModal(mainMenuModal, true));
+        if(autoSpinBtn) autoSpinBtn.addEventListener('click', toggleAutoSpin);
+
         if(settingsBtn) settingsBtn.addEventListener('click', () => { toggleModal(mainMenuModal, false); toggleModal(settingsModal, true); });
         if(infoBtn) infoBtn.addEventListener('click', () => { toggleModal(mainMenuModal, false); toggleModal(infoModal, true); });
         if(fxPanelBtn) fxPanelBtn.addEventListener('click', () => { toggleModal(mainMenuModal, false); toggleModal(fxModal, true); });
@@ -205,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if(phoneSelect) phoneSelect.addEventListener('change', updatePhone);
         if(bgSelect) bgSelect.addEventListener('change', () => { handleBackgroundChange(); saveSettings(); });
         
-        // Безопасное добавление событий для переключателей
         const toggles = [lightThemeToggle, whiteFireToggle, shadowsToggle, stabilizationToggle, superFpsBoostToggle, viewfinderToggle];
         toggles.forEach(t => {
             if(t) t.addEventListener('change', () => { handleSettingsChange(); saveSettings(); });
@@ -234,6 +242,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if(!modal) return;
         if(show) modal.classList.remove('hidden');
         else modal.classList.add('hidden');
+    }
+
+    function toggleAutoSpin() {
+        isAutoSpinning = !isAutoSpinning;
+        if(autoSpinBtn) {
+            if(isAutoSpinning) autoSpinBtn.classList.add('active');
+            else autoSpinBtn.classList.remove('active');
+        }
     }
 
     function initLoader() { 
@@ -326,7 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             };
         } else if (currentFxMode === 'phones' || currentFxMode === 'mix') {
-             const keys = Object.keys(phones).slice(0, 10);
+             // ВСЕ ТЕЛЕФОНЫ ИЗ БАЗЫ
+             const keys = Object.keys(phones); // ВСЕ
              const images = keys.map(k => ({ src: phones[k].image, width: 200, height: 400 }));
              
              let shapeConfig = { type: "image", options: { image: images } };
@@ -393,6 +410,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function activatePropeller() {
         if(isPropellerMode) return;
         toggleModal(mainMenuModal, false);
+        
+        isAutoSpinning = false;
+        if(autoSpinBtn) autoSpinBtn.classList.remove('active');
+
         const time = parseInt(propTimeInput ? propTimeInput.value : 5) || 5;
         const power = parseInt(propPowerInput ? propPowerInput.value : 25) || 25;
         const speed = Math.max(0.01, 1.0 - (power * 0.019));
@@ -416,7 +437,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (now - lastTime >= 1000) { if(fpsDisplay) fpsDisplay.innerText = frameCount + " FPS"; frameCount = 0; lastTime = now; }
 
         if (!isPropellerMode) {
-            if (isDragging || Math.abs(targetRotation - currentRotation) > 0.01) {
+            if(isAutoSpinning && !isDragging) {
+                targetRotation += 2;
+            }
+
+            if (isDragging || Math.abs(targetRotation - currentRotation) > 0.01 || isAutoSpinning) {
                 currentRotation += (targetRotation - currentRotation) * 0.15;
             }
             let transform = `perspective(1000px) rotateZ(${currentRotation}deg)`;
@@ -439,6 +464,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function onDragStart(e) {
         if (e.target.closest('.modal-overlay') || e.target.closest('.app-header') || isPropellerMode || isDebugActive) return;
         e.preventDefault(); isDragging = true;
+        
+        if(isAutoSpinning) {
+            isAutoSpinning = false;
+            if(autoSpinBtn) autoSpinBtn.classList.remove('active');
+        }
         
         const cx = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
         const cy = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;

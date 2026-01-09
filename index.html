@@ -1,4 +1,4 @@
-<!-- сука не работает блять!!!!!!!! -->
+<!-- START OF FILE index.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -26,7 +26,10 @@
 
     <!-- UI HEADER -->
     <header class="app-header">
-        <button id="menu-btn" title="Меню"><i class="fas fa-bars"></i></button>
+        <div class="header-left">
+            <button id="menu-btn" class="icon-btn" title="Меню"><i class="fas fa-bars"></i></button>
+            <button id="auto-spin-btn" class="icon-btn" title="Бесконечное вращение"><i class="fas fa-sync-alt"></i></button>
+        </div>
         <span id="fps-counter">60 FPS</span>
     </header>
 
@@ -88,7 +91,7 @@
                     <select id="phone-select"></select>
                 </div>
 
-                <!-- Propeller Card (COMPACT GRAY) -->
+                <!-- Propeller Card (GRAY BUTTON) -->
                 <div class="propeller-card">
                     <div class="prop-header">
                         <span class="prop-label" data-translate-key="turbo_title"><i class="fas fa-fan"></i> Turbo Propeller</span>
