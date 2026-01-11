@@ -92,6 +92,7 @@ body.bg-gradient { background: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, t
     border: 1px solid rgba(255,255,255,0.1); color: white; width: 42px; height: 42px; 
     border-radius: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center;
     transition: 0.2s;
+    text-decoration: none; /* For A tags */
 }
 .icon-btn:active { background: rgba(255,255,255,0.2); }
 .icon-btn.active { background: var(--accent-color); color: white; border-color: var(--accent-color); }
@@ -210,6 +211,7 @@ select {
     border-radius: 14px; cursor: pointer;
     font-size: 0.9rem; font-weight: 600;
     display: flex; align-items: center; justify-content: center; gap: 8px;
+    text-decoration: none; /* For A tags */
 }
 .menu-action-btn:active { background: #3a3a3c; transform: scale(0.97); }
 .btn-blue { background: var(--accent-color); color: white; }
